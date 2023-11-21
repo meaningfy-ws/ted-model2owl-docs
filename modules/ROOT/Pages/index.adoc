@@ -1,18 +1,65 @@
-# model2owl Project Documentation
-:description: The documentation for the model2owl project.
-:sectanchors:
-//:url-repo: https://github.com/SEMICeu/style-guide
-//:favicon: ../favicon.ico
-:license-url: https://creativecommons.org/licenses/by/4.0/deed.en
-:license-title: CC BY 4.0
-:docinfo: shared
+[[sec:introduction]]
+
+== Introduction to the model2owl Project
+
+=== Background
+
+For the eProcurement Ontology Project, it was [xref:references.adoc#ref:d2.01-2017[decided to represent the conceptual model]] in *Unified Modelling Language* [xref:references.adoc#ref:uml-userguide[(UML)]]. UML is a language that represents concepts visually, thereby facilitating understanding and a common conceptualisation of the model amongst stakeholders.
+
+UML is closer  to the programming languages in which enterprise applications are implementedthan other more logic-oriented approaches, and generally, the primary application of UML [xref:references.adoc#ref:fowler2004[fowler2004]] for ontology design is in the development of class diagrams for object-oriented software. UML, however, does not define formal semantics that allow consistent or accurate determination of an ontology implementation from class diagrams. Semantics, therefore, may become subject to interpretation by stakeholders involved in the development process, and later by users in application and integration tasks [xref:references.adoc#ref:grunninger2003[grunninger2003]]. #To achieve consistency, this project provides  a set of clear transformation rules, a set of modelling conventions, methods of verification, and an automated process of conversion designed to minimise variations in interpretation.#
+
+The #business context# and the project overview are detailed in [xref:references.adoc#ref:costetchi2020a[costetchi2020a]], while the next section provides the motivation and situates the current document within the project.
+
+#. what model2owl does, (business overview)
+.
+. how it works, technical overview
+. components
+. how to use it: tools, processes, procedures#
 
 
-The https://github.com/OP-TED/model2owl/[*model2owl*] project comprises a set of tools for transforming an UML (v2.5) model from its XMI (v2.5.1) serialisation into a formal OWL ontology, and a SHACL shape. This approach is conformant to the https://semiceu.github.io/style-guide/1.0.0/index.html[SEMIC Style Guide] and with https://github.com/meaningfy-ws/model2owl/blob/master/doc/ontology-architecture/ontology-architecture.pdf[eProcurement Ontology Architecture specification].
 
-The UML transformation is performed using XSLT stylesheets under the assumption that the UML model conforms to the set of conventions outlined in the https://meaningfy-ws.github.io/model2owl-docs/public-review/uml/conceptual-model-conventions.html[EPO UML conventions specification]. This set of UML conventions is aligned with and extends the UML conventions specified in https://semiceu.github.io/style-guide/1.0.0/index.html[SEMIC Style Guide].
+== model2owl in eProcurement context
+
+This section provides a working specification of the guidelines and conventions for the eProcurement conceptual model, and describes how it qualifies as suitable input for the transformation scripts that generate the formal eProcurement ontology.
+
+
+The UML Conceptual Model of the eProcurement domain provides the source from which the formal eProcurement ontology is derived through a model transformation process. It makes possible the automatic generation the formal ontology in RDF format [xref:references.adoc#ref:rdf11[rdf11]] from the XMI (v.2.5.1) serialisation [xref:references.adoc#ref:xmi2.5.1[xmi2.5.1]] of a UML (v.2.5) model [xref:references.adoc#ref:uml2.5[uml2.5]], provided that xref:transformation/uml2owl-transformation.adoc[a set of clear transformation rules] are established, and that xref:uml/conceptual-model-conventions.adoc[a set of modelling conventions] is respected.
+
+This documentation also provides the UML modelling constraints and a set of conventional and technical recommendations for naming and structuring the UML class diagram elements. These elements are packages, classes, data types, enumerations, enumeration items, class attributes, association relations and dependency relations. More contextual information is provided in the subsections of the xref::uml/conceptual-model-conventions.adoc[UML conventions specification].
+
+[[sec:requirements]]
+=== eProcurement conceptual model requirements
+
+The eProcurement conceptual model must fulfil four fundamental objectives. It must:
+
+* facilitate understanding of the represented system
+* efficiently convey system details between team members and external stakeholders.
+* provide a point of reference for system designers to gather system specifications and documentation.
+* serve as input for the development of a formal model.
+
+In order to support objectives a conceptual model should fulfil the following requirements:
+
+* be available to all team members for collaboration and iteration.
+* be easily changeable to reflect up-to-date information.
+* contain both visual and written forms of diagramming, to  explain the abstract concepts better.
+* establish terms and concepts that will be used throughout the project.
+* define said terms and concepts.
+* provide a basic structure for the entities of the project.
+* reduce ambiguity while maintaining simple and concise encoding.
+
+
+
+#who, why, where of use#
+
+=== Technical Overview
+
+The https://github.com/OP-TED/model2owl/[*model2owl*] project comprises a set of tools for transforming an UML (v2.5) model from its XMI (v2.5.1) serialisation into a formal OWL ontology, and a SHACL shape. This approach conforms to the https://semiceu.github.io/style-guide/1.0.0/index.html[SEMIC Style Guide] and with the https://github.com/meaningfy-ws/model2owl/blob/master/doc/ontology-architecture/ontology-architecture.pdf[eProcurement Ontology Architecture specification].
+
+The UML transformation is performed using XSLT stylesheets on the assumption that the UML model conforms to the set of conventions outlined in the https://meaningfy-ws.github.io/model2owl-docs/public-review/uml/conceptual-model-conventions.html[EPO UML conventions specification]. This set of UML conventions is aligned with and extends the UML conventions specified in https://semiceu.github.io/style-guide/1.0.0/index.html[SEMIC Style Guide].
 
 The following capabilities are implemented:
+
+#do the arrows indicate a transformation?#
 
 * UML -> Compliance report (ideal for checking the model against the established conventions)
 * UML -> Glossary (ideal for a quick overview of terminology defined)
@@ -20,10 +67,10 @@ The following capabilities are implemented:
 * UML -> OWL 2 (heavyweight ontology with additional axioms suitable for reasoning purposes)
 * UML -> SHACL (data shapes suitable for representing an application profile)
 
-This documentation is evolving and aims at covering the important aspects that one might be interested in when using these tools, including:
+The documentation is constantly reviewed and aims to cover the important aspects when using these tools, including:
 
 * The architectural setup of the project and the ontology
-* The conceptual model conventions that the UML model should adhere to, in order to enable the tools to generate the best possible results.
+* The conceptual model conventions that the UML model should adhere to to generate the best possible results.
 * The transformation rules applied in the process of conversion.
 * The set of validation rules that realise the established conventions (and UML interpretations).
 
@@ -31,3 +78,6 @@ This work is developed in the context of https://github.com/eprocurementontology
 
 The tools can be used on any other ontology that is built according to the provided https://github.com/meaningfy-ws/model2owl/blob/master/doc/ontology-architecture/ontology-architecture.pdf[modelling architecture] and xref:uml/conceptual-model-conventions.adoc[UML conceptual model conventions].
 
+This specification establishes conventions for the interpretation of the UML-based conceptual model in the eProcurement context.
+
+#xref::technical.adoc[Technical Instructions: components, how to use it: tools, processes, procedures]#

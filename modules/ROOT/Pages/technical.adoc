@@ -1,0 +1,30 @@
+= Technical Instructions:
+
+
+
+== Components
+
+xref:architecture/ontology-architecture.adoc[eProcurement ontology architecture and formalisation specifications]
+
+xref:uml/conceptual-model-conventions.adoc[UML Conventions]
+
+xref:transformation/uml2owl-transformation.adoc[Transfer Rules]
+
+xref:checkers/model2owl-checkers.adoc[Verification (checkers)]
+
+
+
+== Performing transformations: Processes and procedures
+
+#list of what can be transformed#
+
+#getting started#
+
+#Prerequisites (not provided on GitHub)#
+
+#Resources on GitHub#
+
+#who, why, where of use#
+
+#instructions#
+
