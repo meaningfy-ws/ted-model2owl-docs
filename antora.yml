@@ -1,5 +1,5 @@
 name: m2o
-version: m2o-home
+version: ~
 title: model2owl Documentation
 start_page: ROOT:index.adoc
 asciidoc:
