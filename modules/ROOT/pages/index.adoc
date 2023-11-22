@@ -16,7 +16,7 @@ To achieve consistency, this project provides a set of clear transformation rule
 
 The documentation provides a working specification, and guidelines and conventions for the eProcurement conceptual model, and describes how the model qualifies as suitable input for the transformation scripts that generate the formal eProcurement ontology.
 
-The UML Conceptual Model of the eProcurement domain provides the source from which the formal eProcurement ontology is derived through a model transformation process. It automates generation the formal ontology in RDF format [xref:references.adoc#ref:rdf11[rdf11]] from the XMI (v.2.5.1) serialisation [xref:references.adoc#ref:xmi2.5.1[xmi2.5.1]] of a UML (v.2.5) model [xref:references.adoc#ref:uml2.5[uml2.5]] possible, provided that xref:transformation/uml2owl-transformation.adoc[a set of clear transformation rules] is established, and xref:uml/conceptual-model-conventions.adoc[a set of modelling conventions] is respected.
+The UML Conceptual Model of the eProcurement domain provides the source from which the formal eProcurement ontology is derived through a model transformation process. It automates the generation of the formal ontology in RDF format [xref:references.adoc#ref:rdf11[rdf11]], from the XMI (v.2.5.1) serialisation [xref:references.adoc#ref:xmi2.5.1[xmi2.5.1]] of a UML (v.2.5) model [xref:references.adoc#ref:uml2.5[uml2.5]], provided that xref:transformation/uml2owl-transformation.adoc[a set of clear transformation rules] is established, and xref:uml/conceptual-model-conventions.adoc[a set of modelling conventions] is respected.
 
 This documentation also provides the UML modelling constraints and a set of conventional and technical recommendations for naming and structuring the UML class diagram elements. These elements are packages, classes, data types, enumerations, enumeration items, class attributes, association relations and dependency relations. More contextual information is provided in the subsections of the xref::uml/conceptual-model-conventions.adoc[UML conventions specification].
 
@@ -25,12 +25,13 @@ This documentation also provides the UML modelling constraints and a set of conv
 
 The eProcurement conceptual model must fulfil four fundamental objectives:
 
+It must
 * facilitate understanding of the represented system.
-* efficiently convey system details between team members and external stakeholders.
+* convey system details between team members and external stakeholders efficiently.
 * provide a point of reference for system designers to gather system specifications and documentation.
 * serve as input for the development of a formal model.
 
-In order to support these objectives, a conceptual model should fulfil the following requirements:
+To support these objectives, a conceptual model should fulfil the following requirements:
 
 * be available to all team members for collaboration and iteration.
 * be easily changeable to reflect up-to-date information.
