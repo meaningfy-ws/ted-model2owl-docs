@@ -1,8 +1,8 @@
 //[[sec:introduction]]
 
-== Introduction to the model2owl Project
+= Introduction to the model2owl Project
 
-=== Background
+== Background
 
 
 
