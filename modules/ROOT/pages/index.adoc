@@ -14,7 +14,7 @@ To achieve consistency, this project provides a set of clear transformation rule
 
 == model2owl in an eProcurement context
 
-This section provides a working specification and the guidelines and conventions for the eProcurement conceptual model, and describes how the model qualifies as suitable input for the transformation scripts that generate the formal eProcurement ontology.
+The documentation provides a working specification, and guidelines and conventions for the eProcurement conceptual model, and describes how the model qualifies as suitable input for the transformation scripts that generate the formal eProcurement ontology.
 
 The UML Conceptual Model of the eProcurement domain provides the source from which the formal eProcurement ontology is derived through a model transformation process. It automates generation the formal ontology in RDF format [xref:references.adoc#ref:rdf11[rdf11]] from the XMI (v.2.5.1) serialisation [xref:references.adoc#ref:xmi2.5.1[xmi2.5.1]] of a UML (v.2.5) model [xref:references.adoc#ref:uml2.5[uml2.5]] possible, provided that xref:transformation/uml2owl-transformation.adoc[a set of clear transformation rules] is established, and xref:uml/conceptual-model-conventions.adoc[a set of modelling conventions] is respected.
 
