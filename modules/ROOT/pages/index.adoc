@@ -10,12 +10,6 @@ For the eProcurement Ontology Project, it was [xref:references.adoc#ref:d2.01-20
 
 UML is closer  to the programming languages in which enterprise applications are implementedthan other more logic-oriented approaches, and generally, the primary application of UML [xref:references.adoc#ref:fowler2004[fowler2004]] for ontology design is in the development of class diagrams for object-oriented software. UML, however, does not define formal semantics that allow consistent or accurate determination of an ontology implementation from class diagrams. Semantics, therefore, may become subject to interpretation by stakeholders involved in the development process, and later by users in application and integration tasks [xref:references.adoc#ref:grunninger2003[grunninger2003]]. #To achieve consistency, this project provides  a set of clear transformation rules, a set of modelling conventions, methods of verification, and an automated process of conversion designed to minimise variations in interpretation.#
 
-
-.
-.
-
-
-
 == model2owl in eProcurement context
 
 This section provides a working specification of the guidelines and conventions for the eProcurement conceptual model, and describes how it qualifies as suitable input for the transformation scripts that generate the formal eProcurement ontology.
