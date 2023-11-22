@@ -146,3 +146,5 @@ No other connector role name reuse is permitted.
 The definition of the connector (and its role) should be the same in all occurrences where its target/source role is reused. In most cases this should apply also to the multiplicity of the reused connector roles.
 
 See also generic conventions about also xref:uml/conv-general.adoc#rule:gen-names-unique[Uniqueness and reuse of names] and xref:uml/conv-general.adoc#rule:gen-relation-reuse[Reuse of relations].
+
+include::partial$feedback.adoc[]

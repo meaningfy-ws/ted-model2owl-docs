@@ -174,3 +174,4 @@ A uml:Class may use the `\<<abstract>>` stereotype to signal that the class is n
 Classes may use the _\<<abstract>> stereotype_. It means that no instances are allowed of this class in the datasets. This is not covered by the OWL 2 [xref:references.adoc#ref:owl2[owl2]] but can be expressed in SHACL data shapes [xref:references.adoc#ref:shacl-spec[shacl-spec]].
 
 
+include::partial$feedback.adoc[]

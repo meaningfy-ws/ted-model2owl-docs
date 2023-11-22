@@ -713,3 +713,5 @@ Declare an individual with a specified class as its type, for a UML Realization 
 </owl:NamedIndividual>
 ----
 |===
+
+include::partial$feedback.adoc[]

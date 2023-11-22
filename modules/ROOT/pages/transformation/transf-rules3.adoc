@@ -228,3 +228,5 @@ Ideally, in the implementation, this rule would be combined with the relevant ru
 </skos:Concept>
 ----
 |===
+
+include::partial$feedback.adoc[]

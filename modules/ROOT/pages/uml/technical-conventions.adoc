@@ -1,1 +1,3 @@
 This page has no content
+
+include::partial$feedback.adoc[]

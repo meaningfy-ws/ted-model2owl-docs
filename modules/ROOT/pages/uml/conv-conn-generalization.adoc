@@ -105,3 +105,5 @@ Equivalent classes can be represented by using stereotypes on the uml:Generaliza
 *Description:*
 
 In case two classes are equivalent, then the latexmath:[$<<equivalent>>$] or latexmath:[$<<complete>>$] stereotype should be used as a marker.
+
+include::partial$feedback.adoc[]

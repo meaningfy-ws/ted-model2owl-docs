@@ -58,4 +58,6 @@ This specification establishes conventions for the interpretation of the UML-bas
 
 #Instructions: Processes and procedures#
 
+include::partial$feedback.adoc[]
+
 

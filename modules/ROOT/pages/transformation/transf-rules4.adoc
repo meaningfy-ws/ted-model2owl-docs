@@ -381,3 +381,5 @@ shape:ClassName-PropertyName
 </rdf:Description>
 ----
 |===
+
+include::partial$feedback.adoc[]

@@ -1,3 +1,5 @@
 = eProcurement ontology architecture and formalisation specifications
 
 *[DRAFT: Add text and pages]*
+
+include::partial$feedback.adoc[]

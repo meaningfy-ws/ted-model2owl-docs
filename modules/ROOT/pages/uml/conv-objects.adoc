@@ -40,3 +40,4 @@ Each Object should instantiate a Class or an Enumeration. Therefore, there shall
 
 Except these realisation connectors, an Object should not connect to any other elements. An Object stands for a specific instance of a class and/or an element of a controlled list, and can only be referred to.
 
+include::partial$feedback.adoc[]

@@ -78,3 +78,5 @@ A pink circle with solid black border is used to declare individuals. Solid blac
 A green solid line is used to declare data properties, where the empty circle at the beginning identifies the property domain while the empty arrow at the end indicates the property range. A blue solid line is used to declare object properties, where the solid circle at the beginning identifies the property domain while the solid arrow at the end indicates the property range.
 
 The following sections present the transformation rules necessary for converting the UML eProcurement conceptual model into a formal OWL ontology.
+
+include::partial$feedback.adoc[]

@@ -211,3 +211,5 @@ The goal of this library is to provide a toolkit to draw quickly and efficiently
 We also welcome technical feedback and bug reports in the form of GitHub Issues and pull requests.
 
 ////
+
+include::partial$feedback.adoc[]

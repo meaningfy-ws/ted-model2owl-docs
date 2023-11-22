@@ -3,3 +3,8 @@
 The business context and the project overview are detailed in the https://docs.ted.europa.eu/epo-home/ePO_Arch_Design.html[eProcurement Ontology Architecture and Formalisation Specifications].
 
 #What model2owl does, (business overview)#
+
+
+
+
+include::partial$feedback.adoc[]
