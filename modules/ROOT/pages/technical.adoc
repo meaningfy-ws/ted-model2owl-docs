@@ -1,6 +1,6 @@
-= Technical Instructions:
+= Technical Information:
 
-
+#how it works, technical overview#
 
 == Components
 
@@ -11,7 +11,6 @@ xref:uml/conceptual-model-conventions.adoc[UML Conventions]
 xref:transformation/uml2owl-transformation.adoc[Transfer Rules]
 
 xref:checkers/model2owl-checkers.adoc[Verification (checkers)]
-
 
 
 == Performing transformations: Processes and procedures
@@ -27,4 +26,5 @@ xref:checkers/model2owl-checkers.adoc[Verification (checkers)]
 #who, why, where of use#
 
 #instructions#
+
 

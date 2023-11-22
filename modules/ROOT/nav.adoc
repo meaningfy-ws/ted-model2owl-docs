@@ -1,8 +1,11 @@
-* xref:epo-context.adoc[Context: model2owl and eProcurement ontology ]
+* xref:index.adoc[Introduction]
+* xref:business.adoc[Business information]
+* xref:technical.adoc[Technical Information]
+
 
 // * xref:architecture/ontology-architecture.adoc[Architectural Design]
 
-* xref:uml/definitions.adoc[Definitions]
+*
 * xref:uml/conceptual-model-conventions.adoc[UML Model Conventions]
 ** xref:uml/conv-general.adoc[General Conventions]
 ** xref:uml/conv-classes.adoc[Classes]
@@ -22,4 +25,5 @@
 ** xref:transformation/transf-rules2.adoc[Rules for UML Connectors]
 ** xref:transformation/transf-rules3.adoc[Rules for UML Datatypes]
 ** xref:transformation/transf-rules4.adoc[Rules for UML Descriptors]
-* xref:references.adoc[References]
+xref:uml/definitions.adoc[Definitions]
+xref:references.adoc[References]

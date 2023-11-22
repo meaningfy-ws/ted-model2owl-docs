@@ -1,0 +1,5 @@
+= Business Information:
+
+The #business context# and the project overview are detailed in [xref:references.adoc#ref:costetchi2020a[costetchi2020a]], while the next section provides the motivation and situates the current document within the project.
+
+#. what model2owl does, (business overview)
