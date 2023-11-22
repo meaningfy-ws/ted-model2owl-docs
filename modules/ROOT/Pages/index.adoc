@@ -1,4 +1,4 @@
-[[sec:introduction]]
+//[[sec:introduction]]
 
 == Introduction to the model2owl Project
 
