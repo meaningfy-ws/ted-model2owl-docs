@@ -4,13 +4,13 @@
 
 The https://github.com/OP-TED/model2owl/[*model2owl*] project comprises a set of tools for transforming an UML (v2.5) model from its XMI (v2.5.1) serialisation into a formal OWL ontology, and a SHACL shape. This approach conforms to the https://semiceu.github.io/style-guide/1.0.0/index.html[SEMIC Style Guide] and with the https://github.com/meaningfy-ws/model2owl/blob/master/doc/ontology-architecture/ontology-architecture.pdf[eProcurement Ontology Architecture specification].
 
-The UML transformation is performed using XSLT stylesheets on the assumption that the UML model conforms to the set of conventions outlined in the https://meaningfy-ws.github.io/model2owl-docs/public-review/uml/conceptual-model-conventions.html[EPO UML conventions specification]. This set of UML conventions is aligned with and extends the UML conventions specified in https://semiceu.github.io/style-guide/1.0.0/index.html[SEMIC Style Guide].
+The UML transformation is performed using XSLT stylesheets on the assumption that the UML model conforms to the set of conventions outlined in the https://meaningfy-ws.github.io/model2owl-docs/public-review/uml/conceptual-model-conventions.html[ePO UML conventions specification]. This set of UML conventions is aligned with and extends the UML conventions specified in https://semiceu.github.io/style-guide/1.0.0/index.html[SEMIC Style Guide].
 
 The following capabilities are implemented:
 
-#list of what can be transformed#
+#list of what can be transformed - as below?#
 
-#do the arrows indicate a transformation?#
+#(do the arrows indicate a transformation or the artifacts produced by a transformation?)#
 
 * UML -> Compliance report (ideal for checking the model against the established conventions)
 * UML -> Glossary (ideal for a quick overview of terminology defined)
@@ -37,16 +37,16 @@ This specification establishes conventions for the interpretation of the UML-bas
 
 == Components
 
-xref:architecture/ontology-architecture.adoc[eProcurement ontology architecture and formalisation specifications]
+* The *specifications* can be found in the xref:architecture/ontology-architecture.adoc[eProcurement ontology architecture and formalisation specifications] document.
 
-xref:uml/conceptual-model-conventions.adoc[UML Conventions]
+* The xref:uml/conceptual-model-conventions.adoc[UML Conceptual Model Conventions] can be read via the links in the left-hand menu.
 
-xref:transformation/uml2owl-transformation.adoc[Transfer Rules]
+* The xref:transformation/uml2owl-transformation.adoc[Transfer Rules] are described and explained in this link.
 
-xref:checkers/model2owl-checkers.adoc[Verification (checkers)]
+* A list  with descriptions of the checkers, used for xref:checkers/model2owl-checkers.adoc[verification], can be found via this link.
 
 
-== Performing transformations: Processes and procedures
+== Performing transformations:
 
 #getting started#
 
