@@ -35,7 +35,7 @@ This specification establishes conventions for the interpretation of the UML-bas
 
 #how it works, technical overview#
 
-== Components
+=== Components
 
 * The *specifications* can be found in the xref:architecture/ontology-architecture.adoc[eProcurement ontology architecture and formalisation specifications] document.
 
@@ -46,7 +46,7 @@ This specification establishes conventions for the interpretation of the UML-bas
 * A list  with descriptions of the checkers, used for xref:checkers/model2owl-checkers.adoc[verification], can be found via this link.
 
 
-== Performing transformations:
+=== Performing transformations
 
 #getting started#
 
