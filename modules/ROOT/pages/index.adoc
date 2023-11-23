@@ -6,6 +6,8 @@
 
 #highlighted words to sort out refs#
 
+The model2owl pipeline transforms the UML diagram created by business stakeholders into OWL (core and restriction) files and shacl files to be used by machines. (to be expanded on)
+
 In the https://docs.ted.europa.eu/epo-home/ePO_Arch_Design.html[planning and development] of the eProcurement Ontology Project, it was decided to represent the conceptual model in *Unified Modelling Language* (UML) #(ref:uml-userguide -book)#. UML is a language that represents concepts visually, thereby facilitating understanding and a common conceptualisation of the model amongst stakeholders.
 
 UML is closer to the programming languages in which enterprise applications are implemented than other more logic-oriented approaches, and generally, the primary application of UML for ontology design is in the development of class diagrams for object-oriented software #(fowler2004 -book)#. UML, however, does not define formal semantics that allow consistent or accurate determination of an ontology implementation from class diagrams. Semantics, therefore, may become subject to interpretation firstly by stakeholders involved in the development process, and secondly, by users in application and integration tasks #(grunninger2003 -book)#.
