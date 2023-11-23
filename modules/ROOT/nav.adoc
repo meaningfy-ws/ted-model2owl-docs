@@ -4,6 +4,8 @@
 
 * [.separated]#**UML Conventions**#
 * xref:uml/conceptual-model-conventions.adoc[UML Model Conventions]
+
+////
 ** xref:uml/conv-general.adoc[General Conventions]
 ** xref:uml/conv-classes.adoc[Classes]
 ** xref:uml/conv-attributes.adoc[Class Attributes]
@@ -16,6 +18,7 @@
 ** xref:uml/conv-enumerations.adoc[Enumerations]
 ** xref:uml/conv-objects.adoc[Objects]
 ** xref:uml/conv-packages.adoc[Packages]
+////
 
 * [.separated]#**Checkers (Validation)**#
 * xref:checkers/model2owl-checkers.adoc[UML convention checking rules]
