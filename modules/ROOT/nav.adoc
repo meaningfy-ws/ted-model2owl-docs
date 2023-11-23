@@ -21,7 +21,7 @@
 ////
 
 * [.separated]#**Checkers (Validation)**#
-* xref:checkers/model2owl-checkers.adoc[UML convention checking rules]
+* xref:checkers/model2owl-checkers.adoc[UML Convention Checking Rules]
 
 * [.separated]#**Transformation**#
 * xref:transformation/uml2owl-transformation.adoc[Transformation Rules]
