@@ -21,21 +21,21 @@ Kiko's https://www.semanticscholar.org/paper/A-Detailed-Comparison-of-UML-and-OW
 
 Three further papers by Xu el al in https://link.springer.com/chapter/10.1007/978-3-642-10583-8_16[2009] and https://link.springer.com/article/10.1007/s11280-011-0147-z[2012], and Na et al in https://www.researchgate.net/publication/221541983_A_Method_for_Building_Domain_Ontologies_based_on_the_Transformation_of_UML_Models[2006], focus on extracting ontological knowledge from UML class diagrams, and describe some UML–OWL mappings with the aim of reusing the existing UML models and stream the building of OWL domain ontologies.
 
-https://www.e-informatyka.pl/index.php/einformatica/volumes/volume-2019/issue-1/article-3/[sadowska, 2019]] presents a comprehensive review of  related work. WIt is used as a guideline for ensuring the necessary coverage of the transformation rules specified in this report. It is important to note that not all the UML elements are dealt with here, only the ones employed in the eProcurement conceptual model.
+https://www.e-informatyka.pl/index.php/einformatica/volumes/volume-2019/issue-1/article-3/[Sadowska, 2019], presents a comprehensive review of  related work. WIt is used as a guideline for ensuring the necessary coverage of the transformation rules specified in this report. It is important to note that not all the UML elements are dealt with here, only the ones employed in the eProcurement conceptual model.
 
 === How to read this document
 
-The remainder of this document comprises four sections covering major UML aspects. Section xref:transformation/transf-rules1.adoc#sec:tran-rules[Transformation of UML classes and attributes] treats classes and attributes. Following section deals with the main connector types employed in the eProcurement model, namely: associations, dependencies and generalisations. Section #sec:tran-rules3[[sec:tran-rules3]] explains how the datatypes and enumerations should be transformed and, finally, Section #sec:tran-rules4[[sec:tran-rules4]] provides a few transformation rules that are applicable to all UML elements and are concerned with comments, labels and notes.
+The remainder of this document comprises four sections covering major UML aspects. The section xref:transformation/transf-rules1.adoc#sec:tran-rules[Transformation of UML classes and attributes] treats classes and attributes. The following section deals with the  employed in the eProcurement model namely, xref:transformation/transf-rules2.adoc[associations, dependencies and generalisations]. The third section  describes the xref:transformation/transf-rules3.adoc[transformation rules] i.e., how the datatypes and enumerations should be transformed and finally, the xref:transformation/transf-rules4.adoc[forth section] provides some transformation rules applicable to all UML elements, concerned with comments, labels and notes.
 
 Each section provides a table with overview of the transformation rule set comprised within. The table provides three columns, one for every layer of the ontology architecture comprising rules: (a) , (b) , and (c) .
 
-Transformation rules are specified in a normative language and are aided by prototypical UML diagram fragments (usually preceding the rule) along with representation of the corresponding OWL fragment depicted in Graffoo visual notation [xref:references.adoc#ref:graffoo[graffoo]]. The diagrams are provided side to side in order to increase comprehension, with UML fragment on the left constituting the source of the transformation and the OWL fragment on the right representing the final result of the transformation.
+Transformation rules are specified in normative language and are aided by prototypical UML diagram fragments (usually preceding the rule) along with representation of the corresponding OWL fragment depicted in https://www.researchgate.net/publication/301951431_Modelling_OWL_Ontologies_with_Graffoo[graffoo visual notation]. The diagrams are provided side to side, to aid understanding, with UML fragment on the left constituting the source of the transformation, and the OWL fragment on the right representing the final result of the transformation.
 
-Each transformation rule is accompanied by the formal OWL representation, in Turtle [xref:references.adoc#ref:turtle[turtle]] and RDF/XML syntaxes [xref:references.adoc#ref:rdf-xml-syntax-spec[rdf-xml-syntax-spec]] [xref:references.adoc#ref:rdf1.1-xml-syntax[rdf1.1-xml-syntax]], corresponding to the depicted UML fragment from the preceding figure. RDF/XML is a syntax to express RDF graphs as an XML document. Turtle is a textual syntax for RDF that is compact and resembles a natural text form with abbreviations for common usage patterns and datatypes.
+Each transformation rule is accompanied by the formal OWL representation, in https://www.w3.org/TR/turtle/[Turtle]  and https://www.w3.org/2001/sw/RDFCore/TR/WD-rdf-syntax-grammar-20030117/[RDF/XML syntaxes], corresponding to the depicted UML fragment from the preceding figure. RDF/XML is a syntax to express RDF graphs as an XML document. Turtle is a textual syntax for RDF that is compact and resembles a natural text form with abbreviations for common usage patterns and datatypes.
 
 === UML visual notation
 
-This section provides the main UML elements employed in this document. A detailed description can be consulted in the standard specifications [xref:references.adoc#ref:uml2.5[uml2.5]] and in the UML user guide [xref:references.adoc#ref:uml-userguide[uml-userguide]].
+This section provides the main UML elements employed in this document. A detailed description can be consulted in the standard specifications https://www.omg.org/spec/UML/2.5.1[uml2.5] and in the https://www.amazon.com/Unified-Modeling-Language-User-Guide/dp/0321267974[UML user guide].
 
 
 .UML visual notation for classes and attributes
@@ -59,7 +59,7 @@ image::f3.png[3]
 
 === Graffoo visual notation
 
-This section provides the main Graffoo elements employed in this document. A detailed description can be consulted in the OWL standard specifications [xref:references.adoc#ref:owl2[owl2]] and in the Graffoo user guide [xref:references.adoc#ref:graffoo[graffoo]].
+This section provides the main Graffoo elements employed in this document. A detailed description can be consulted in the OWL standard specifications https://www.w3.org/2012/pdf/REC-owl2-overview-20121211.pdf[owl2] and in the https://www.researchgate.net/publication/301951431_Modelling_OWL_Ontologies_with_Graffoo[graffoo  user guide].
 
 
 .Graffoo visual notation for classes, instances and datatypes
