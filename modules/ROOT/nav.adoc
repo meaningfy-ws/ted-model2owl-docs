@@ -24,9 +24,9 @@
 * xref:transformation/uml2owl-transformation.adoc[Transformation Rules]
 ** xref:transformation/transf-rules1.adoc[Rules for UML Classes and Attributes]
 ** xref:transformation/transf-rules2.adoc[Rules for UML Connectors]
-** xref:transformation/transf-rules3.adoc[Rules for UML Datatypes]
+** xref:transformation/transf-rules3.adoc[Rules for UML Data Types]
 ** xref:transformation/transf-rules4.adoc[Rules for UML Descriptors]
 
 * [.separated]#**References**#
-** xref:uml/definitions.adoc[Definitions]
-** xref:../../../references/references.adoc[Reference Documents]
+* xref:uml/definitions.adoc[Definitions]
+* xref:../../../references/references.adoc[Reference Documents]
