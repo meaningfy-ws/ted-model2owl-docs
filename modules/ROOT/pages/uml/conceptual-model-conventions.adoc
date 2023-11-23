@@ -10,7 +10,7 @@ The current set of UML Model Conventions are meant to guide the semantic enginee
 
 This set of guidelines is aligned with the SEMIC style guide [xref:references.adoc#ref:semic-style-guide[semic-style-guide]] and constitutes an extension and further elaboration of it.
 
-The guidelines provided here are either of general or technical nature. They are formulated so, as to be not only easily understandable by the semantic engineer, but also to allow the implementation of automatic model checkers (see Section xref:checkers/model2owl-checkers.adoc[]]) as well as the definition of precise transformation rules that can be implemented in tools to automatically generate the semantic derivate artefacts (see Section xref:transformation/uml2owl-transformation.adoc[]]).
+The guidelines provided here are either of general or technical nature. They are formulated so, as to be not only easily understandable by the semantic engineer, but also to allow the implementation of automatic model checkers (see Section xref:checkers/model2owl-checkers.adoc[]]) as well as the definition of precise transformation rules that can be implemented in tools to generate the derived semantic artefacts automatically  (see Section xref:transformation/uml2owl-transformation.adoc[]).
 
 We organized the conventions into subsections covering:
 
