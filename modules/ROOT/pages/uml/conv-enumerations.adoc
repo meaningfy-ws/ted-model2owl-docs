@@ -33,4 +33,3 @@ In case no attribute alias is specified then the attribute name is used as prefe
 
 It is possible to employ the enumerations for class properties by drawing a dependency (uml:Dependency) relation from the class to the enumeration and provide a relation target role. However, the enumeration should not connect to other elements.
 
-include::partial$feedback.adoc[]

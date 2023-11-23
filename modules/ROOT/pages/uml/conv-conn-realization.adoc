@@ -71,4 +71,3 @@ For objects defined in external models proxy uml:Object elements should be defin
 
 In case an object that is to be used in this model is defined in an external model a proxy uml:Object element should be created so that we can connect it to classes in our model. For example, if we want to refer to the `time:unitMonth` instance of the class `time:TemporalUnit`, then a proxy for `time:unitMonth` individual (and in this case also of the class `time:TemporalUnit`) must be created (ideally in a dedicated `time` package).
 
-include::partial$feedback.adoc[]

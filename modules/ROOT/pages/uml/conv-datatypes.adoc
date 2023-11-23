@@ -115,4 +115,3 @@ uml:DataType elements shall not connect to other elements. They can only be refe
 
 There should be no outgoing connector from a uml:DataType element. uml:DataType elements should only be referred to, most commonly, by being used as the type of a uml:Attribute element. Declarations of uml:DataType elements that are not referred to should be avoided in order to keep the model lean and clean.
 
-include::partial$feedback.adoc[]

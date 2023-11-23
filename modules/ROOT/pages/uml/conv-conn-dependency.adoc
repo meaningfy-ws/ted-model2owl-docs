@@ -55,4 +55,3 @@ The multiplicity must be specified at the target of the uml:Dependency connector
 
 In the transformation process, for the reasoning purposes, the range of the property must be expressed as a range restriction using `owl:oneOf` the values from the enumeration Concept scheme. This is also valuable for generating SHACL shapes.
 
-include::partial$feedback.adoc[]

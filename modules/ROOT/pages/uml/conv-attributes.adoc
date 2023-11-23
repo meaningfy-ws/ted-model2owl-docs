@@ -84,4 +84,3 @@ It is mandatory to avoid using the same name in an attribute and in a relation, 
 
 The definition and datatype (and in most cases also the multiplicity) of the attribute should be the same in all classes where it is reused.
 
-include::partial$feedback.adoc[]

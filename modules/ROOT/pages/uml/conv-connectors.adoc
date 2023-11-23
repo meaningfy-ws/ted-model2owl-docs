@@ -147,4 +147,3 @@ The definition of the connector (and its role) should be the same in all occurre
 
 See also generic conventions about also xref:uml/conv-general.adoc#rule:gen-names-unique[Uniqueness and reuse of names] and xref:uml/conv-general.adoc#rule:gen-relation-reuse[Reuse of relations].
 
-include::partial$feedback.adoc[]

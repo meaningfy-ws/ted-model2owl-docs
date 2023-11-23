@@ -521,4 +521,3 @@ When providing additional information to an element (classes, enumerations, data
 
 *Note:* Tags should not be used as the sole (or primary) source of concept identifier generation, i.e. every UML element that has tags attached, should, in the first place, have a proper name provided, according to the conventions in the [xref:sec:names[]] section.
 
-include::partial$feedback.adoc[]

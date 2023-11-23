@@ -39,5 +39,3 @@ uml:Object element shall have no outgoing connectors, except uml:Realization con
 Each Object should instantiate a Class or an Enumeration. Therefore, there shall be at least one uml:Realization relationship between the Object and a Class or Enumeration.
 
 Except these realisation connectors, an Object should not connect to any other elements. An Object stands for a specific instance of a class and/or an element of a controlled list, and can only be referred to.
-
-include::partial$feedback.adoc[]
