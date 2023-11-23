@@ -19,6 +19,8 @@ We organized the conventions into subsections covering:
 * general conventions on UML connectors
 * conventions specific to particular UML connector types (Associations, Dependencies, Generalisations, Realisations)
 
+include::conv-general.adoc[]
+
 include::conv-attributes.adoc[]
 
 include::conv-attributes.adoc[]
@@ -38,8 +40,6 @@ include::conv-connectors.adoc[]
 include::conv-datatypes.adoc[]
 
 include::conv-enumerations.adoc[]
-
-include::conv-general.adoc[]
 
 include::conv-objects.adoc[]
 
