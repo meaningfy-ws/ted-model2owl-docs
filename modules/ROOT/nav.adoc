@@ -2,7 +2,7 @@
 * xref:business.adoc[Business information]
 * xref:technical.adoc[Technical Information]
 
-#* [.separated]#**UML Conventions**#
+* [.separated]#**UML Conventions**#
 * xref:uml/conceptual-model-conventions.adoc[UML Model Conventions]
 ** xref:uml/conv-general.adoc[General Conventions]
 ** xref:uml/conv-classes.adoc[Classes]
@@ -17,16 +17,16 @@
 ** xref:uml/conv-objects.adoc[Objects]
 ** xref:uml/conv-packages.adoc[Packages]
 
-#* [.separated]#**Checkers (Validation)**#
+* [.separated]#**Checkers (Validation)**#
 * xref:checkers/model2owl-checkers.adoc[UML convention checking rules]
 
-#* [.separated]#**Transformation**#
+* [.separated]#**Transformation**#
 * xref:transformation/uml2owl-transformation.adoc[Transformation Rules]
 ** xref:transformation/transf-rules1.adoc[Rules for UML Classes and Attributes]
 ** xref:transformation/transf-rules2.adoc[Rules for UML Connectors]
 ** xref:transformation/transf-rules3.adoc[Rules for UML Datatypes]
 ** xref:transformation/transf-rules4.adoc[Rules for UML Descriptors]
 
-#* [.separated]#**References**#
+* [.separated]#**References**#
 * xref:uml/definitions.adoc[Definitions]
 * xref:../../../references/references.adoc[Reference Documents]
