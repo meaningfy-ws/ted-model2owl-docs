@@ -48,7 +48,6 @@ include::conv-packages.adoc[]
 //include::definitions.adoc[]
 
 
-
 [[sec:keywords]]
 == Key words for Requirement Statements
 
