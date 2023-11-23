@@ -28,5 +28,5 @@
 ** xref:transformation/transf-rules4.adoc[Rules for UML Descriptors]
 
 * [.separated]#**References**#
-* xref:uml/definitions.adoc[Definitions]
-* xref:../../../references/references.adoc[Reference Documents]
+** xref:uml/definitions.adoc[Definitions]
+** xref:../../../references/references.adoc[Reference Documents]
