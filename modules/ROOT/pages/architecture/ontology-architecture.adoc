@@ -1,4 +1,4 @@
 = eProcurement ontology architecture and formalisation specifications
 
-include::ePO_Arch_Design.adoc[]
+include::../ePO_Arch_Design.adoc[]
 

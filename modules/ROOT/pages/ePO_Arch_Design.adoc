@@ -222,7 +222,7 @@ The process starts with authoring two documents laying the foundations of the en
 
 The main purpose of the ontology architecture specifications (this document) is to describe why the ontology is being built, what its intended uses are, who the end-users are, and which requirements the ontology should fulfil. Moreover, it states how the ontology should be structured in order to facilitate maintenance and usage patterns.
 
-image:ArchFig2.png[]
+image:../ArchFig2.png[]
 
 .Figure 2: Creation of the specifications documents and the UML transformation scripts
 
