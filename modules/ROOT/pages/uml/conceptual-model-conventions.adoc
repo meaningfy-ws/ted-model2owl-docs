@@ -8,7 +8,7 @@ This part of the *model2owl* project documentation describes _the conventions th
 
 The current set of UML Model Conventions are meant to guide the semantic engineers and ontology editors on producing consistent, uniform and uniquely interpretable conceptual models. Also, it is meant to help the readers of the conceptual models to interpret the meaning and eliminate any ambiguities. Finally, the conventions are fit for implementation.
 
-This set of guidelines is aligned with the SEMIC style guide [xref:references.adoc#ref:semic-style-guide[semic-style-guide]] and constitutes an extension and further elaboration of it.
+This set of guidelines is aligned with the https://joinup.ec.europa.eu/collection/semic-support-centre/news/release-semic-style-guide#:~:text=The%20SEMIC%20Style%20Guide%20is%20a%20document%20that,expert%20advice%20on%20semantic%20interoperability%20for%20public%20administrations[SEMIC style guide] and constitutes an extension and further elaboration of it.
 
 The guidelines provided here are either of general or technical nature. They are formulated so, as to be not only easily understandable by the semantic engineer, but also to allow the implementation of automatic model checkers (see Section xref:checkers/model2owl-checkers.adoc[]]) as well as the definition of precise transformation rules that can be implemented in tools to generate the derived semantic artefacts automatically  (see Section xref:transformation/uml2owl-transformation.adoc[]).
 

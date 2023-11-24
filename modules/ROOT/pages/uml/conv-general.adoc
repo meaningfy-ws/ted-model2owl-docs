@@ -135,7 +135,7 @@ Clear and plain language shall be used; and abbreviations, unpronounceable, easi
 
 *Description:*
 
-It is recommended to avoid abbreviations in concept names. Also, the words employed in the metamodel such as "class", "property", "attribute", "connector" etc. should be avoided as well. Names that are nonsensical, unpronounceable, hard to read, or easily confusable with other names should not be employed https://www.researchgate.net/publication/319395252_Extensible_Markup_Language_XML_10_Fifth_Edition?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6Il9kaXJlY3QiLCJwYWdlIjoiX2RpcmVjdCJ9fQ[Bray et al, 2008].
+It is recommended to avoid abbreviations in concept names. Also, the words employed in the metamodel such as "class", "property", "attribute", "connector" etc. should be avoided as well. Names that are nonsensical, unpronounceable, hard to read, or easily confusable with other names should not be employed https://www.researchgate.net/publication/319395252_Extensible_Markup_Language_XML_10_Fifth_Edition?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6Il9kaXJlY3QiLCJwYWdlIjoiX2RpcmVjdCJ9fQ[(Bray et al, 2008)].
 
 
 // [[sec:casing]]
@@ -178,7 +178,7 @@ Names containing multiple words shall use _camelCase_ or _PascalCase_ as word de
 
 *Description:*
 
-In UML, the spaces in names are allowed and using them may be the most intuitive solution for many ontology developers. It is however, important to consider other systems with which your system may interact. If those systems do not use spaces or if your presentation medium does not handle spaces well, it can be useful to use another method https://protege.stanford.edu/publications/ontology_development/ontology101.pdf[Noy et al, 2001].
+In UML, the spaces in names are allowed and using them may be the most intuitive solution for many ontology developers. It is however, important to consider other systems with which your system may interact. If those systems do not use spaces or if your presentation medium does not handle spaces well, it can be useful to use another method https://protege.stanford.edu/publications/ontology_development/ontology101.pdf[(Noy et al, 2001)].
 
 It is recommended that the element names avoid using spaces and instead follow a camel-case convention. _CamelCasing_ is the practice of writing phrases such that the word or abbreviation in the middle of the phrase begins with a capital case.
 
@@ -263,11 +263,11 @@ Attributes and connector names shall contain a verb. Apply certain, well establi
 
 *Description:*
 
-Some ontology engineering methodologies suggest using prefix and suffix conventions in the names to distinguish between classes and attributes. Two common practices are to add a "has-" prefix or a "-of" suffix to attribute names. Thus, our attributes become "hasAwardStatus" and ”hasBuyer” if we chose the "has-" convention. The attributes become "awardStatusOf" and "buyerOf" if we chose the "-of" convention. This approach allows anyone looking at a term to determine immediately if the term is a class or an attribute. However, the term names become slightly longer https://protege.stanford.edu/publications/ontology_development/ontology101.pdf[Noy et al, 2001].
+Some ontology engineering methodologies suggest using prefix and suffix conventions in the names to distinguish between classes and attributes. Two common practices are to add a "has-" prefix or a "-of" suffix to attribute names. Thus, our attributes become "hasAwardStatus" and ”hasBuyer” if we chose the "has-" convention. The attributes become "awardStatusOf" and "buyerOf" if we chose the "-of" convention. This approach allows anyone looking at a term to determine immediately if the term is a class or an attribute. However, the term names become slightly longer https://protege.stanford.edu/publications/ontology_development/ontology101.pdf[(Noy et al, 2001)].
 
 We recommend that the names of class attributes employ the "has-" suffix. For boolean properties we recommend the use of the "is-" prefix.
 
-Other common suffixes are the prepositions "-by" and "-to". The organisation ontology [xref:references.adoc#ref:org-ontology[org-ontology]] exemplifies their usage in cases such as "embodiedBy" and "conformsTo". However, if the preposition can be avoided, https://joinup.ec.europa.eu/sites/default/files/document/2012-03/D3.1-Process%20and%20Methodology%20for%20Core%20Vocabularies_v1.01.pdf[then do so].
+Other common suffixes are the prepositions "-by" and "-to". The organisation ontology [xref:references.adoc#ref:org-ontology[org-ontology]] exemplifies their usage in cases such as "embodiedBy" and "conformsTo". However, if the preposition can be avoided as per the IsA project's "https://joinup.ec.europa.eu/sites/default/files/document/2012-03/D3.1-Process%20and%20Methodology%20for%20Core%20Vocabularies_v1.01.pdf[Process and Methodology for Core Vocabularies]" document, then do so.
 
 It is recommended to use prepositions in the ontology terms only if necessary (CN: I would say: every time when it makes the meaning more clear)
 
