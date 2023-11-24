@@ -18,9 +18,9 @@ Relations are to be expressed through UML Connectors. It is recommended to use a
 
 *Description:*
 
-When establishing relations between concepts it is conventional to use verbs of action, state, process or relation, such as "includes", "replaces", "manages". It is required to use a verb or a verb phrase for relationship terms. It should be in _lowerCamelCase_ such that latexmath:[$<subject-predicate-object>$] triples may actually be read as natural language clauses, e.g. "EconomicOperator offers ProcuredItem" [xref:references.adoc#ref:d2.01-2017[d2.01-2017]].
+When establishing relations between concepts it is conventional to use verbs of action, state, process or relation, such as "includes", "replaces", "manages". It is required to use a verb or a verb phrase for relationship terms. It should be in _lowerCamelCase_ such that latexmath:[$<subject-predicate-object>$] triples may actually be read as https://joinup.ec.europa.eu/sites/default/files/document/2017-08/d02.01_specification_of_the_process_and_methodology_v1.00.pdf[natural language clauses], e.g. "EconomicOperator offers ProcuredItem".
 
-The verb phrase must be in present tense, and, if needed, inflected for third person singular. If an additional level of specificity is needed a qualifying nominal phrase may be appended.
+The verb phrase must be in present tense, and, if needed, inflected for third-person singular. If an additional level of specificity is needed a qualifying nominal phrase may be appended.
 
 The relation names should be provided as target, and in case of bidirectional association relations also source, role names. For more details on this, see convention about [xref:rule:connectors-name[UML Connector names]].
 
@@ -38,7 +38,7 @@ Relationships are usually bidirectional, and the name for both directions should
 
 *Description:*
 
-Relationships are usually bidirectional, and the names of the relations in both directions should be provided, where it makes sense from the modeling point of view. Adjust the verb phrases in the predicates as appropriate. Usually, by employing the _active and passive voice_ in the term formulation brings the desired result. For example, "uses/isUsedBy" and "refersTo/isReferredToBy" or "offers/isOfferedBy" [xref:references.adoc#ref:d2.01-2017[d2.01-2017]].
+Relationships are usually bidirectional, and the names of the relations in both directions should be provided, where it makes sense from the modeling point of view. Adjust the verb phrases in the predicates as appropriate. Usually, by employing the _active and passive voice_ in the term formulation brings https://joinup.ec.europa.eu/sites/default/files/document/2017-08/d02.01_specification_of_the_process_and_methodology_v1.00.pdf[the desired result]. For example, "uses/isUsedBy" and "refersTo/isReferredToBy" or "offers/isOfferedBy".
 
 
 [[rule:connectors-inverse]]
@@ -57,7 +57,7 @@ Semantically inverse relationships should be represented as two distinct UML con
 
 The name of the inverse relation should not be semantically inverted verb, such as in case of "buys/sells" , "open/closes". The semantically inverted dichotomies must be modelled in separate connectors because they represent different relations. For example the dichotomy "buys/sells" should be modelled as two pairs: "buys/isBoughtBy" and "sells/isSoldBy".
 
-When the relation is of different nature, more like an attribute, then prefixing and suffixing techniques can be employed. For example, in the Organization Ontology [xref:references.adoc#ref:org-ontology[org-ontology]], the concepts of an "Organization" and a "Site" are defined along with two relationships that are the inverse of each other: "Organisation hasSite Site" and "Site siteOf Organisation" [xref:references.adoc#ref:d3.1-2015[d3.1-2015]].
+When the relation is of different nature, more like an attribute, then prefixing and suffixing techniques can be employed. For example, in the https://www.w3.org/TR/vocab-org/[Organization Ontology], the concepts of an "Organization" and a "Site" are defined along with two relationships that are the inverse of each other: "Organisation hasSite Site" and "Site siteOf Organisation" https://joinup.ec.europa.eu/sites/default/files/document/2012-03/D3.1-Process%20and%20Methodology%20for%20Core%20Vocabularies_v1.01.pdf[(Process and Methodoloy for Core Vocabularies)].
 
 
 [[rule:connectors-inverse-definition]]
@@ -76,7 +76,7 @@ It is recommended that the definition of both the relation and its inverse relat
 
 It is recommended that each relationship includes a definition of its inverse.
 
-Models should define such inverse pairs for relationships although this does not extend to attributes. For example, Dublin Core [xref:references.adoc#ref:dublin-core-metadata[dublin-core-metadata]] includes a property of "dateAccepted", there is no inverse property that would link a given date, which is expressed as a simple value, to all the documents accepted for publication on that date.
+Models should define such inverse pairs for relationships although this does not extend to attributes. For example, https://datatracker.ietf.org/doc/rfc5013/[Dublin Core] includes a property of "dateAccepted", there is no inverse property that would link a given date, which is expressed as a simple value, to all the documents accepted for publication on that date.
 
 
 [[sec:connectors]]

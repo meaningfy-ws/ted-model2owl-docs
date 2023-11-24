@@ -15,7 +15,7 @@ Packages should be used to define a logical partition of the model.
 
 *Description:*
 
-Packages should be used to define a logical partition of the model. They serve as the primary method for the vertical slicing of the conceptual model as described in the layering and slicing section of [xref:references.adoc#ref:costetchi2020a[costetchi2020a]].
+Packages should be used to define a logical partition of the model. They serve as the primary method for the vertical slicing of the conceptual model as described in the layering and slicing section of xref:architecture/ontology-architecture.adoc[eProcurement Ontology Architecture and Formalisation Specifications].
 
 *See also:* SEMIC Style Guide Rule [https://semiceu.github.io/style-guide/1.0.0/gc-conceptual-model-conventions.html#sec:cmc-r15[CMC-R15]]
 

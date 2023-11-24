@@ -34,7 +34,7 @@ Class names shall be formulated in singular.
 
 *Description:*
 
-A class name represents a collection of objects. For example, a class "Language" actually represents all languages. Therefore, it could be more natural for some model designers to call the class "Languages" rather than "Language". In practice, however, the singular is used more often for class names, while the plural for sets and collections [xref:references.adoc#ref:noy2001[noy2001]]. Therefore, it is required that the class names must always use the singular lexical form.
+A class name represents a collection of objects. For example, a class "Language" actually represents all languages. Therefore, it could be more natural for some model designers to call the class "Languages" rather than "Language". In practice, however, the singular is used more often for class names, while the plural for https://protege.stanford.edu/publications/ontology_development/ontology101.pdf[sets and collections]. Therefore, it is required that the class names must always use the singular lexical form.
 
 
 [[rule:class-name-capitalise]
@@ -68,7 +68,7 @@ Classes in a subclass hierarchy should be named consistently.
 
 *Description:*
 
-When building the class hierarchy, names of direct subclasses of a class should consistently either all include or not include the name of the superclass. For example, if we create two subclasses of `Wine` to represent red and white wines, then the two subclass names should be either `Red Wine` and `White Wine` or `Red` and `White`, but not `Red Wine` and `White` [xref:references.adoc#ref:noy2001[noy2001]].
+When building the class hierarchy, names of direct subclasses of a class should consistently either https://protege.stanford.edu/publications/ontology_development/ontology101.pdf[all include or not include] the name of the superclass. For example, if we create two subclasses of `Wine` to represent red and white wines, then the two subclass names should be either `Red Wine` and `White Wine` or `Red` and `White`, but not `Red Wine` and `White` .
 
 [[rule:class-single-subclass]]
 |===
@@ -171,6 +171,6 @@ A uml:Class may use the `\<<abstract>>` stereotype to signal that the class is n
 
 *Description:*
 
-Classes may use the _\<<abstract>> stereotype_. It means that no instances are allowed of this class in the datasets. This is not covered by the OWL 2 [xref:references.adoc#ref:owl2[owl2]] but can be expressed in SHACL data shapes [xref:references.adoc#ref:shacl-spec[shacl-spec]].
+Classes may use the _\<<abstract>> stereotype_. It means that no instances are allowed of this class in the datasets. This is not covered by the https://www.w3.org/2012/pdf/REC-owl2-overview-20121211.pdf[OWL 2] but can be expressed in https://www.w3.org/TR/shacl/[SHACL data shapes].
 
 
