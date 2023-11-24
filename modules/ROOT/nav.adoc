@@ -30,6 +30,8 @@
 ** xref:transformation/transf-rules3.adoc[Rules for UML Data Types]
 ** xref:transformation/transf-rules4.adoc[Rules for UML Descriptors]
 
+////
 * [.separated]#**References**#
 * xref:uml/definitions.adoc[Definitions]
-//* xref:../../../references/references.adoc[Reference Documents]
+* xref:../../../references/references.adoc[Reference Documents]
+////

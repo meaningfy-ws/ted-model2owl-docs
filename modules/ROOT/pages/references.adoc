@@ -276,7 +276,7 @@ Reiter, Raymond. 1981. “On Closed World Data Bases.” In _Readings in Artific
 Rescorla, Eric, Richard Barnes, and Stephen Kent. 2013. “[.nocase]#Further Key Words for Use in RFCs to Indicate Requirement Levels#.” Request for Comments. RFC 6919; RFC Editor. https://doi.org/10.17487/RFC6919.
 
 [[ref-org-ontology]]
-Reynolds, Dave. 2014. “The Organization Ontology.” \{W3C} Recommendation. W3C.
+ \{W3C} Recommendation. W3C.
 
 [[ref-sadowska2019]]
 Sadowska, Malgorzata, and Zbigniew Huzar. 2019. “Representation of UML Class Diagrams in OWL 2 on the Background of Domain Ontologies.” _E-Informatica_ 13 (1): 63–103.
