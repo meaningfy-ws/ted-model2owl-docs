@@ -1,6 +1,6 @@
 * xref:index.adoc[Home]
-* xref:business.adoc[Business information]
-* xref:technical.adoc[Technical Information]
+* xref:business.adoc[Functional Overview]
+* xref:technical.adoc[Technical Overview]
 
 * [.separated]#**UML Conventions**#
 * xref:uml/conceptual-model-conventions.adoc[UML Model Conventions]
