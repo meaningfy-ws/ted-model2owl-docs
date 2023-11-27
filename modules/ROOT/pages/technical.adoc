@@ -2,9 +2,9 @@
 
 === Technical Overview
 
-The https://github.com/OP-TED/model2owl/[*model2owl*] project comprises a set of tools for transforming a UML (v2.5) model from its XMI (v2.5.1) serialisation into a formal OWL ontology, and a SHACL shape. This approach conforms to the https://semiceu.github.io/style-guide/1.0.0/index.html[SEMIC Style Guide] and the https://github.com/meaningfy-ws/model2owl/blob/master/doc/ontology-architecture/ontology-architecture.pdf[eProcurement Ontology Architecture specification].
+The https://github.com/OP-TED/model2owl/[*model2owl*] project comprises a set of tools for transforming a https://www.omg.org/spec/UML/2.5.1/About-UML[UML (v2.5)] model from its https://www.omg.org/spec/XMI/2.5.1[XMI (v2.5.1)] serialisation into a formal https://www.w3.org/OWL/[OWL ontology], and a https://www.w3.org/TR/shacl/[SHACL shape]. This approach conforms to the https://semiceu.github.io/style-guide/1.0.0/index.html[SEMIC Style Guide] and the https://github.com/meaningfy-ws/model2owl/blob/master/doc/ontology-architecture/ontology-architecture.pdf[eProcurement Ontology Architecture specification].
 
-The UML transformation is performed using XSLT stylesheets and assumes that the UML model conforms to the set of conventions outlined in the https://meaningfy-ws.github.io/model2owl-docs/public-review/uml/conceptual-model-conventions.html[ePO UML conventions specification]. This set of UML conventions is aligned with, and extends, the UML conventions specified in https://semiceu.github.io/style-guide/1.0.0/index.html[SEMIC Style Guide].
+The UML transformation is performed using https://www.w3.org/TR/xslt-30/[XSLT stylesheets] and assumes that the UML model conforms to the set of conventions outlined in the https://meaningfy-ws.github.io/model2owl-docs/public-review/uml/conceptual-model-conventions.html[ePO UML conventions specification]. This set of UML conventions is aligned with, and extends, the UML conventions specified in https://semiceu.github.io/style-guide/1.0.0/index.html[SEMIC Style Guide].
 
 The following artifacts are produced from the  UML in the process:
 
@@ -17,7 +17,7 @@ The following artifacts are produced from the  UML in the process:
 The documentation (regularly updated) aims to cover the most important aspects when using these tools, including:
 
 * The architectural setup of the project and the ontology
-* The conceptual model conventions that the UML model should adhere to to generate the best possible results.
+* The conceptual model conventions to which the UML model should adhere to generate the best possible results.
 * The transformation rules applied in the process of conversion.
 * The set of validation rules that realise the established conventions (and UML interpretations).
 
