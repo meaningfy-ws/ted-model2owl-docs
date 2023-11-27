@@ -4,9 +4,8 @@
 
 == Overview
 
+The creation of the  https://docs.ted.europa.eu/epo-home/ePO_Arch_Design.html[eProcurement Ontology] requires collaborative discussions and consensus among various experts in the procurement domain to develop a conceptual model. Conversely, the tangible outcomes of the eProcurement Ontology, comprising an OWL-expressed ontology, a series of SHACL shapes, and a glossary, have traditionally been crafted by semantic web specialists.
 
-
-The model2owl pipeline transforms the UML diagram created by business stakeholders into OWL (core and restriction) files and shacl files used by machines.
 
 ////
 In the https://docs.ted.europa.eu/epo-home/ePO_Arch_Design.html[planning and development] of the eProcurement Ontology Project, it was decided to represent the conceptual model in https://www.amazon.com/Unified-Modeling-Language-User-Guide/dp/0321267974[Unified Modelling Language (UML)]. UML is a language that represents concepts visually, thereby facilitating understanding and a common conceptualisation of the model amongst stakeholders.
@@ -15,15 +14,19 @@ In the https://docs.ted.europa.eu/epo-home/ePO_Arch_Design.html[planning and dev
 UML is closer to the programming languages in which enterprise applications are implemented than other more logic-oriented approaches, and generally, the primary application of UML for ontology design is in the development of class diagrams for object-oriented software (for more information, see https://www.amazon.com/UML-Distilled-Standard-Modeling-Language/dp/0321193687[here]).
 ////
 
-However, UML does not necessarily define formal semantics as consistently or accurately as required to support the implementation of an ontology from class diagrams. Semantics, therefore, may become subject to interpretation by both stakeholders involved in the development process, and by users performing application and integration tasks (for more information, see https://link.springer.com/chapter/10.1007/978-3-540-24744-9_14[here]).
+To streamline the development of these artifacts and allow broader public interaction and discussion, we have opted for an intermediary representation: UML. UML allows this as it holds widespread recognition and is comprehensible to a broader audience. Additionally, tools exist that facilitate the generation of diagrams, enabling detailed discussions on top of visual representations.
+
+////
+UML, however, does not necessarily define formal semantics as consistently or accurately as required to support the implementation of an ontology from class diagrams. Semantics, therefore, may become subject to interpretation by both stakeholders involved in the development process, and by users performing application and integration tasks (for more information, see https://link.springer.com/chapter/10.1007/978-3-540-24744-9_14[here]).
+////
+
+The *model2OWL* was therefore developed, a tool that adheres to https://semiceu.github.io/style-guide/1.0.0/index.html[semantic conventions], and that enables operation within a unified UML model. This model serves as the singular source of truth, and through automated processes, essential artifacts such as a glossary, OWL ontology, and SHACL shapes (the machine-readable artifacts) can be generated. Embracing a singular source of truth and automating artifact generation significantly reduces the administrative overhead in each development cycle.
 
 #insert some examples: contract conclusion/ different country rules/ adherance to legislation etc#
 
-To ensure consistency in terms and meaning, and produce unambiguous machine-readable OWL (core and restriction) files and shacl files, the model2owl pipeline does the following:
+To generating machine-readable OWL (core and restriction) files and shacl shapes, the model2owl tool does the following:
 
-It takes the human-readable input in UML form, and in an automated conversion process, applies a set of modelling conventions, transformation rules, and methods of verification to it. The output, in the form of a machine-readable specification, is then clear and exact in definition, and can be used for classification or specification by disparate organisations that for reason of e.g., language, legal, or other internal differences, initially may have had different interpretations of concepts.
-
-With these inconsistencies corrected or eliminated, they can then communicate with a common and accurate ontology.
+It takes the human-readable input in UML form, and in an automated conversion process, applies to it a set of modelling conventions, transformation rules, and methods of verification. The output, in the form of a machine-readable specification, is then clear and exact in definition, and can be used for classification or specification by disparate organisations that for reason of e.g., language, legal, or other internal differences, initially may have had different interpretations of concepts. This ensures a common and accurate ontology.
 
 == model2owl in an eProcurement context
 
@@ -31,8 +34,9 @@ In the context of eProcurement, this documentation provides a working specificat
 
 The UML Conceptual Model of the eProcurement domain provides the source from which the formal eProcurement ontology is derived through a model transformation process. The model2owl process automates the generation of the formal ontology in https://www.w3.org/TR/2014/REC-rdf-schema-20140225/[RDF format], from the http://www.omg.org/spec/XMI/2.5.1[XMI (v.2.5.1) serialisation] of the data, provided that xref:transformation/uml2owl-transformation.adoc[a set of clear transformation rules] is established, and xref:uml/conceptual-model-conventions.adoc[a set of modelling conventions] is respected.
 
-This documentation also provides the UML modelling constraints and a set of conventional and technical recommendations for naming and structuring the UML class diagram elements. These elements are packages, classes, data types, enumerations, enumeration items, class attributes, association relations and dependency relations. More contextual information is provided in the subsections of the xref::uml/conceptual-model-conventions.adoc[UML conventions specification].
+This documentation also describes the UML modelling constraints and a set of conventional and technical recommendations for naming and structuring the UML class diagram elements. These elements are packages, classes, data types, enumerations, enumeration items, class attributes, association relations and dependency relations. More contextual information is provided in the subsections of the xref::uml/conceptual-model-conventions.adoc[UML conventions specification].
 
+////
 [[sec:requirements]]
 === eProcurement conceptual model requirements
 
@@ -58,5 +62,6 @@ To support these objectives, a conceptual model should fulfil the following requ
 //The links here provide more information for both  xref:business.adoc[business] and xref:technical.adoc[technical] users.
 
 Information on the eProcurement ontology architecture, UML conventions, transfer rules and checkers (validators) can be accessed from the links in the left-hand menu.
+////
 
 #what about github resources?#
