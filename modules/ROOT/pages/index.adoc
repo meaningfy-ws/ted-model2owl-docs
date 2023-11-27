@@ -20,7 +20,7 @@ To streamline the development of these artifacts and allow broader public intera
 UML, however, does not necessarily define formal semantics as consistently or accurately as required to support the implementation of an ontology from class diagrams. Semantics, therefore, may become subject to interpretation by both stakeholders involved in the development process, and by users performing application and integration tasks (for more information, see https://link.springer.com/chapter/10.1007/978-3-540-24744-9_14[here]).
 ////
 
-The *model2OWL* was therefore developed, a tool that adheres to https://semiceu.github.io/style-guide/1.0.0/index.html[semantic conventions], and that enables operation within a unified UML model. This model serves as the singular source of truth, and through automated processes, essential artifacts such as a glossary, OWL ontology, and SHACL shapes (the machine-readable artifacts) can be generated. Embracing a singular source of truth and automating artifact generation significantly reduces the administrative overhead in each development cycle.
+The *model2OWL* was therefore developed, a tool that adheres to https://semiceu.github.io/style-guide/1.0.0/index.html[semantic conventions], and that enables operation within a unified UML model. This model serves as the singular source of truth, and through automated processes, essential artifacts such as a glossary, OWL ontology, and SHACL shapes  can be generated. Embracing a single source of truth, and automating artifact generation, significantly reduces the administrative overhead in each development cycle.
 
 #insert some examples: contract conclusion/ different country rules/ adherance to legislation etc#
 
