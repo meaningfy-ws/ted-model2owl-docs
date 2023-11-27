@@ -22,7 +22,7 @@ UML, however, does not necessarily define formal semantics as consistently or ac
 
 The *model2OWL* was therefore developed, a tool that adheres to https://semiceu.github.io/style-guide/1.0.0/index.html[semantic conventions], and that enables operation within a unified UML model. This model serves as the singular source of truth, and through automated processes, essential artifacts such as a glossary, OWL ontology, and SHACL shapes  can be generated. Embracing a single source of truth, and automating artifact generation, significantly reduces the administrative overhead in each development cycle.
 
-#insert some examples: contract conclusion/ different country rules/ adherance to legislation etc#
+#insert some examples: contract conclusion/ different country rules/ adherence to legislation etc#
 
 To generating machine-readable OWL (core and restriction) files and shacl shapes, the model2owl tool does the following:
 
