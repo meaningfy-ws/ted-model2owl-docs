@@ -1,6 +1,6 @@
-= Technical Overview:
+= Technical Overview
 
-=== Technical Overview
+
 
 The https://github.com/OP-TED/model2owl/[*model2owl*] project comprises a set of tools for transforming a https://www.omg.org/spec/UML/2.5.1/About-UML[UML (v2.5)] model from its https://www.omg.org/spec/XMI/2.5.1[XMI (v2.5.1)] serialisation into a formal https://www.w3.org/OWL/[OWL ontology], and a https://www.w3.org/TR/shacl/[SHACL shape]. This approach conforms to the https://semiceu.github.io/style-guide/1.0.0/index.html[SEMIC Style Guide] and the https://github.com/meaningfy-ws/model2owl/blob/master/doc/ontology-architecture/ontology-architecture.pdf[eProcurement Ontology Architecture specification].
 
@@ -27,10 +27,6 @@ The tools can be used on any other ontology that is built according to the provi
 
 This specification establishes conventions for the interpretation of the UML-based conceptual model in the eProcurement context.
 
-
-
-#how it works, technical overview#
-
 === Components
 
 * The *specifications* can be found in the xref:architecture/ontology-architecture.adoc[eProcurement ontology architecture and formalisation specifications] document.
@@ -41,6 +37,7 @@ This specification establishes conventions for the interpretation of the UML-bas
 
 * A list  with descriptions of the checkers, used for xref:checkers/model2owl-checkers.adoc[verification], can be found via this link.
 
+#insert technical process graphic#
 ////
 === Performing transformations
 
