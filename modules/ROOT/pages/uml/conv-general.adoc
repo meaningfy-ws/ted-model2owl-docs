@@ -4,7 +4,7 @@
 In this section a number of general conventions, of either _conventional_ or _technical_ nature are provided. The topic starts with some general conventions, and then a number of generic areas are covered: naming things, providing appropriate descriptions, and generic recommendations on technical aspects of encoding such information. In each topic, both conventional and technical conventions are covered, as relevant.
 
 [[sec:general-model]]
-=== Generic conventions on the UML Model
+=== Generic conventions of the UML Model
 
 To reduce the complexity of UML models that one can build, and the conversion of those UML models into derivative artefacts (i.e. OWL ontologies and SHACL shapes), we identified a minimal set of UML model components (UML elements and connectors) that are necessary and sufficient to express most ontological statements that might be needed in practice. For this minimal set of UML model components we convened on a xref:transformation/uml2owl-transformation.adoc[well-defined set of transformation rules] to ensure that the generation of derivative artefacts is deterministic and complete. The use of other UML components will be ignored.
 
