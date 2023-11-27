@@ -2,23 +2,19 @@
 
 === Technical Overview
 
-The https://github.com/OP-TED/model2owl/[*model2owl*] project comprises a set of tools for transforming an UML (v2.5) model from its XMI (v2.5.1) serialisation into a formal OWL ontology, and a SHACL shape. This approach conforms to the https://semiceu.github.io/style-guide/1.0.0/index.html[SEMIC Style Guide] and with the https://github.com/meaningfy-ws/model2owl/blob/master/doc/ontology-architecture/ontology-architecture.pdf[eProcurement Ontology Architecture specification].
+The https://github.com/OP-TED/model2owl/[*model2owl*] project comprises a set of tools for transforming a UML (v2.5) model from its XMI (v2.5.1) serialisation into a formal OWL ontology, and a SHACL shape. This approach conforms to the https://semiceu.github.io/style-guide/1.0.0/index.html[SEMIC Style Guide] and the https://github.com/meaningfy-ws/model2owl/blob/master/doc/ontology-architecture/ontology-architecture.pdf[eProcurement Ontology Architecture specification].
 
-The UML transformation is performed using XSLT stylesheets on the assumption that the UML model conforms to the set of conventions outlined in the https://meaningfy-ws.github.io/model2owl-docs/public-review/uml/conceptual-model-conventions.html[ePO UML conventions specification]. This set of UML conventions is aligned with and extends the UML conventions specified in https://semiceu.github.io/style-guide/1.0.0/index.html[SEMIC Style Guide].
+The UML transformation is performed using XSLT stylesheets and assumes that the UML model conforms to the set of conventions outlined in the https://meaningfy-ws.github.io/model2owl-docs/public-review/uml/conceptual-model-conventions.html[ePO UML conventions specification]. This set of UML conventions is aligned with, and extends, the UML conventions specified in https://semiceu.github.io/style-guide/1.0.0/index.html[SEMIC Style Guide].
 
-The following capabilities are implemented:
+The following artifacts are produced from the  UML in the process:
 
-#list of what can be transformed - as below?#
+* A *Compliance Report* (ideal for checking the model against the established conventions)
+* A *Glossary* (ideal for a quick overview of terminology defined)
+* An *OWL 2 lightweight ontology*, suitable as a core vocabulary
+* An *OWL 2 heavyweight ontology*, with additional axioms suitable for reasoning purposes
+* *SHACL data shapes* suitable for representing an application profile
 
-#(do the arrows indicate a transformation or the artifacts produced by a transformation?)#
-
-* UML -> Compliance report (ideal for checking the model against the established conventions)
-* UML -> Glossary (ideal for a quick overview of terminology defined)
-* UML -> OWL 2 (lightweight ontology suitable as a core vocabulary)
-* UML -> OWL 2 (heavyweight ontology with additional axioms suitable for reasoning purposes)
-* UML -> SHACL (data shapes suitable for representing an application profile)
-
-The documentation is constantly reviewed and aims to cover the important aspects when using these tools, including:
+The documentation (regularly updated) aims to cover the most important aspects when using these tools, including:
 
 * The architectural setup of the project and the ontology
 * The conceptual model conventions that the UML model should adhere to to generate the best possible results.
@@ -45,7 +41,7 @@ This specification establishes conventions for the interpretation of the UML-bas
 
 * A list  with descriptions of the checkers, used for xref:checkers/model2owl-checkers.adoc[verification], can be found via this link.
 
-
+////
 === Performing transformations
 
 #getting started#
@@ -57,6 +53,7 @@ This specification establishes conventions for the interpretation of the UML-bas
 #who, why, where of use#
 
 #Instructions: Processes and procedures#
+////
 
 include::partial$feedback.adoc[]
 
