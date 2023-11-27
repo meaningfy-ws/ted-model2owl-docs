@@ -4,7 +4,39 @@ The business context and the project overview are detailed in the xref:ePO_Arch_
 
 #What model2owl does, (business overview)#
 
+In the context of eGovernment digitalisation, the https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2013:175:0001:0008:EN:PDF#:~:text=This%20Directive%20respects%20the%20fundamental,to%20property%20(Article%2017)["once only principle" in EU public administration] on the re-use of public sector information is one of the drivers towards eProcurement, aimed at making public spending more transparent, evidence-oriented, optimised, streamlined and integrated with market conditions. Part of this is the development of an https://docs.ted.europa.eu/EPO/latest/index.html[eProcurement Ontology].
 
+The eProcurement ontology is represented in the  human-readable form of a UML conceptual model. Working with the model in this form allows participation and discussion between various stakeholders, both non-technical and technical:
 
+* Contracting authorities and entities, i.e. buyers, such as public administrations in the EU Member States or EU institutions;
+
+* Economic operators, i.e. suppliers of goods and services such as businesses, entrepreneurs and financial institutions;
+
+* Academia and researchers;
+
+* Media and journalists;
+
+* Auditors and regulators;
+
+* Members of parliaments at regional, national and EU level;
+
+* Standardisation organisations;
+
+* NGOs; and
+
+* Citizens
+
+#insert graphic#
+
+To facilitate the digitisation of eProcurement, a machine-readable form of the conceptual model must be produced: the model needs to be converted/ translated into machine-readable OWL files and Shaql shapes.
+The model2owl tool has been created to perform this function. It uses on a number of xref:technical.adoc[open standards and conventions] in a process that includes strict rules and validation:
+
+* Firstly, the UML must follow certain xref:../pages/uml/conceptual-model-conventions..adoc[conventions]
+* Secondly, xref:transformation/uml2owl-transformation.adoc[transfer rules] must be applied.
+* Thirdly, the resulting output files need to be xref:checkers/model2owl-checkers.adoc[checked and validated].
+
+#graphic of the high-level process#
+
+To understand the technical process in more depth, see the xref:technical.adoc[Technical Overview], as well as the xref:ePO_Arch_Design.adoc[eProcurement Ontology Architecture and Formalisation Specifications].
 
 include::partial$feedback.adoc[]
