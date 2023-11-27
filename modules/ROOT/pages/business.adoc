@@ -1,6 +1,5 @@
 = Functional Overview:
 
-The business context and the project overview are detailed in the xref:ePO_Arch_Design.adoc[eProcurement Ontology Architecture and Formalisation Specifications].
 
 #What model2owl does, (business overview)#
 
@@ -37,6 +36,8 @@ The model2owl tool has been created to perform this function. It uses on a numbe
 
 #graphic of the high-level process#
 
-To understand the technical process in more depth, see the xref:technical.adoc[Technical Overview], as well as the xref:ePO_Arch_Design.adoc[eProcurement Ontology Architecture and Formalisation Specifications].
+To understand the technical process in more depth, see the xref:technical.adoc[Technical Overview].
+
+A more detailed description of the functional and technical overviews can be found in the xref:ePO_Arch_Design.adoc[eProcurement Ontology Architecture and Formalisation Specifications].
 
 include::partial$feedback.adoc[]
