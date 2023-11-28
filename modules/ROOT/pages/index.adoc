@@ -71,3 +71,5 @@ Information on the eProcurement ontology architecture, UML conventions, transfer
 ////
 
 #what about github resources?#
+
+include::partial$feedback.adoc[]
