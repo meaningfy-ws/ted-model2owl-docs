@@ -26,13 +26,15 @@ To streamline the development of these artifacts and allow broader public intera
 UML, however, does not necessarily define formal semantics as consistently or accurately as required to support the implementation of an ontology from class diagrams. Semantics, therefore, may become subject to interpretation by both stakeholders involved in the development process, and by users performing application and integration tasks (for more information, see https://link.springer.com/chapter/10.1007/978-3-540-24744-9_14[here]).
 ////
 
-The *model2OWL* was therefore developed, a tool that adheres to https://semiceu.github.io/style-guide/1.0.0/index.html[semantic conventions], and that enables operation within a unified UML model. This model serves as the singular source of truth, and through automated processes, essential artifacts such as a glossary, OWL ontology, and SHACL shapes  can be generated. Embracing a single source of truth, and automating artifact generation, significantly reduces the administrative overhead in each development cycle.
+The *model2OWL* tool adheres to https://semiceu.github.io/style-guide/1.0.0/index.html[semantic conventions], which enables operation within a unified UML model. This model serves as the singular source of truth, and through automated processes, essential artifacts such as a glossary, OWL ontology, and SHACL shapes  can be generated. Embracing a single source of truth, and automating artifact generation, significantly reduces the administrative overhead in each development cycle.
 
 #insert some examples: contract conclusion/ different country rules/ adherence to legislation etc#
 
 To generating machine-readable OWL (core and restriction) files and shacl shapes, the model2owl tool does the following:
 
-It takes the human-readable input in UML form, and in an automated conversion process, applies to it a set of modelling conventions, transformation rules, and methods of verification. The output, in the form of a machine-readable specification, is then clear and exact in definition, and can be used for classification or specification by disparate organisations that for reason of e.g., language, legal, or other internal differences, initially may have had different interpretations of concepts. This ensures a common and accurate ontology.
+It takes the human-readable input in UML form, and in an automated conversion process, applies sets of modelling conventions, transformation rules, and methods of verification to it.
+
+The output artifacts are defined by the https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-semantic-data-specification)[semic conventions] as a specification, the significance of which is its ability to ensure that all relevant stakeholders generate data that adheres to the agreed model. The data is structured in the form of a graph that follows the https://semiceu.github.io/style-guide/1.0.0/style-guide-whole.html#sec:pc-r1[Linked Data] principles.
 
 == model2owl in an eProcurement context
 
@@ -70,6 +72,6 @@ To support these objectives, a conceptual model should fulfil the following requ
 Information on the eProcurement ontology architecture, UML conventions, transfer rules and checkers (validators) can be accessed from the links in the left-hand menu.
 ////
 
-#what about github resources?#
+//#what about github resources?#
 
 include::partial$feedback.adoc[]
