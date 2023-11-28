@@ -4,20 +4,16 @@
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: November 2023
 
-
-
-
-
 The https://github.com/OP-TED/model2owl/[*model2owl*] project comprises a set of tools for transforming a https://www.omg.org/spec/UML/2.5.1/About-UML[UML (v2.5)] model from its https://www.omg.org/spec/XMI/2.5.1[XMI (v2.5.1)] serialisation into a formal https://www.w3.org/OWL/[OWL ontology], and a https://www.w3.org/TR/shacl/[SHACL shape]. This approach conforms to the https://semiceu.github.io/style-guide/1.0.0/index.html[SEMIC Style Guide] and the https://github.com/meaningfy-ws/model2owl/blob/master/doc/ontology-architecture/ontology-architecture.pdf[eProcurement Ontology Architecture specification].
 
-The UML transformation is performed using https://www.w3.org/TR/xslt-30/[XSLT stylesheets] and assumes that the UML model conforms to the set of conventions outlined in the https://meaningfy-ws.github.io/model2owl-docs/public-review/uml/conceptual-model-conventions.html[ePO UML conventions specification]. This set of UML conventions is aligned with, and extends, the UML conventions specified in https://semiceu.github.io/style-guide/1.0.0/index.html[SEMIC Style Guide].
+The UML transformation is performed using https://www.w3.org/TR/xslt-30/[XSLT stylesheets] and assumes that the UML model conforms to the set of conventions outlined in the https://meaningfy-ws.github.io/model2owl-docs/public-review/uml/conceptual-model-conventions.html[ePO UML conventions specification]. This set of UML conventions is aligned with, and extends, the UML conventions specified in the https://semiceu.github.io/style-guide/1.0.0/index.html[SEMIC Style Guide].
 
 The following artifacts are produced from the  UML in the process:
 
-* A *Compliance Report* (ideal for checking the model against the established conventions)
-* A *Glossary* (ideal for a quick overview of terminology defined)
+* A *Compliance Report* (for checking the model against the established conventions)
+* A *Glossary* (for a quick overview of terminology defined)
 * An *OWL 2 lightweight ontology*, suitable as a core vocabulary
-* An *OWL 2 heavyweight ontology*, with additional axioms suitable for reasoning purposes
+* An *OWL 2 heavyweight ontology* with additional axioms, suitable for reasoning purposes
 * *SHACL data shapes* suitable for representing an application profile
 
 The documentation (regularly updated) aims to cover the most important aspects when using these tools, including:
@@ -29,7 +25,7 @@ The documentation (regularly updated) aims to cover the most important aspects w
 
 This work is developed in the context of https://github.com/eprocurementontology/eprocurementontology[eProcurement ontology project] financed by the Digital Europe Programme and led by the https://op.europa.eu/en/[Publications Office of the European Union].
 
-The tools can be used on any other ontology that is built according to the provided https://github.com/meaningfy-ws/model2owl/blob/master/doc/ontology-architecture/ontology-architecture.pdf[modelling architecture] and xref:uml/conceptual-model-conventions.adoc[UML conceptual model conventions].
+The tools can be used on any other ontology that is built according to the https://github.com/meaningfy-ws/model2owl/blob/master/doc/ontology-architecture/ontology-architecture.pdf[modelling architecture] and xref:uml/conceptual-model-conventions.adoc[UML conceptual model conventions] provided.
 
 This specification establishes conventions for the interpretation of the UML-based conceptual model in the eProcurement context.
 
@@ -39,22 +35,20 @@ This specification establishes conventions for the interpretation of the UML-bas
 
 * The *specifications* can be found in the xref:architecture/ontology-architecture.adoc[eProcurement ontology architecture and formalisation specifications] document.
 
-* The xref:uml/conceptual-model-conventions.adoc[UML Conceptual Model Conventions] can be read via the links in the left-hand menu.
+* The xref:uml/conceptual-model-conventions.adoc[UML Conceptual Model Conventions] can be accessed via the links in the left-hand menu.
 
-* The xref:transformation/uml2owl-transformation.adoc[Transfer Rules] are described and explained in this link.
+* The xref:transformation/uml2owl-transformation.adoc[Transfer Rules] can also be accessed via the links in the left-hand menu.
 
 * A list and descriptions of the xref:checkers/model2owl-checkers.adoc[checkers], used for verification.
 
 == Resources
 
-
-
 === Scripts
-* *html-conventions-report.xsl* is the script checking  conformance to the technical conventions of the conceptual model.
-* *html-model-glossary.xsl* is the script for creating a glossary of the conceptual model.
-* *owl-core.xsl* is the transformation script for the core OWL ontology.
+* *html-conventions-report.xsl* is the script that checks conformance to the technical conventions of the conceptual model.
+* *html-model-glossary.xsl* is the script that creates a glossary of the conceptual model.
+* *owl-core.xsl* is the transformation script that generates the core OWL ontology.
 * *shacl-shapes.xsl* is the transformation script for the SHACL data shape constraints.
-* *owl-restrictions.xsl* is the transformation script for the restrictions of OWL ontology (on classes and properties).
+* *owl-restrictions.xsl* is the transformation script for the restrictions (on classes and properties) of the OWL ontology.
 
 === Script unit tests
 * *test/unitTest/test-html-conventions-lib* is the location of the unit tests for the script checking the conformance to the technical conventions of the conceptual model.
@@ -76,7 +70,7 @@ There are two ways to perform the transformations:
 
 Makefile is a powerful tool that automates different commands for software projects. It provides a convenient way to define and execute various tasks, such as using source code, generating documentation, running tests, and more.
 
-All commands are executed using the Make build automation tool that needs to be installed if it is already. Make targets sometimes require optional parameters (see example bellow). This project uses the default values for the parameters used in the different commands here.
+All commands are executed using the Make build automation tool that needs to be installed if it is not already. Make targets sometimes require optional parameters (see example below). This project uses the default values for the parameters used in the different commands here.
 
 *Example*:
 ----
@@ -135,15 +129,15 @@ make owl-core XMI_INPUT_FILE_PATH=/home/mypc/work/model2owl/file1.xml OUTPUT_FOL
 
 *Prerequisites*:
 
-* The make utility must be installed
+* The Make utility must be installed
 * Python3 must be installed
 
 *Steps*:
 
 . Clone the https://github.com/OP-TED/model2owl.git repository
-. execute "make install" via terminal
+. Execute "make install" via terminal
 
-NOTE: If you don't have a virtual environment set up type "make create-virtual-env" to create a virtual environment and then activate it by typing "source model2owl-venv/bin/activate"
+NOTE: If you don't have a virtual environment set up, type "make create-virtual-env" to create a virtual environment, and then activate it by typing "source model2owl-venv/bin/activate"
 
 
 *Configuration*:
@@ -163,7 +157,7 @@ To change the configuration in the config-parameters.xsl,  simply change the val
 
 NOTE: Do not change the values from the namespacePrefixes, umlDataTypesMapping, xsdAndRdfDataTypes variables as these will already work having one config folder with all config files.
 
-NOTE: When changing variables make sure you modify it with the same datatype (boolean, string, list).
+NOTE: When changing variables make sure you modify the element retaining the same datatype (boolean, string, list).
 
 ----
 #exiting variables
@@ -173,14 +167,17 @@ NOTE: When changing variables make sure you modify it with the same datatype (bo
 #Don't change to different datatypes
 <xsl:variable name="defaultNamespaceInterpretation" select="'new-value'"/> ---> incorrect
 ----
-NOTE: If the variable is a list, and you don't need any values just leave an empty list:
+NOTE: If the variable is a list, and you don't need any values, just leave an empty list:
 ----
 <xsl:variable name="stereotypeValidOnAssociations" select="()"/>
 ----
 
 *Namespaces configuration*:
 
-In the namespaces.xml file you can add the namespaces that you use in UML model, and control which should be imported in the final output.
+In the namespaces.xml file you can:
+
+* add the namespaces that you use in UML model, and
+* control which should be imported in the final output.
 
 *Example*:
 ----
@@ -227,7 +224,7 @@ All configuration files (see above) should be in one folder. Once the folder wit
 
 *Running transformations*:
 
-After installing and creating your configuration folder, use the available make targets command described above to transform/generate output from you XMI/XML export file. The command should be executed from the root folder of the project.
+After installing and creating your configuration folder, use the "make targets" command described above to transform/generate output from you XMI/XML export file. The command should be executed from the root folder of the project.
 
 *Example*:
 ----
