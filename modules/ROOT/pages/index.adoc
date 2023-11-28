@@ -1,6 +1,12 @@
+:doctitle: Introduction to the model2owl Project
+:doccode: m2o-main-prod-001
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: November 2023
+
 //[[sec:introduction]]
 
-= Introduction to the model2owl Project
+
 
 == Overview
 

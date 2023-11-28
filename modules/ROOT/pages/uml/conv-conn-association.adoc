@@ -1,5 +1,10 @@
+:doctitle: Conventions on uml:Association Connectors
+:doccode: m2o-main-prod-010
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: November 2023
+
 [[sec:association]]
-== Conventions on uml:Association Connectors
 
 [[rule:association-btw-class-and-class-or-object]]
 |===

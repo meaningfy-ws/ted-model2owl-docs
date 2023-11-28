@@ -1,3 +1,9 @@
+:doctitle: eProcurement ontology architecture and formalisation specifications
+:doccode: m2o-main-prod-006
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: November 2023
+
 = eProcurement ontology architecture and formalisation specifications
 
 include::../ePO_Arch_Design.adoc[]

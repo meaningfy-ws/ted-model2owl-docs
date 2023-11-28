@@ -1,5 +1,10 @@
+:doctitle: General Conventions
+:doccode: m2o-main-prod-017
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: November 2023
+
 [[sec:general-conv]]
-== General Conventions
 
 In this section a number of general conventions, of either _conventional_ or _technical_ nature are provided. The topic starts with some general conventions, and then a number of generic areas are covered: naming things, providing appropriate descriptions, and generic recommendations on technical aspects of encoding such information. In each topic, both conventional and technical conventions are covered, as relevant.
 
@@ -57,6 +62,11 @@ All UML model elements and connectors must be declared with the visibility set t
 
 *Description:*
 This convention also includes that the UML class attributes have their visibility (or "Scope") set to "Public", and that all named roles specified at either end of any of the connectors have their visibility (or "Access") set to "Public".
+
+
+
+
+
 
 
 [[sec:names]]

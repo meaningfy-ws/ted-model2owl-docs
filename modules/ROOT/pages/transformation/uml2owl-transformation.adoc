@@ -1,4 +1,10 @@
-= Transformation of the UML model into derivative artefacts
+:doctitle: Transformation of the UML model into derivative artefacts
+:doccode: m2o-main-prod-022
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: November 2023
+
+
 
 [[sec:introduction]]
 == Introduction

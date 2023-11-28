@@ -1,5 +1,11 @@
+:doctitle: Transformation of UML classes and attributes
+:doccode: m2o-main-prod-023
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: November 2023
+
 [[sec:tran-rules]]
-== Transformation of UML classes and attributes
+
 :source-highlighter: pygments
 :reftext: Transformation of UML classes and attributes
 

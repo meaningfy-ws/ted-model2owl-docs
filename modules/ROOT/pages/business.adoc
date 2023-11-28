@@ -1,4 +1,9 @@
-= Functional Overview
+:doctitle: Functional Overview
+:doccode: m2o-main-prod-002
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: November 2023
+
 
 
 In the context of eGovernment digitalisation, the https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2013:175:0001:0008:EN:PDF#:~:text=This%20Directive%20respects%20the%20fundamental,to%20property%20(Article%2017)["once only principle" in EU public administration] on the re-use of public sector information is one of the drivers towards eProcurement, aimed at making public spending more transparent, evidence-oriented, optimised, streamlined and integrated with market conditions. Part of this is the development of an https://docs.ted.europa.eu/EPO/latest/index.html[eProcurement Ontology].

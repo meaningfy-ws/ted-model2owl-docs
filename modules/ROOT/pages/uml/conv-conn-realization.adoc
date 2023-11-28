@@ -1,5 +1,10 @@
+:doctitle: Conventions on uml:Realization Connectors
+:doccode: m2o-main-prod-013
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: November 2023
+
 [[sec:realization]]
-== Conventions on uml:Realization Connectors
 
 
 [[rule:realization-btw-object-and-class-or-enum]]

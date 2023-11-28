@@ -1,3 +1,9 @@
+:doctitle: References
+:doccode: m2o-main-prod-005
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: November 2023
+
 [[refs]]
 [[ref-ferreira2013]]
 Almeida Ferreira, D, and A Silva. 2013. “UML to OWL Mapping Overview an Analysis of the Translation Process and Supporting Tools.” In _Conference: 7th Conference of Portuguese Association of Information Systems_.

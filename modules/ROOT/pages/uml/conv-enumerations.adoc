@@ -1,4 +1,9 @@
-== Conventions on uml:Enumeration elements
+:doctitle: Conventions on uml:Enumeration elements
+:doccode: m2o-main-prod-016
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: November 2023
+
 
 [[sec:enumeration]]
 ===  Technical conventions on uml:Enumeration elements

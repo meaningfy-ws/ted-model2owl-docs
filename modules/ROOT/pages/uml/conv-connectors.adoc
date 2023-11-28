@@ -1,4 +1,10 @@
-== Modeling Relations with UML Connectors
+:doctitle: Modeling Relations with UML Connectors
+:doccode: m2o-main-prod-014
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: November 2023
+
+
 
 [[sec:relations]]
 === Conventional recommendations on Relations

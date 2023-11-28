@@ -1,3 +1,9 @@
+:doctitle: UML Convention checker inventory
+:doccode: m2o-main-prod-027
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: November 2023
+
 = UML Convention checker inventory
 
 This page summarises the list of automatic checkers that are implemented to validate the UML Model, by running it against the XMI file encoding the model.

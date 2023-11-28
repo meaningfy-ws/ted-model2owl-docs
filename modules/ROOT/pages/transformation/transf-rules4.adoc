@@ -1,5 +1,11 @@
+:doctitle: Transformation of UML descriptors and tags
+:doccode: m2o-main-prod-026
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: November 2023
+
 [[sec:tran-rules4]]
-== Transformation of UML descriptors and tags
+
 
 In this section are specified transformation rules for UML descriptive elements. <<tab:descriptiors-overview>> provides an overview of the section coverage.
 

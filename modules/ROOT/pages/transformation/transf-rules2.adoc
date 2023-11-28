@@ -1,5 +1,11 @@
+:doctitle: Transformation of UML connectors
+:doccode: m2o-main-prod-024
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: November 2023
+
 [[sec:tran-rules2]]
-== Transformation of UML connectors
+
 
 In this section are specified transformation rules for UML association, generalisation and dependency connectors. <<tab:connectors-overview>> provides an overview of the section coverage.
 

@@ -1,4 +1,10 @@
-== Conventions on Attributes of uml:Class elements
+:doctitle: Conventions on Attributes of uml:Class elements
+:doccode: m2o-main-prod-008
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: November 2023
+
+
 
 [[sec:attributes]]
 === Conventional recommendations on Attributes

@@ -1,3 +1,11 @@
+:doctitle: Navigation
+:doccode: m2o-main-prod-004
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: November 2023
+
+
+
 * xref:index.adoc[Home]
 * xref:business.adoc[Functional Overview]
 * xref:technical.adoc[Technical Overview]

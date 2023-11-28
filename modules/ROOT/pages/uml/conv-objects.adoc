@@ -1,5 +1,10 @@
+:doctitle: Conventions on uml:Object elements
+:doccode: m2o-main-prod-018
+:author: NPJ
+:authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
+:docdate: November 2023
+
 [[sec:uml-object]]
-== Conventions on uml:Object elements
 
 The generic conventions that are defined for all UML elements in the xref:uml/conv-general.adoc[General conventions] section apply also for the uml:Object element. This section provides a few additional conventions in addition to those.
 
