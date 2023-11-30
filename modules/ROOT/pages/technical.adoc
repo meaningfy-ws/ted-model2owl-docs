@@ -10,15 +10,15 @@ The UML transformation is performed using https://www.w3.org/TR/xslt-30/[XSLT st
 
 The following artifacts are produced from the  UML in the process:
 
-* A *Compliance Report* (for checking the model against the established conventions)
-* A *Glossary* (for a quick overview of terminology defined)
-* An *OWL 2 lightweight ontology*, suitable as a core vocabulary
-* An *OWL 2 heavyweight ontology* with additional axioms, suitable for reasoning purposes
-* *SHACL data shapes* suitable for representing an application profile
+* A *Compliance Report* (for checking the model against the established conventions).
+* A *Glossary* (for a quick overview of terminology defined).
+* An *OWL 2 lightweight ontology*, suitable as a core vocabulary.
+* An *OWL 2 heavyweight ontology* with additional axioms, suitable for reasoning purposes.
+* *SHACL data shapes* suitable for representing an application profile.
 
 The documentation (regularly updated) aims to cover the most important aspects when using these tools, including:
 
-* The architectural setup of the project and the ontology
+* The architectural setup of the project and the ontology.
 * The conceptual model conventions to which the UML model should adhere to generate the best possible results.
 * The transformation rules applied in the process of conversion.
 * The set of validation rules that realise the established conventions (and UML interpretations).
@@ -39,7 +39,7 @@ This specification establishes conventions for the interpretation of the UML-bas
 
 * The xref:transformation/uml2owl-transformation.adoc[Transfer Rules] can also be accessed via the links in the left-hand menu.
 
-* A list and descriptions of the xref:checkers/model2owl-checkers.adoc[checkers], used for verification.
+* A list and descriptions of the xref:checkers/model2owl-checkers.adoc[Checkers], used for verification.
 
 == Resources
 
