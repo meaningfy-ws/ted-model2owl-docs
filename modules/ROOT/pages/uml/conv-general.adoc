@@ -6,12 +6,12 @@
 
 [[sec:general-conv]]
 
-In this section a number of general conventions, of either _conventional_ or _technical_ nature are provided. The topic starts with some general conventions, and then a number of generic areas are covered: naming things, providing appropriate descriptions, and generic recommendations on technical aspects of encoding such information. In each topic, both conventional and technical conventions are covered, as relevant.
+In this section, a number of general conventions of either _conventional_ or _technical_ nature are provided. The topic starts with some general conventions, and then a number of generic areas are covered: naming things, providing appropriate descriptions, and generic recommendations on technical aspects of encoding such information. In each topic, both conventional and technical conventions are covered, as relevant.
 
 [[sec:general-model]]
-=== Generic conventions of the UML Model
+=== General conventions of the UML Model
 
-To reduce the complexity of UML models that one can build, and the conversion of those UML models into derivative artefacts (i.e. OWL ontologies and SHACL shapes), we identified a minimal set of UML model components (UML elements and connectors) that are necessary and sufficient to express most ontological statements that might be needed in practice. For this minimal set of UML model components we convened on a xref:transformation/uml2owl-transformation.adoc[well-defined set of transformation rules] to ensure that the generation of derivative artefacts is deterministic and complete. The use of other UML components will be ignored.
+To reduce the complexity of both the UML models, and the conversion of those UML models into derived artefacts i.e., OWL ontologies and SHACL shapes, a minimum set of UML model components and UML elements and connectors, were identified that express most of the ontological statements needed in practice. For this minimum set of UML model components, a xref:transformation/uml2owl-transformation.adoc[well-defined set of transformation rules] was agreed to ensure that the generation of derived artefacts is deterministic (not random) and complete. Other UML components were ignored.
 
 
 [[rule:gen-model-elements]]
@@ -28,7 +28,7 @@ The UML model shall contain only the following types of UML elements: Class, Dat
 
 *Description:*
 
-The Model2OWL tool deals only with the conversion of the following UML elements: Class, DataType, Enumeration, Object and Package. Other UML elements will be ignored, and therefore should not be used.
+The model2owl tool deals with the conversion of the following UML elements only: Class, DataType, Enumeration, Object and Package. Other UML elements are ignored, and therefore should not be used.
 
 
 [[rule:gen-model-connectors]]
@@ -45,7 +45,7 @@ The UML model shall contain only the following types of UML Connectors: Associat
 
 *Description:*
 
-The Model2OWL tool deals only with the conversion of the following UML connectors: Association, Dependency, Generalization and Realization. Other types of UML connectors will be ignored, and therefore should not be used.
+The model2owl tool deals with the conversion of the following UML connectors only: Association, Dependency, Generalization and Realization. Other types of UML connectors will be ignored, and therefore should not be used.
 
 
 [[rule:gen-element-visibility]]
@@ -64,19 +64,14 @@ All UML model elements and connectors must be declared with the visibility set t
 This convention also includes that the UML class attributes have their visibility (or "Scope") set to "Public", and that all named roles specified at either end of any of the connectors have their visibility (or "Access") set to "Public".
 
 
-
-
-
-
-
 [[sec:names]]
 === Naming Conventions
 
-Defining naming and structural conventions for concepts in an ontology, and then strictly adhering to these conventions, don’t only make the ontology easier to understand, but also helps avoid some common modelling mistakes.
+Defining naming and structural conventions for concepts in an ontology, and strictly adhering to them, not only makes the ontology easier to understand, it also helps avoid common modelling mistakes.
 
-UML is a language without formal semantics. Moreover, it is quite flexible and permissive with ways in which a concept can be expressed. Also, there are many alternatives in naming concepts. Often there is no particular reason to choose one or another alternative. However, we need to define a set of naming conventions for classes, relations, attributes, controlled lists and adhere to it as per https://protege.stanford.edu/publications/ontology_development/ontology101.pdf[Noy et al, 2001].
+UML is a language without formal semantics. Moreover, it is quite flexible and permissive in the ways in which a concept can be expressed. It also allows many alternatives in naming concepts. Often there is no particular reason to choose one alternative over another, however, https://protege.stanford.edu/publications/ontology_development/ontology101.pdf[defining a set of naming conventions for classes, relations, attributes, controlled lists and adhering to it is necessary].
 
-In theory any name can be assigned to a concept, relationship or property. In practice, there are two types of constraints on the kind of names that should be used: _technical_ and _conventional_. This section deals with conventional recommendations, while the technical aspects are covered in later sections, such as [xref:sec:namespaces[]], [xref:sec:charset[]], and [xref:sec:stereotypes-tags[]] .
+In theory, any name can be assigned to a concept, relationship or property. In practice, however, there are two types of constraints on the kind of names that should be used: _technical_ and _conventional_. This section deals with recommendations for conventional names, and technical aspects such as [xref:sec:namespaces[]], [xref:sec:charset[]], and [xref:sec:stereotypes-tags[]] are covered in later sections.
 
 
 [[rule:gen-names-labels-and-ids]]
@@ -94,7 +89,7 @@ Element names should support generation of human- and machine-readable denominat
 
 *Description:*
 
-The naming conventions apply to the _element names_ in the conceptual model. These names are intended for further use as human-readable denominations, called _labels_; and machine-readable denominations, called _identifiers_. The identifiers serve as a https://doi.org/10.17487/RFC3986[basis for generating URIs] to ensure unambiguous reference to a formal construct; while the labels are meant to ease the comprehension by human-readers. For this reason we will consider that mostly the conventional recommendations provided here apply to them and none of the technical constraints.
+The naming conventions apply to _element names_ in the conceptual model. These names are intended for further use as human-readable denominations, called _labels_; and machine-readable denominations, called _identifiers_. The identifiers serve as a https://doi.org/10.17487/RFC3986[basis for generating URIs] to ensure unambiguous reference to a formal construct; while the labels are meant to be understandable by human-readers. For this reason it is assumed that mostly the conventional recommendations provided here apply to them, and none of the technical constraints.
 
 [[rule:gen-names-language]]
 |===
@@ -110,8 +105,7 @@ Element names shall be formulated using British English. Multilingual support, i
 |===
 *Description:*
 
-It is recommended by https://joinup.ec.europa.eu/sites/default/files/document/2017-08/d02.01_specification_of_the_process_and_methodology_v1.00.pdf[Dekkers et al, 2017], that the names and descriptions for classes and properties are expressed in British English.
-In addition, a mechanism for providing a multilingual labelling system should be adopted.
+It is recommended by https://joinup.ec.europa.eu/sites/default/files/document/2017-08/d02.01_specification_of_the_process_and_methodology_v1.00.pdf[Dekkers et al, 2017], that the names and descriptions for classes and properties are expressed in British English, and also, that a mechanism for providing a multilingual labelling system should be adopted.
 
 
 [[rule:gen-names-namespaces]]
@@ -145,7 +139,7 @@ Clear and plain language shall be used; and abbreviations, unpronounceable, easi
 
 *Description:*
 
-It is recommended to avoid abbreviations in concept names. Also, the words employed in the metamodel such as "class", "property", "attribute", "connector" etc. should be avoided as well. Names that are nonsensical, unpronounceable, hard to read, or easily confusable with other names should not be employed https://www.researchgate.net/publication/319395252_Extensible_Markup_Language_XML_10_Fifth_Edition?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6Il9kaXJlY3QiLCJwYWdlIjoiX2RpcmVjdCJ9fQ[(Bray et al, 2008)].
+It is recommended that abbreviations in concept names, and  the words employed in the metamodel such as "class", "property", "attribute", "connector" etc, are avoided. Names that are nonsensical, unpronounceable, hard to read, or easily confusable with other names also should not be employed https://www.researchgate.net/publication/319395252_Extensible_Markup_Language_XML_10_Fifth_Edition?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6Il9kaXJlY3QiLCJwYWdlIjoiX2RpcmVjdCJ9fQ[(Bray et al, 2008)].
 
 
 // [[sec:casing]]
@@ -165,9 +159,9 @@ Names are case-sensitive. Names of elements of the same type should use consiste
 
 *Description:*
 
-We can greatly improve the readability of an ontology if we use consistent capitalisation for concept names. For example, it is common to capitalise class names and use lower case for property names. And so, the names of classes, data-types and enumerations must begin with a capital letter while the names of class attributes, enumeration items, association and dependency relations, including their source and target roles, must begin with a lower case character.
+The readability of an ontology can be greatly improved if consistent capitalisation is used for concept names. For example, it is common to capitalise class names and use lower case for property names. The names of classes, data-types and enumerations must begin with a capital letter while the names of class attributes, enumeration items, association and dependency relations, including their source and target roles, must begin with a lower case character.
 
-All the names are case-sensitive. This means that the class "Buyer" and the attribute "buyer" are two different names. Nonetheless, such similarities are strongly discouraged and more elaborated names are highly encouraged. For example, a simple elaboration is to use suffixes or prefixes.  See rules:
+All names are case-sensitive. This means that the class "Buyer" and the attribute "buyer" are two different names. Nonetheless, such similarities are strongly discouraged and more elaborated names are highly encouraged. For example, a simple elaboration is to use suffixes or prefixes.  See rules:
 
 //TODO: add reference to rules about avoiding duplication and usage of suffix/prefix
 
@@ -188,12 +182,12 @@ Names containing multiple words shall use _camelCase_ or _PascalCase_ as word de
 
 *Description:*
 
-In UML, the spaces in names are allowed and using them may be the most intuitive solution for many ontology developers. It is however, important to consider other systems with which your system may interact. If those systems do not use spaces or if your presentation medium does not handle spaces well, it can be useful to use another method https://protege.stanford.edu/publications/ontology_development/ontology101.pdf[(Noy et al, 2001)].
+In UML, using spaces in names is allowed and using them may be the most intuitive solution for many ontology developers. It is however, important to consider other systems with which the system may interact. If those systems do not use spaces or if your presentation medium does not handle spaces well, it can be useful to use another method https://protege.stanford.edu/publications/ontology_development/ontology101.pdf[(Noy et al, 2001)].
 
-It is recommended that the element names avoid using spaces and instead follow a camel-case convention. _CamelCasing_ is the practice of writing phrases such that the word or abbreviation in the middle of the phrase begins with a capital case.
+It is recommended that using spaces in element names is avoided, and a camel-case convention is followed instead. _CamelCasing_ is the practice of writing phrases such that the word or abbreviation in the middle of the phrase begins with a capital case.
 
 //[TODO: Check if the following is still holds]
-Exceptionally, if the conceptual model authors must maintain high readability of the UML diagrams, spaces may be tolerated and handled by the conversion script. In the conversion process, spaces are trimmed and phrases turned into camel-case form. For example " Pre-award catalogue request " is transformed into "Pre-AwardCatalogueRequest".
+If in an exception, the conceptual model authors are obliged to maintain high readability of the UML diagrams, spaces may be tolerated and handled by the conversion script. In the conversion process, spaces are trimmed and phrases turned into camel-case form. For example " Pre-award catalogue request " is transformed into "Pre-AwardCatalogueRequest".
 
 [[sec:uniqueness]]
 //=== Name uniqueness
@@ -214,11 +208,11 @@ Element names (Class, Datatype, Enumeration, Object, Package) must be unique, wh
 
 In the formal ontology, each class, property or individual must be uniquely identifiable by its identifier. Therefore, the elements of the conceptual model, classes, attributes, connectors, instance, should have unique names.
 
-This means that there cannot exist a class, and an attribute with the same name (such as a class "Buyer" and a property "Buyer"). Neither can there exist a class and an instance, or an instance and a relation, with the same name.
+This means that a class and an attribute with the same name (such as a class "Buyer" and a property "Buyer") cannot co-exist. Neither can a class and an instance, or an instance and a relation, with the same name co-exist.
 
 Names that reduce to the same identifier are considered the same. For example "Legal Entity" and "LegalEntity" are different labels, but they reduce to the same identifier "LegalEntity". In such cases the names are considered equal, and the UML elements replicated.
 
-Although name uniqueness is a recommendation, sometimes it is useful to replicate a UML element. In such cases, when the names are reused, the assumption is that the two UML elements represent manifestations of the same meaning. This is especially important for relations, and is explained in convention [xref:#rule:gen-relation-reuse[]].
+Although name uniqueness is a recommendation, sometimes it is useful to replicate a UML element. In such cases, when the names are reused, the assumption is that the two UML elements represent manifestations of the same meaning. This is especially important for relations, and is explained in the convention [xref:#rule:gen-relation-reuse[]].
 
 The names of the following THINGS shall be unique against the OTHER THINGS (i.e. shall not be reused as names of the other things):
 
@@ -247,13 +241,15 @@ Connector and Attribute names shall be chosen such as to support the appropriate
 
 *Description:*
 
-The relation names should be chosen so that there is a balance of accuracy and precision on one hand and the relation reusability on the other hand. These two dimensions are inversely correlated: the higher the reuse the lower the accuracy and vice versa.
+Relation names should be chosen so that there is a balance of accuracy and precision on one hand, and  relation reusability on the other hand. These two dimensions are inversely correlated: the higher the reuse the lower the accuracy and vice versa.
 
-On one hand, if we choose more generic predicates such as "isSpecifiedIn" this tends towards maximising relation reusability across the model. Yet at the same time the risk of overloading the relation meaning also increases.
+If we choose more generic predicates such as "isSpecifiedIn" this tends towards maximising relation reusability across the model. However, the risk of overloading the relation meaning also increases.
 
-On the other hand, the above risk could be mitigated by simply appending the range class to the relation name: such "isSpecifiedInContract" and such "isSpecifiedInProcedure" following the following naming pattern: . This ensures predicate uniqueness and maximum level of specificity at the cost of reusability across and beyond the model. The latter can be achieved through inference, but an additional predicate inheritance structure must be defined. Another risk is that a change or evolution of the name of the class has a direct impact on all incoming predicates, and thus raising the chances of errors. This in turn may decrease the model agility and elasticity.
+The above risk could be mitigated by simply appending the range class to the relation name: such as "isSpecifiedInContract" and "isSpecifiedInProcedure" following the following naming pattern. This ensures predicate uniqueness and maximum level of specificity at the cost of reusability across and beyond the model.
 
-Optionally, the transformation process from the conceptual model to the formal ontology, may contain a mechanism of appending the name of the range class to the predicate name in order to automatically produce a predicate with higher specificity, shall this be required.
+The latter can be achieved through inference, but an additional predicate inheritance structure must be defined. Another risk is that a change or evolution of the name of the class has a direct impact on all incoming predicates, thus raising the chances of errors. This in turn may decrease the model's agility and elasticity.
+
+Optionally, the transformation process from the conceptual model to the formal ontology may contain a mechanism that appends the name of the range class to the predicate name to produce a predicate with higher specificity automatically, should that be required.
 
 
 [[sec:suffix-prefix]]
@@ -273,24 +269,22 @@ Attributes and connector names shall contain a verb. Apply certain, well establi
 
 *Description:*
 
-Some ontology engineering methodologies suggest using prefix and suffix conventions in the names to distinguish between classes and attributes. Two common practices are to add a "has-" prefix or a "-of" suffix to attribute names. Thus, our attributes become "hasAwardStatus" and ”hasBuyer” if we chose the "has-" convention. The attributes become "awardStatusOf" and "buyerOf" if we chose the "-of" convention. This approach allows anyone looking at a term to determine immediately if the term is a class or an attribute. However, the term names become slightly longer https://protege.stanford.edu/publications/ontology_development/ontology101.pdf[(Noy et al, 2001)].
+Some ontology engineering methodologies suggest using prefix and suffix conventions in names to distinguish between classes and attributes. Two common practices are to add a "has-" prefix, or a "-of" suffix, to attribute names. The attributes then become "hasAwardStatus" and ”hasBuyer” if we chose the "has-" convention. The attributes become "awardStatusOf" and "buyerOf" if we chose the "-of" convention. This approach allows  immediate determination whether the term is a class or an attribute. However, https://protege.stanford.edu/publications/ontology_development/ontology101.pdf[term names become slightly longer].
 
-We recommend that the names of class attributes employ the "has-" suffix. For boolean properties we recommend the use of the "is-" prefix.
+The recommendation is that the names of class attributes employ the "has-" suffix. For boolean properties the use of the "is-" prefix is recommended.
 
 Other common suffixes are the prepositions "-by" and "-to". https://www.w3.org/TR/vocab-org/[The organisation ontology] exemplifies their usage in cases such as "embodiedBy" and "conformsTo". However, if the preposition can be avoided as per the https://joinup.ec.europa.eu/interoperable-europe/news/final-evaluation-isa2-has-been-adopted[ISA project]'s "https://joinup.ec.europa.eu/sites/default/files/document/2012-03/D3.1-Process%20and%20Methodology%20for%20Core%20Vocabularies_v1.01.pdf[Process and Methodology for Core Vocabularies]" document, then it is recommended to do so.
 
-It is also recommended to use prepositions in the ontology terms only if necessary (CN: I would say: every time when it makes the meaning more clear)
+It is also recommended to use prepositions in the ontology terms only if necessary, where they make the meaning more clear.
 
-Optionally common and descriptive prefixes and suffixes for related properties or classes may be used. While they are just labels, and their names have no inherent semantic meaning, it is still a useful way for humans to cluster and understand the vocabulary. For example, properties about languages or tools might contain suffixes such as "Language" (e.g. "displayLanguage") or "Tool" (e.g. "validationTool") for all related properties https://www.researchgate.net/publication/319395252_Extensible_Markup_Language_XML_10_Fifth_Edition?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6Il9kaXJlY3QiLCJwYWdlIjoiX2RpcmVjdCJ9fQ[(Bray et al, 2008)].
-
-
+There is the option to use common and descriptive prefixes and suffixes for related properties or classes. While they are just labels, and their names have no inherent semantic meaning, it is still a useful way for humans to cluster and understand the vocabulary. For example, https://www.researchgate.net/publication/319395252_Extensible_Markup_Language_XML_10_Fifth_Edition?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6Il9kaXJlY3QiLCJwYWdlIjoiX2RpcmVjdCJ9fQ[properties about languages or tools might contain suffixes such as "Language" (e.g. "displayLanguage") or "Tool" (e.g. "validationTool") for all related properties].
 
 *See also:* SEMIC Style Guide Rule [https://semiceu.github.io/style-guide/1.0.0/gc-general-conventions.html#sec:gc-r4[GC-R4]]
 
 [[sec:descriptions]]
 === Notes, descriptions and comments
 
-Large emphasis is set on the naming conventions. Nonetheless, most often, a good name is insufficient for an accurate or easy comprehension by human-readers. To mitigate this, and to increase the conceptual richness, practitioners may wish to provide human-readable definitions, notes, examples and comments grasping the underlying assumptions, usage examples, additional explanations and other types of information.
+A large emphasis is set on the naming conventions, however, more often than not, a good name is insufficient for an accurate or easy comprehension by human-readers. To address this, and to increase the conceptual richness, practitioners may wish to provide human-readable definitions, notes, examples and comments clarifying the underlying assumptions,and providing usage examples, additional explanations and other types of information.
 
 [[rule:gen-description]]
 |===
@@ -306,40 +300,40 @@ All elements must have a definition providing a concise but complete description
 
 *Description:*
 
-We adopt here the https://github.com/SEMICeu/OpenGuidelines/blob/main/Principles%20for%20creating%20good%20definitions_v1.00.pdf[SEMIC Principles for creating good definitions]. They are based on advice found in the literature and are the following:
+The https://github.com/SEMICeu/OpenGuidelines/blob/main/Principles%20for%20creating%20good%20definitions_v1.00.pdf[SEMIC Principles for creating good definitions] have been adopted. They are based on advice found in the literature and are the following:
 
 * Be concise but complete,
-** Avoid over-generalisations. Adapt and contextualise the definition to the surrounding/connected concepts.
-** Make sure that every concept that occurs in the model is directly (or indirectly) defined
-* Describe only one term
+** Avoid over-generalisations. Adapt and contextualise the definition to the surrounding/ connected concepts.
+** Make sure that every concept that occurs in the model is directly (or indirectly) defined.
+* Describe only one term.
 * Structure the definition in a standardised way:
-** Use the singular form to phrase the definition (see [xref:sec:names[]])
-** State what the term is, and don't enumerate what it is NOT (i.e. no negative definition)
-** Use only commonly understood abbreviations
-** Use similar terminology for definitions of related concepts
-* Don't use  circular definitions, i.e. the term defined should not be part of the definition,
+** Use the singular form to phrase the definition (see [xref:sec:names[]]).
+** State what the term is, and don't enumerate what it is NOT (i.e. no negative definition).
+** Use only commonly understood abbreviations.
+** Use similar terminology for definitions of related concepts.
+* Don't use  circular definitions, i.e. the term defined should not be part of the definition.
 * Don't add secondary information such as additional explanation, scoping, examples, etc. these are to be documented in usage notes.
 * Form the definition in one or more sentences that start with a capital letter and end with a period.
 * Do not start a definition with a repetition of the name of the concept.
 //* Rich standard encodings such as UTF-8 and UTF-16 are supported in notes and definitions. In the element names, however,
 //we recommend avoiding any character encodings and using plain ASCII [xref:semicsg/references.adoc#ref:epo-cmc[epo-cmc, sec 4.2]].
 
-In addition to these SEMIC recommendation for providing good definitions, we also add the following recommendations to adequately complete the description of an element:
+In addition to the SEMIC recommendation for providing good definitions, the following recommendations for completing the description of an element have been added:
 
 * It is recommended that each element is defined by a crisp, one-line definition. The definition starts with a capital letter and ends with a period.
 
-* A description may provide complementary information concerning the usage of the element or its relation to relevant standards. For example, a description may contain recommendations about which controlled vocabularies to use, describe the underlying assumptions and additional explanations for reducing ambiguity. Descriptions may contain multiple paragraphs separated by blank lines. The descriptions should not paraphrase the definitions.
+* A description may provide complementary information concerning the usage of the element, or its relation to relevant standards. For example, a description may contain recommendations about which controlled vocabularies to use and describe the underlying assumptions and additional explanations for reducing ambiguity. Descriptions may contain multiple paragraphs separated by blank lines. The descriptions should not paraphrase the definitions.
 
-* If the model editor provides concrete examples of possible element values or instances then they shall be provided as a comma-separated list. Each example value is enclosed in quotes and is optionally followed by a short explanation enclosed in parentheses https://ec.europa.eu/isa2/sites/default/files/e-government_core_vocabularies_handbook.pdf[(eGovernment Core Vocabularies Handbook)].
+* If the model editor provides concrete examples of possible element values or instances then they should be provided as a comma-separated list. Each example value is enclosed in quotes and is optionally followed by a short explanation enclosed in parentheses https://ec.europa.eu/isa2/sites/default/files/e-government_core_vocabularies_handbook.pdf[(eGovernment Core Vocabularies Handbook)].
 
 *See also:* SEMIC Style Guide Rule [https://semiceu.github.io/style-guide/1.0.0/gc-general-conventions.html#sec:gc-r5[GC-R5]], which provides more recommendations to be followed here.
 
 [[sec:controlled-lists]]
 === Controlled lists
 
-The controlled list is a carefully selected list of words and phrases and is often employed in the modelling practices. The controlled list has a name, and a set of terms. For example, the list of grammatical genders can be named "Gender" and comprise the terms "masculine", "feminine", "neuter" and "utrum".
+A controlled list is a carefully selected list of words and phrases and commonly employed in modelling practices. The controlled list has a name, and a set of terms. For example, the list of grammatical genders can be named "Gender" and comprise the terms "masculine", "feminine", "neuter" and "utrum".
 
-As a rule of thumb, but not always, the relationship between the controlled list as a whole and its comprising elements can be informally conceptualised as a class-instance, class-subclass, set-item, or part-whole.
+As a rule of thumb, the relationship between the controlled list as a whole, and the elements comprising it, can be informally conceptualised as a class-instance, class-subclass, set-item, or part-whole.
 
 [[rule:gen-controlled-list]]
 |===
@@ -379,7 +373,7 @@ When the controlled list is unknown, then it shall not be referred to, but inste
 
 *Description:*
 
-When the authors of a conceptual model intend to omit which controlled list shall be used, then a class attribute with the range `skos:Concept` (in some cases `Code` is preferred, but we strongly recommend avoiding this) can be created to indicate that. This approach can be useful in situations when multiple (external) controlled lists can be used interchangeably. For example, the `adms:status` property of a `dcat:CatalogueRecord` shall be a `skos:Concept`, without specifying the controlled list.
+When the authors of a conceptual model intend to omit which controlled list shall be used, then a class attribute with the range `skos:Concept` (in some cases `Code` is preferred, but it is strongly recommended avoiding this) can be created to indicate that. This approach can be useful in situations when multiple (external) controlled lists could be used interchangeably. For example, the `adms:status` property of a `dcat:CatalogueRecord` shall be a `skos:Concept`, without specifying the controlled list.
 
 [[rule:gen-controlled-list-empty]]
 |===
@@ -395,7 +389,7 @@ uml:Enumeration shall contain no values. Management of the controlled list of va
 |===
 *Description:*
 
-It is advisable, however, to be specific concerning which controlled list shall be used. In such cases, an Enumeration shall be created representing the controlled list. The Enumeration shall be empty, i.e., not specifying any value, because the values are assumed to be maintained externally and only the reference is necessary.
+It is advisable, however, to be specific as to which controlled list is used. In such cases, an Enumeration shall be created representing the controlled list. The Enumeration shall be empty, i.e., not specifying any value, because the values are assumed to be maintained externally and only the reference is necessary.
 
 The properties having this controlled list as range shall be depicted as UML dependency connectors between a Class and an Enumeration [xref:uml/conv-connectors.adoc#sec:dependency[uml:Dependency]]. For example, in ePO, `dct:Location` can have a country code represented as a dependency relation to `at-voc:country` (the country authority table published on the EU Vocabularies website).
 
@@ -418,7 +412,7 @@ More specific requirements on the uml:Enumeration elements are provided in the S
 [[sec:namespaces]]
 === Namespaces
 
-In order to enable the reuse of names defined in other models and reuse of unique references for names that support easy identification, namespace management must be considered. We adopt XML approach to defining and managing namespaces as it is inherent in both XMI and OWL2 standards. Hence, a _namespace_ is a set of symbols that are used to organise objects of various kinds, so that these objects may be referred to by name and uniquely identifiable.
+In order to enable the reuse of names defined in other models and reuse of unique references for names that support easy identification, namespace management must be considered. We adopt an XML approach in defining and managing namespaces as it is inherent in both XMI and OWL2 standards. Hence, a _namespace_ is a set of symbols that is used to organise objects of various kinds, so that these objects may be referred to by name and are uniquely identifiable.
 
 // Namespaces are commonly structured as hierarchies to allow reuse of names in different contexts [xref:references.adoc#ref:xml-namespaces[xml-namespaces]]. This mechanism can be implemented in UML through partitioning the model using packages, which are described in the [xref:uml/conv-packages.adoc#sec:uml-package[uml:Package]] Section.
 
@@ -490,7 +484,7 @@ Element names shall use only ASCII characters to generate valid URIs. UTF-8, UTF
 
 *Description:*
 
-Encoded UTF-8 and UTF-16 names may be used https://www.researchgate.net/publication/319395252_Extensible_Markup_Language_XML_10_Fifth_Edition?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6Il9kaXJlY3QiLCJwYWdlIjoiX2RpcmVjdCJ9fQ[(Bray et al, 2008], https://www.w3.org/TR/2014/PR-rdf11-concepts-20140109/diff-20131105.html[Bickly & Guha, 2014)] but we recommend avoiding any character encodings in the element names. Encoded characters are mostly not readable and require a decoding to become human friendly. Also, unexpected results may occur in the transformation script. This recommendation does not apply to the content strings such as descriptions, notes and comments, which may use any character encoding.
+Encoded UTF-8 and UTF-16 names may be used https://www.researchgate.net/publication/319395252_Extensible_Markup_Language_XML_10_Fifth_Edition?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6Il9kaXJlY3QiLCJwYWdlIjoiX2RpcmVjdCJ9fQ[(Bray et al, 2008], https://www.w3.org/TR/2014/PR-rdf11-concepts-20140109/diff-20131105.html[Bickly & Guha, 2014)] but we recommend avoiding any character encodings in the element names. Encoded characters are mostly not readable and require a decoding to become human friendly. Also, unexpected results may occur when running the transformation script. This recommendation does not apply to content strings such as descriptions, notes and comments, which may use any encoding character.
 
 
 [[sec:stereotypes-tags]]
@@ -530,8 +524,8 @@ UML tags shall be used to provide additional descriptions of the element in a co
 
 When providing additional information to an element (classes, enumerations, datatypes, connectors, attributes, connector roles) through a tag ensure that:
 
-* The tag name should be provided and should be either a short URI or short URI with a language tag (e.g. @en).
-* There should be a value associated to each tag that appears on an element.
+* The tag name is provided and should be either a short URI or short URI with a language tag (e.g. @en).
+* There is a value associated to each tag that appears on an element.
 
-*Note:* Tags should not be used as the sole (or primary) source of concept identifier generation, i.e. every UML element that has tags attached, should, in the first place, have a proper name provided, according to the conventions in the [xref:sec:names[]] section.
+*Note:* Tags should not be used as the sole (or primary) source of concept identifier generation, i.e. every UML element that has tags attached, should, in the first place, have a proper name provided according to the conventions in the [xref:sec:names[]] section.
 

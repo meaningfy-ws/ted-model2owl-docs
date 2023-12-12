@@ -21,7 +21,7 @@ uml:Realization connectors connect a uml:Object element to a uml:Class or uml:En
 
 *Description:*
 
-The uml:Realization connector signifies an instantiation relation, and is transformed into `rdf:type` relation standing between the source object and the target class. In case the target is a uml:Enumeration element (and the enum is converted into a `skos:ConceptScheme` instance, and the object into a `skos:Concept`), then the relation should be translated into a `skos:inScheme` relation.
+The uml:Realization connector signifies an instantiation relation, and is transformed into a `rdf:type` relation standing between the source object and the target class. Where the target is a uml:Enumeration element (and the enum is converted into a `skos:ConceptScheme` instance, and the object into a `skos:Concept`), then the relation should be translated into a `skos:inScheme` relation.
 
 //[TODO:] Check if the last sentence is correct. Also, wouldn't it be more appropriate if we would use a "composition", or at least "aggregation", relation to connect object to enums?
 
@@ -57,7 +57,7 @@ uml:Realization connectors shall have no target or source multiplicity specified
 
 *Description:*
 
-The multiplicity must not be specified neither at the target nor at the source end of the uml:Realization connector.
+The multiplicity must not be specified at the target nor at the source end of the uml:Realization connector.
 
 
 [[rule:realization-proxy-objects]]
@@ -74,5 +74,5 @@ For objects defined in external models proxy uml:Object elements should be defin
 
 *Description:*
 
-In case an object that is to be used in this model is defined in an external model a proxy uml:Object element should be created so that we can connect it to classes in our model. For example, if we want to refer to the `time:unitMonth` instance of the class `time:TemporalUnit`, then a proxy for `time:unitMonth` individual (and in this case also of the class `time:TemporalUnit`) must be created (ideally in a dedicated `time` package).
+Where an object used in this model is defined in an external model as a proxy, a uml:Object element should be created so that it can be connected to classes in the model. For example, if we want to refer to the `time:unitMonth` instance of the class `time:TemporalUnit`, then a proxy for `time:unitMonth` individual (and in this case also of the class `time:TemporalUnit`) must be created (ideally in a dedicated `time` package).
 

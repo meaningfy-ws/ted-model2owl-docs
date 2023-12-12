@@ -7,7 +7,7 @@
 [[sec:tran-rules4]]
 
 
-In this section are specified transformation rules for UML descriptive elements. <<tab:descriptiors-overview>> provides an overview of the section coverage.
+This section specifies the transformation rules for UML descriptive elements. The <<tab:descriptiors-overview>> provides an overview of the section coverage.
 
 [[tab:descriptiors-overview]]
 .Overview of transformation rules for UML descriptors and tags
@@ -23,7 +23,9 @@ In this section are specified transformation rules for UML descriptive elements.
 
 === Name
 
-Most of the UML elements are named. The xref:uml/conceptual-model-conventions.adoc[UML conventions] dedicate an extensive section to the naming conventions and how to deterministically generate a URI and a label from the UML element name. By default, we recommend the use of the SKOS lexicalization (`skos:prefLabel`) in the core ontology layer. In the future, this could be controlled by a flag in the configuration of the transformation tool. With such a flag one could enable RDFS lexicalization (`rdfs:label`) instead of, or in addition to, the SKOS lexicalization.
+Most of the UML elements are named. The xref:uml/conceptual-model-conventions.adoc[UML conventions] dedicate an extensive section to the naming conventions and how to generate a URI and a label from the UML element name deterministically. By default, the use of the SKOS lexicalization (`skos:prefLabel`) in the core ontology layer is recommended.
+
+In the future, this could be controlled by a flag in the configuration of the transformation tool. With such a flag one could enable RDFS lexicalization (`rdfs:label`) instead of, or in addition to, the SKOS lexicalization.
 
 
 [#rule:element-label-core,source,XML,caption='',title='{example-caption} {counter:rule-cnt:T.01}. Label -- in core ontology layer',reftext='{example-caption} {rule-cnt}']
@@ -100,10 +102,8 @@ shape:ClassName-PropertyName
 ----
 |===
 
-=== Note
-
-Most of the UML element foresee provisions of descriptions and notes. They should be transformed into `rdfs:comment` and `skos:definition`.
-By default, we recommend the use of the SKOS lexicalization (`skos:definition`) in the core ontology layer. In the future this could be controlled by a flag in the configuration of the transformation tool. With such a flag one could enable RDFS lexicalization (`rdfs:comment`) instead of, or in addition to, the SKOS lexicalization.
+NOTE: Most of the UML elements foresee a provision for descriptions and notes. These should be transformed into `rdfs:comment` and `skos:definition`.
+By default, the use of the SKOS lexicalization (`skos:definition`) in the core ontology layer is recommended. In the future this could be controlled by a flag in the configuration of the transformation tool. With such a flag, A RDFS lexicalization (`rdfs:comment`) could be enabled instead of, or in addition to, the SKOS lexicalization.
 
 
 [#rule:element-definition-core,source,XML,caption='',title='{example-caption} {counter:rule-cnt:D.1}. Description -- in core ontology layer',reftext='{example-caption} {rule-cnt}']
@@ -192,7 +192,7 @@ image::f19.png[19]
 
 As UML Comments add no semantics, they are not used in any method of semantic validation. In https://www.w3.org/TR/owl2-syntax/[OWL] the AnnotationAssertion axiom does not add any semantics either, and it only improves readability.
 
-By default, we recommend the use of the SKOS lexicalization (`skos:editorialNote`) in the core ontology layer. In the future this could be controlled by a flag in the configuration of the transformation tool. With such a flag one could enable RDFS lexicalization (`rdfs:comment`) instead of, or in addition to, the SKOS lexicalization.
+By default, the use of the SKOS lexicalization (`skos:editorialNote`) in the core ontology layer is recommended. In the future this could be controlled by a flag in the configuration of the transformation tool. With such a flag  RDFS lexicalization (`rdfs:comment`) instead of, or in addition to, the SKOS lexicalization could be enabled.
 
 
 [#rule:element-external-comment-core,source,XML,caption='',title='{example-caption} {counter:rule-cnt:D.1}. Comment -- in core ontology layer',reftext='{example-caption} {rule-cnt}']
@@ -276,7 +276,7 @@ shape:ClassName-PropertyName
 
 === Tags
 
-Any UML element can have additional information provided by means of tags, represented by UML Tag elements. Such tags should be transformed into annotation on the RDF resource representing the UML element (e.g. Class, Attribute, Connector). The language tags that are provided on the tag, can be used to generate multilingual ontologies/specifications. For example, the highlighted elements in <<fig:transf-tag-marked>> would be transformed in the following Turtle statement `epo:Procedure skos:definition "this is the definition in French"@fr .`
+Any UML element can have additional information provided by means of tags, represented by UML Tag elements. Such tags should be transformed into annotation on the RDF resource representing the UML element (e.g. Class, Attribute, Connector). The language tags that are provided on the tag can be used to generate multilingual ontologies/specifications. For example, the highlighted elements in <<fig:transf-tag-marked>> would be transformed in the following Turtle statement `epo:Procedure skos:definition "this is the definition in French"@fr .`
 
 .Example depicting the specification of UML tags
 [#fig:transf-tag-marked]
@@ -312,7 +312,7 @@ Specify an annotation axiom on the OWL entity for each UML Tag associated to a U
 
 === Source
 
-It is a good practice to annotate all concepts in an ontology with the IRI of the ontology where these concepts are defined. RDFS provides a dedicated property for purpose, called `rdfs:isDefinedBy`, which we will use.
+It is a good practice to annotate all concepts in an ontology with the IRI of the ontology where these concepts are defined. RDFS provides a dedicated property for purpose, called `rdfs:isDefinedBy`, which will be use.
 
 
 [#rule:element-source-core,source,XML,caption='',title='{example-caption} {counter:rule-cnt:T.01}. Source specification -- in core ontology layer',reftext='{example-caption} {rule-cnt}']
@@ -344,7 +344,7 @@ Annotate all locally defined OWL concepts with the name of the (core) ontology t
 
 [#rule:element-source-ds,source,XML,caption='',title='{example-caption} {counter:rule-cnt:T.01}. Source specification -- in data shape layer',reftext='{example-caption} {rule-cnt}']
 ====
-For all SHACL shapes specify the source ontology defining the shape.
+For all SHACL shapes, specify the source ontology defining the shape.
 ====
 
 [cols="a,a", options="noheader"]

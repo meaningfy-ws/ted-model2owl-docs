@@ -9,7 +9,7 @@
 :source-highlighter: pygments
 :reftext: Transformation of UML classes and attributes
 
-In this section are specified transformation rules for UML class and attribute elements. <<tab:class-attribute-overview>> provides an overview of the section coverage.
+This section describes specified transformation rules for UML class and attribute elements. The <<tab:class-attribute-overview>> section provides an overview of the section coverage.
 
 
 [[tab:class-attribute-overview]]
@@ -173,13 +173,13 @@ shape:ClassName a sh:NodeShape ;
 [[sec:attribute]]
 === Attribute
 
-The https://www.omg.org/spec/UML/2.5.1[UML attributes] are properties that are owned by a Classifier, e.g. Class. Both UML attributes and associations are represented by one meta-model element – Property. OWL also allows one to define properties. A transformation of UML attribute to OWL data property or OWL object property is done based  on its type. If the type of the attribute is a primitive type it should be transformed into OWL data property. However, if the type of the attribute is a structured datatype, class or enumeration, it should be transformed into an OWL object property. These cases are illustrated in <<fig:attribute-visual>>.
+The https://www.omg.org/spec/UML/2.5.1[UML attributes] are properties that are owned by a Classifier e.g., Class. Both UML attributes and associations are represented by one meta-model element – Property. OWL also allows the definition of properties. A transformation of UML attribute to OWL data property or OWL object property is done based  on its type. If the type of the attribute is a primitive type, it should be transformed into an OWL data property. However, if the type of the attribute is a structured datatype, class or enumeration, it should be transformed into an OWL object property. These cases are illustrated in <<fig:attribute-visual>>.
 
 .Visual representation of class attributes in UML (on the left) and OWL properties (on the right)
 [#fig:attribute-visual]
 image::f8.png[8]
 
-Attributes can also be reused across multiple classes (i.e. multiple UML classes can own the same attributes), as illustrated in <<fig:attribute-visual-reuse>>. In such cases there should be special logic applied when defining the domain and range of these properties (see rules <<rule:attribute-rc-domain>>, <<rule:attribute-rc-range>>).
+Attributes can also be reused across multiple classes i.e., multiple UML classes can own the same attributes as illustrated in <<fig:attribute-visual-reuse>>. In such cases special logic should be applied when defining the domain and range of these properties (see rules <<rule:attribute-rc-domain>>, <<rule:attribute-rc-range>>).
 
 .Visual representation of reused class attributes in UML (on the left) and OWL properties (on the right)
 [#fig:attribute-visual-reuse]
@@ -233,7 +233,7 @@ Ideally, in the implementation, this rule would be combined with the relevant ru
 [#rule:attribute-rc-domain,source,XML,caption='',title='{example-caption} {counter:rule-cnt:1.1}. Attribute domain -- in reasoning layer',reftext='{example-caption} {rule-cnt}']
 ====
 Specify data (or object) property domains for attribute(s).
-The domain of properties created for attributes that are reused in multiple classes should be the union of all the classes where the attribute is reused.
+The domain of properties created for attributes reused in multiple classes should be the union of all the classes where the attribute is reused.
 ====
 
 [cols="a,a", options="noheader"]
@@ -273,7 +273,7 @@ The domain of properties created for attributes that are reused in multiple clas
 ----
 |===
 
-For reused attributes, like the ones depicted in <<fig:attribute-visual-reuse>>, the generated output should have the following form.
+For reused attributes, like the ones depicted in <<fig:attribute-visual-reuse>>, the generated output should have the following form:
 
 [cols="a,a", options="noheader"]
 |===
@@ -384,7 +384,7 @@ shape:ClassName-attributeName a sh:PropertyShape ;
 [#rule:attribute-rc-range,source,XML,caption='',title='{example-caption} {counter:rule-cnt:1.1}. Attribute type -- in reasoning layer',reftext='{example-caption} {rule-cnt}']
 ====
 Specify data (or object) property range for attribute(s).
-The range of object properties created for attributes that are reused in multiple classes should be the union of all the classes specified as values for those attributes.
+The range of object properties created for attributes reused in multiple classes should be the union of all the classes specified as values for those attributes.
 ====
 
 [cols="a,a", options="noheader"]
@@ -515,7 +515,7 @@ shape:ClassName-attribute2
 [[sec:attribute-multiplicity]]
 === Attribute multiplicity
 
-In https://www.omg.org/spec/UML/2.5.1[uml 2.5], multiplicity bounds of multiplicity element are specified in the form of `[<lower-bound> .. <upper-bound>]`. The lower-bound, also referred here as minimum cardinality or `min` is of a non-negative Integer type and the upper-bound, also referred here as maximum cardinality or `max`, is of an UnlimitedNatural type (see Section xref:transformation/transf-rules3.adoc#sec:primitive-type[Primitive datatype]). The strictly compliant specification of UML in version 2.5 defines only a single value range for MultiplicityElement. not limit oneself to a single interval. Therefore, the below UML to OWL mapping covers a wider case – a possibility of specifying more value ranges for a multiplicity element. Nevertheless, if the reader would like to strictly follow the current UML specification, the particular single lower..upper bound interval is therein also comprised.
+In https://www.omg.org/spec/UML/2.5.1[uml 2.5], multiplicity bounds of the multiplicity element are specified in the form of `[<lower-bound> .. <upper-bound>]`. The lower-bound, also referred here as minimum cardinality or `min` is of a non-negative Integer type and the upper-bound, also referred here as maximum cardinality or `max`, is of an UnlimitedNatural type (see Section xref:transformation/transf-rules3.adoc#sec:primitive-type[Primitive datatype]). The strictly compliant specification of UML in version 2.5 defines only a single value range for MultiplicityElement, but the below UML to OWL mapping covers a wider case – a possibility of specifying more value ranges for a multiplicity element. Nevertheless, if the reader would like to follow the current UML specification strictly, the particular single lower..upper bound interval therein is also depicted.
 
 
 .Visual representation of class attributes with multiplicity in UML (on the left) and OWL class specialising an anonymous restriction of properties (on the right)
@@ -523,11 +523,11 @@ In https://www.omg.org/spec/UML/2.5.1[uml 2.5], multiplicity bounds of multiplic
 image::f9.png[9]
 
 
-It should be noted that upper-bound of UML MultiplicityElement can be specified as unlimited: "*". In OWL, cardinality expressions serve to restrict the number of individuals that are connected by an object property expression to a given number of instances of a https://www.w3.org/2012/pdf/REC-owl2-overview-20121211.pdf[specified class expression]. Therefore, UML unlimited upper-bound does not add any information to OWL ontology, hence it is not transformed.
+It should be noted that the upper-bound of the UML MultiplicityElement can be specified as unlimited: "*". In OWL, cardinality expressions serve to restrict the number of individuals that are connected by an object property expression to a given number of instances of a https://www.w3.org/2012/pdf/REC-owl2-overview-20121211.pdf[specified class expression]. Therefore, the UML unlimited upper-bound does not add any information to OWL ontology, and hence it is not transformed.
 
 [#rule:attribute-rc-multiplicity,source,XML,caption='',title='{example-caption} {counter:rule-cnt:1.1}. Attribute multiplicity -- in reasoning layer',reftext='{example-caption} {rule-cnt}']
 ====
-For each attribute multiplicity of the form ( min .. max ), where min and max are different than ``*'' (any), specify a subclass axiom where the OWL class, corresponding to the UML Class, specialises an anonymous restriction of properties formulated according to the following cases.
+For each attribute multiplicity of the form ( min .. max ), where min and max are different than ``*'' (any), specify a subclass axiom  where the OWL class, corresponding to the UML Class specifies an anonymous restriction of properties formulated according to the following cases.
 
 . exact cardinality, e.g. [2..2]
 . minimum cardinality only, e.g. [1..*]
@@ -655,7 +655,7 @@ For each attribute multiplicity of the form ( min .. max ), where min and max ar
 ----
 |===
 
-Attributes with multiplicity exactly one correspond to functional object or data properties in OWL. If we apply the previous rule specifying min and max cardinality will lead to inconsistent ontology. To avoid that it is important that min and max cardinality are not generated from [1..1] multiplicity but only functional property axiom.
+Attributes with exactly one to one multiplicity corresponding to a functional object or data properties in OWL: If we apply the previous rule specifying min and max cardinality, it will lead to an inconsistent ontology. To avoid this, it is important that min and max cardinality are not generated from a [1..1] multiplicity, only from a functional property axiom.
 
 [#rule:attribute-rc-multiplicity-one,source,XML,caption='',title='{example-caption} {counter:rule-cnt:1.1}. Attribute multiplicity "one"  -- in reasoning layer',reftext='{example-caption} {rule-cnt}']
 ====

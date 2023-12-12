@@ -5,9 +5,9 @@
 :docdate: November 2023
 
 [[sec:tran-rules3]]
-==
 
-In this section are specified transformation rules for UML datatypes and enumerations. <<tab:datatype-overview>> provides an overview of the section coverage.
+
+This section describes the specified transformation rules for UML datatypes and enumerations. The <<tab:datatype-overview>> provides an overview of the section coverage.
 
 [[tab:datatype-overview]]
 .Overview of transformation rules for UML datatypes
@@ -23,7 +23,7 @@ In this section are specified transformation rules for UML datatypes and enumera
 [[sec:primitive-type]]
 === Primitive datatype
 
-The UML primitive type defines a predefined datatype without any substructure. The UML specification https://www.omg.org/spec/UML/2.5.1[uml 2.5] predefines five primitive types: String, Integer, Boolean, UnlimitedNatural and Real. Here we extended those to the list provided in <<tab:type-mapping>>.
+The UML primitive type is a predefined datatype without any substructure. The UML specification, https://www.omg.org/spec/UML/2.5.1[UML 2.5], predefines five primitive types: String, Integer, Boolean, UnlimitedNatural and Real. These extend the list provided in <<tab:type-mapping>>.
 
 
 .Visual representation of a UML Datatype (on the left) and an OWL Datatype (on the right)
@@ -33,7 +33,7 @@ image::f16.png[16]
 
 [#rule:datatype-core,source,XML,caption='',title='{example-caption} {counter:rule-cnt:D.01}. Datatype -- in core ontology layer',reftext='{example-caption} {rule-cnt}']
 ====
-Specify datatype declaration axiom for UML datatype as follows:
+Specify a datatype declaration axiom for a UML datatype as follows:
 
 * UML primitive datatypes are declared as the mapped XSD datatype in <<tab:type-mapping>>.
 * XSD and RDF(S) datatypes are declared as such.
@@ -112,18 +112,18 @@ xsd:boolean a rdfs:Datatype .
 
 === Structured datatypes
 
-The UML structured datatype https://www.omg.org/spec/UML/2.5.1[uml 2.5] has attributes and is used to define complex data types. The structured datatypes should be treated as classes.
+The UML structured datatype in https://www.omg.org/spec/UML/2.5.1[uml 2.5] has attributes and is used to define complex data types. The structured datatypes should be treated as classes.
 
 [#rule:datatype-structured-core,source,XML,caption='',title='{example-caption} {counter:rule-cnt:D01}. Structured Datatype -- in core ontology layer',reftext='{example-caption} {rule-cnt}']
 ====
-Specify OWL class declaration axiom for UML structured datatype.
+Specify an OWL class declaration axiom for a UML structured datatype.
 ====
 
-See applicable rules in Section on xref:transformation/transf-rules1.adoc#sec:class[Class Rules].
+See the applicable rules in the section on xref:transformation/transf-rules1.adoc#sec:class[Class Rules].
 
 === Enumeration
 
-UML Enumerations https://www.omg.org/spec/UML/2.5.1[uml 2.5] are kinds of datatypes, whose values correspond to one of user-defined literals. They should be transformed into https://www.w3.org/2004/02/skos/specs[SKOS] concept schemes comprising the concepts corresponding to enumerated items.
+UML Enumerations in https://www.omg.org/spec/UML/2.5.1[uml 2.5] are kinds of datatypes, each of whose values correspond to a user-defined literal. They should be transformed into https://www.w3.org/2004/02/skos/specs[SKOS] concept schemes comprising the concepts corresponding to enumerated items.
 
 
 .Visual representation of a UML Enumeration
@@ -134,12 +134,12 @@ image::f17.png[17]
 [#fig:enumeration-owl-visual]
 image::f18.png[18]
 
-IMPORTANT: Normally, the controlled list represented by UML Enumerations will be defined externally. In order to be ale to validate some data against the generate SHACL shapes, these controlled lists need to be imported into the SHACL shapes. Moreover, the restriction module should be also imported into the SHACL module, alongside the OWL core module.
+IMPORTANT: Normally, the controlled list represented by UML Enumerations is defined externally. To validate data against the generated SHACL shapes, these controlled lists need to be imported into the SHACL shapes. The restriction module should be also imported into the SHACL module, alongside the OWL core module.
 
 
 [#rule:enumeration-core,source,XML,caption='',title='{example-caption} {counter:rule-cnt:D01}. Enumeration -- in core ontology layer',reftext='{example-caption} {rule-cnt}']
 ====
-Specify SKOS concept scheme instantiation axiom for a UML enumeration.
+Specify a SKOS concept scheme instantiation axiom for a UML enumeration.
 ====
 
 [TIP]
@@ -201,7 +201,7 @@ For a UML enumeration, specify an equivalent class restriction covering the set 
 
 [#rule:enumeration-item-core,source,XML,caption='',title='{example-caption} {counter:rule-cnt:D01}. Enumeration items -- in core ontology layer',reftext='{example-caption} {rule-cnt}']
 ====
-Specify SKOS concept instantiation axiom for each UML enumeration item.
+Specify a SKOS concept instantiation axiom for each UML enumeration item.
 ====
 
 [TIP]

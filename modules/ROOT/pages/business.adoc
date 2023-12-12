@@ -10,9 +10,9 @@ In the context of eGovernment digitalisation, the https://eur-lex.europa.eu/LexU
 
 The eProcurement ontology is represented in the  human-readable form of a UML conceptual model. Working with the model in this form allows participation and discussion between various stakeholders, both non-technical and technical:
 
-* Contracting authorities and entities, i.e. buyers, such as public administrations in the EU Member States or EU institutions;
+* Contracting authorities and entities, i.e., buyers, such as public administrations in the EU Member States or EU institutions;
 
-* Economic operators, i.e. suppliers of goods and services such as businesses, entrepreneurs and financial institutions;
+* Economic operators, i.e., suppliers of goods and services such as businesses, entrepreneurs and financial institutions;
 
 * Academia and researchers;
 

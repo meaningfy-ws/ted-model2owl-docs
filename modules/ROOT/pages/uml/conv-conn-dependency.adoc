@@ -22,7 +22,7 @@ uml:Dependency connectors connect a uml:Class element to a uml:Enumeration eleme
 
 *Description:*
 
-The dependency connector may be used between uml:Class and uml:Enumeration or uml:Object boxes, oriented from the class towards the enumeration or object. It indicates the class has an owl:ObjectProperty whose range is a controlled vocabulary. The connector must have direction "Source->Target". No other directions are acceptable.
+The dependency connector may be used between uml:Class and uml:Enumeration or uml:Object boxes, oriented from the class towards the enumeration or object. It indicates that the class has an owl:ObjectProperty whose range is a controlled vocabulary. The connector must have direction "Source->Target". No other directions are acceptable.
 
 
 [[rule:dependency-target]]
@@ -41,7 +41,7 @@ uml:Dependency connectors shall have no name specified. They shall have a valid 
 
 A Dependency connector shall have no name specified (see the xref:uml/conv-connectors.adoc#rule:connectors-name[General convention on connector names]).
 
-A Dependency connector shall have only a target role specified. The target role name must be valid, as it is used to generate the OWL property URI that this connector represents. The source role of the Dependency connector shall not be specified.
+A Dependency connector shall have only a target role specified. The target role name must be valid as it is used to generate the OWL property URI that the connector represents. The source role of the Dependency connector shall not be specified.
 
 [[rule:dependency-multiplicity]]
 |===
