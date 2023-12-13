@@ -31,7 +31,7 @@ https://www.e-informatyka.pl/index.php/einformatica/volumes/volume-2019/issue-1/
 
 === How to read this document
 
-The remainder of this document comprises four sections covering major UML aspects. The section xref:transformation/transf-rules1.adoc#sec:tran-rules[Transformation of UML classes and attributes] treats classes and attributes. The next section deals with the  employed in the eProcurement model namely, xref:transformation/transf-rules2.adoc[associations, dependencies and generalisations]. The third section  describes the xref:transformation/transf-rules3.adoc[transformation rules] i.e., how the data types and enumerations should be transformed and finally, the forth and final section provides some xref:transformation/transf-rules4.adoc[transformation rules applicable to all UML elements], concerned with comments, labels and notes.
+The remainder of this document comprises four sections covering major UML topics. The section xref:transformation/transf-rules1.adoc#sec:tran-rules[Classes and Attributes] treats classes and attributes. The second section deals with the   xref:transformation/transf-rules2.adoc[associations, dependencies and generalisations]. The third section  describes the xref:transformation/transf-rules3.adoc[transformation rules] i.e., how the data types and enumerations should be transformed and finally, the fourth and final section provides xref:transformation/transf-rules4.adoc[transformation rules applicable to all UML elements], concerning comments, labels and notes.
 
 Each section provides a table with an overview of the transformation rule set presented within. The table has three columns, one for every layer of the ontology architecture comprising rules: (a) , (b) , and (c) .
 

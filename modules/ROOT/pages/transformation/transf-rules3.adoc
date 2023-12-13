@@ -1,4 +1,4 @@
-:doctitle: Transformation of UML datatypes
+:doctitle: Transformation of UML data types
 :doccode: m2o-main-prod-025
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
