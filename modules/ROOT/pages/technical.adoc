@@ -29,7 +29,7 @@ The tools can be used on any other ontology that is built according to the https
 
 This specification establishes conventions for the interpretation of the UML-based conceptual model in the eProcurement context.
 
-#insert technical process graphic#
+//#insert technical process graphic#
 
 == Components
 
