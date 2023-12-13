@@ -1,4 +1,4 @@
-:doctitle: Transformation of the UML model into derivative artefacts
+:doctitle: Transformation of the UML model into OWL artefacts
 :doccode: m2o-main-prod-022
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
@@ -31,13 +31,13 @@ https://www.e-informatyka.pl/index.php/einformatica/volumes/volume-2019/issue-1/
 
 === How to read this document
 
-The remainder of this document comprises four sections covering major UML aspects. The section xref:transformation/transf-rules1.adoc#sec:tran-rules[Transformation of UML classes and attributes] treats classes and attributes. The next section deals with the  employed in the eProcurement model namely, xref:transformation/transf-rules2.adoc[associations, dependencies and generalisations]. The third section  describes the xref:transformation/transf-rules3.adoc[transformation rules] i.e., how the datatypes and enumerations should be transformed and finally, the forth and final section provides some xref:transformation/transf-rules4.adoc[transformation rules applicable to all UML elements], concerned with comments, labels and notes.
+The remainder of this document comprises four sections covering major UML aspects. The section xref:transformation/transf-rules1.adoc#sec:tran-rules[Transformation of UML classes and attributes] treats classes and attributes. The next section deals with the  employed in the eProcurement model namely, xref:transformation/transf-rules2.adoc[associations, dependencies and generalisations]. The third section  describes the xref:transformation/transf-rules3.adoc[transformation rules] i.e., how the data types and enumerations should be transformed and finally, the forth and final section provides some xref:transformation/transf-rules4.adoc[transformation rules applicable to all UML elements], concerned with comments, labels and notes.
 
 Each section provides a table with an overview of the transformation rule set presented within. The table has three columns, one for every layer of the ontology architecture comprising rules: (a) , (b) , and (c) .
 
 Transformation rules are specified in normative language and are aided by prototypical UML diagram fragments (usually preceding the rule) along with a representation of the corresponding OWL fragment depicted in https://www.researchgate.net/publication/301951431_Modelling_OWL_Ontologies_with_Graffoo[graffoo visual notation]. The diagrams are provided side to side to aid understanding, with UML fragment on the left constituting the source of the transformation, and the OWL fragment on the right representing the final result of the transformation.
 
-Each transformation rule is accompanied by the formal OWL representation in https://www.w3.org/TR/turtle/[Turtle]  and https://www.w3.org/2001/sw/RDFCore/TR/WD-rdf-syntax-grammar-20030117/[RDF/XML syntaxes] corresponding to the depicted UML fragment from the preceding figure. RDF/XML is a syntax that expresses RDF graphs as an XML document. Turtle is a textual syntax for RDF that is compact and resembles a natural text form with abbreviations for common usage patterns and datatypes.
+Each transformation rule is accompanied by the formal OWL representation in https://www.w3.org/TR/turtle/[Turtle]  and https://www.w3.org/2001/sw/RDFCore/TR/WD-rdf-syntax-grammar-20030117/[RDF/XML syntaxes] corresponding to the depicted UML fragment from the preceding figure. RDF/XML is a syntax that expresses RDF graphs as an XML document. Turtle is a textual syntax for RDF that is compact and resembles a natural text form with abbreviations for common usage patterns and data types.
 
 === UML visual notation
 
@@ -48,7 +48,7 @@ This section provides the main UML elements employed in this document. A detaile
 [#fig:uml-classes]
 image::f1.png[1]
 
-.UML visual notation for datatypes and enumerations
+.UML visual notation for data types and enumerations
 [#fig:uml-datatypes]
 image::f2.png[2]
 
@@ -59,7 +59,7 @@ image::f3.png[3]
 
 <<fig:uml-classes>> depicts simple, abstract, and regular classes with and without attribute specifications. Note that no class methods are ever employed as this document as the transformations aim at data structures only.
 
-<<#fig:uml-datatypes>> depicts a primitive datatype and an enumeration. No complex datatypes are depicted as they are treated in the same manner as classes.
+<<#fig:uml-datatypes>> depicts a primitive datatype and an enumeration. No complex data types are depicted as they are treated in the same manner as classes.
 
 <<fig:uml-associations>> depicts association, generalisation and dependency connectors as the only ones necessary to model the eProcurement conceptual model.
 
@@ -77,12 +77,14 @@ image::f4.png[4]
 image::f5.png[5]
 
 
-A yellow rectangle with solid black border is used to declare classes. Solid black and labelled arrows are used to declare class axioms. A green rhomboid with solid black border is used to declare datatypes. Solid black and labelled arrows are used to declare class axioms.
+A yellow rectangle with solid black border is used to declare classes. Solid black and labelled arrows are used to declare class axioms. A green rhomboid with solid black border is used to declare data types. Solid black and labelled arrows are used to declare class axioms.
 
 A pink circle with solid black border is used to declare individuals. Solid black and labelled arrows are used to declare axioms and assertions among individuals.
 
 A green solid line is used to declare data properties, where the empty circle at the beginning identifies the property domain, and the empty arrow at the end indicates the property range. A blue solid line is used to declare object properties, where the solid circle at the beginning identifies the property domain, and the solid arrow at the end indicates the property range.
 
-The following sections present the transformation rules necessary for converting the UML eProcurement conceptual model into a formal OWL ontology.
+The transformation rules for UML classes and attributes, connectors, data types and descriptors can be accessed via the menu items on the left.
+
+//The following sections present the transformation rules necessary for converting the UML eProcurement conceptual model into a formal OWL ontology.
 
 include::partial$feedback.adoc[]
