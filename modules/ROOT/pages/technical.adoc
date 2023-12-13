@@ -66,7 +66,7 @@ There are two ways to perform the transformations:
 
 === Working Locally
 
-==== Introducing the Makefile tool:
+==== Introducing the Makefile tool
 
 Makefile is a powerful tool that automates different commands for software projects. It provides a convenient way to define and execute various tasks, such as using source code, generating documentation, running tests, and more.
 
@@ -222,7 +222,7 @@ All configuration files (see above) should be in one folder. Once the folder wit
  <xsl:import href="my-pc/user/my-config-folder/config-parameters.xsl"/>
 ----
 
-*Running transformations*:
+==== Running transformations
 
 After installing and creating your configuration folder, use the "make targets" command described above to transform/generate output from you XMI/XML export file. The command should be executed from the root folder of the project.
 

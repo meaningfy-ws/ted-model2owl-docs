@@ -139,7 +139,7 @@ Clear and plain language shall be used; and abbreviations, unpronounceable, easi
 
 *Description:*
 
-It is recommended that abbreviations in concept names, and  the words employed in the metamodel such as "class", "property", "attribute", "connector" etc, are avoided. Names that are nonsensical, unpronounceable, hard to read, or easily confusable with other names also should not be employed https://www.researchgate.net/publication/319395252_Extensible_Markup_Language_XML_10_Fifth_Edition?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6Il9kaXJlY3QiLCJwYWdlIjoiX2RpcmVjdCJ9fQ[(Bray et al, 2008)].
+It is recommended that abbreviations in concept names, and  the words employed in the metamodel such as "class", "property", "attribute", "connector" etc, are avoided. Names that are nonsensical, unpronounceable, hard to read, or easily confusable with other names also should not be employed https://www.w3.org/TR/REC-xml/[(Bray et al, 2008)].
 
 
 // [[sec:casing]]
@@ -395,7 +395,7 @@ The properties having this controlled list as range shall be depicted as UML dep
 
 image::cmc-r14-1.png[]
 
-The name of the Enumeration shall be resolved to a URI identical to that of the `skos:ConceptScheme`. As for the connector type we recommend using a dependency connector (depicted with a dashed line) because the semantic interpretation differs slightly from the association connector (depicted with a continuous line). Namely, the range of the property has to fulfil two constraints: (a) instantiating the `skos:Concept` class and (b) being `skos:inScheme` the intended #controlled list# xref:architecture/ontology-architecture.adoc[(ePO Architecture)]
+The name of the Enumeration shall be resolved to a URI identical to that of the `skos:ConceptScheme`. As for the connector type we recommend using a dependency connector (depicted with a dashed line) because the semantic interpretation differs slightly from the association connector (depicted with a continuous line). Namely, the range of the property has to fulfil two constraints: (a) instantiating the `skos:Concept` class and (b) being `skos:inScheme` the intended controlled list xref:architecture/ontology-architecture.adoc[(ePO Architecture)]
 //TODO: this reference can be replaced with a cross-reference to the architecture section of this Model2OWL documentation, when that part will be updated.
 
 
