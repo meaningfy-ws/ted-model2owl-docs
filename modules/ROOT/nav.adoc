@@ -38,6 +38,10 @@
 ** xref:transformation/transf-rules3.adoc[Data Types]
 ** xref:transformation/transf-rules4.adoc[Descriptors]
 
+* [.separated]#**Performing Transformations**#
+* xref:technical.adoc#_working_locally[On a local machine]
+* xref:boiler.adoc[Using the online boilerplate utility]
+
 ////
 * [.separated]#**References**#
 * xref:uml/definitions.adoc[Definitions]
