@@ -61,8 +61,8 @@ This specification establishes conventions for the interpretation of the UML-bas
 === Getting started
 There are two ways to perform the transformations:
 
-* Locally, on a machine (available immediately), and
-* Online, using the model2owl boilerplate utility (to be introduced later)
+* Locally, on a machine, and
+* Online, using the xref:boiler.adoc[model2owl boilerplate utility]
 
 === Working Locally
 
@@ -234,7 +234,17 @@ make owl-core XMI_INPUT_FILE_PATH=/home/mypc/work/model2owl/file1.xml OUTPUT_FOL
 ////
 === Using the automated online utility: model2owl-boilerplate
 
-To use model2owl without installing or executing anything locally, the online https://github.com/meaningfy-ws/model2owl-boilerplate[model2owl boilerplate utility] has been created. Follow the instructions provided in the repository to use this automated model2owl process.
+To use model2owl without installing or executing anything locally, the online https://github.com/meaningfy-ws/model2owl-boilerplate[model2owl boilerplate utility] has been created. The instructions are given in the repositories README.md file as well as here:
+
+Getting Started:
+This project will use model2owl to transform a UML model into a formal OWL ontology, a SHACL shape, a conventions report and glossary based on established UML conventions.
+
+Main steps:
+
+Fork this repository
+Put your UML model/models export (XML file) in the implementation folder
+Configure model2owl using config folder
+Change GitHub action script available to include your ontologies
 ////
 
 include::partial$feedback.adoc[]
