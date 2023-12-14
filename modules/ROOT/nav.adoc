@@ -25,7 +25,7 @@
 
 * [.separated]#**Performing Transformations**#
 * xref:local.adoc[On a local machine]
-* xref:boiler.adoc[Using the online boilerplate utility]
+* xref:boiler.adoc[Using the boilerplate utility]
 
 ////
 * [.separated]#**References**#
