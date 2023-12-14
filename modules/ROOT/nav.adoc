@@ -31,7 +31,7 @@
 * [.separated]#**Checkers (Validation)**#
 * xref:checkers/model2owl-checkers.adoc[UML Convention Checking Rules]
 
-* [.separated]#**Transformation**#
+* [.separated]#**Transformation Rules**#
 * xref:transformation/uml2owl-transformation.adoc[Introduction]
 ** xref:transformation/transf-rules1.adoc[Classes and Attributes]
 ** xref:transformation/transf-rules2.adoc[Connectors]
