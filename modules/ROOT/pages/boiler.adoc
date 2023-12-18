@@ -7,7 +7,7 @@
 = The Boilerplate Utility
 === Using the automated online utility: model2owl-boilerplate
 
-To use model2owl without installing or executing anything locally, the online https://github.com/meaningfy-ws/model2owl-boilerplate[model2owl boilerplate utility] was created. The instructions on how to use it are given in the repositories README.md file as well as below.
+To use model2owl without installing or executing anything locally, the online https://github.com/meaningfy-ws/model2owl-boilerplate[model2owl boilerplate utility] was created. The instructions on how to use it are given in the repository's README.md file as well as below.
 
 The utility uses model2owl to transform a UML model into a formal OWL ontology, a SHACL shape, a conventions report, and glossary, based on established UML conventions.
 
