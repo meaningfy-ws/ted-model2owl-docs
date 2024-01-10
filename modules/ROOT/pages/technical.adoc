@@ -23,7 +23,7 @@ The documentation (regularly updated) aims to cover the most important aspects w
 * The transformation rules applied in the process of conversion.
 * The set of validation rules that realise the established conventions (and UML interpretations).
 
-This work is developed in the context of https://github.com/eprocurementontology/eprocurementontology[eProcurement ontology project] financed by the Digital Europe Programme and led by the https://op.europa.eu/en/[Publications Office of the European Union].
+This work is developed in the context of https://github.com/eprocurementontology/eprocurementontology[eProcurement ontology project] financed by the Digital Europe Programme, and led by the https://op.europa.eu/en/[Publications Office of the European Union].
 
 The tools can be used on any other ontology that is built according to the https://github.com/meaningfy-ws/model2owl/blob/master/doc/ontology-architecture/ontology-architecture.pdf[modelling architecture] and xref:uml/conceptual-model-conventions.adoc[UML conceptual model conventions] provided.
 
@@ -39,22 +39,22 @@ This specification establishes conventions for the interpretation of the UML-bas
 
 * The xref:transformation/uml2owl-transformation.adoc[Transfer Rules] can also be accessed via the links in the left-hand menu.
 
-* A list and descriptions of the xref:checkers/model2owl-checkers.adoc[Checkers], used for verification.
+* A list and descriptions of the xref:checkers/model2owl-checkers.adoc[Checkers], used for verification, also accessible from the left-hand menu.
 
 == Resources
 
 === Scripts
-* *html-conventions-report.xsl* is the script that checks conformance to the technical conventions of the conceptual model.
+* *html-conventions-report.xsl* is the script that checks conformance with the technical conventions of the conceptual model.
 * *html-model-glossary.xsl* is the script that creates a glossary of the conceptual model.
 * *owl-core.xsl* is the transformation script that generates the core OWL ontology.
-* *shacl-shapes.xsl* is the transformation script for the SHACL data shape constraints.
-* *owl-restrictions.xsl* is the transformation script for the restrictions (on classes and properties) of the OWL ontology.
+* *shacl-shapes.xsl* is the transformation script that generates the SHACL data shape constraints.
+* *owl-restrictions.xsl* is the transformation script that generates the restrictions (on classes and properties) of the OWL ontology.
 
 === Script unit tests
-* *test/unitTest/test-html-conventions-lib* is the location of the unit tests for the script checking the conformance to the technical conventions of the conceptual model.
-* *test/unitTest/test-owl-core-lib* is the location of the unit tests for the transformation script for the core OWL ontology.
-* *test/unitTest/test-shacl-shape-lib* is the location of the unit tests for the transformation script for the SHACL data shape constraints.
-* *test/unitTest/reasoning-layer-lib* is the location of the unit tests for the transformation script for the restrictions of the OWL ontology (classes and properties).
+* *test/unitTest/test-html-conventions-lib* is the location of the unit tests for the script checking the conformance with the technical conventions of the conceptual model.
+* *test/unitTest/test-owl-core-lib* is the location of the unit tests for the transformation script generating the core OWL ontology.
+* *test/unitTest/test-shacl-shape-lib* is the location of the unit tests for the transformation script generating the SHACL data shape constraints.
+* *test/unitTest/reasoning-layer-lib* is the location of the unit tests for the transformation script generating the restrictions of the OWL ontology (classes and properties).
 
 == Performing transformations
 

@@ -13,15 +13,15 @@
 * [.separated]#**UML Conventions**#
 * xref:uml/conceptual-model-conventions.adoc[UML Model Conventions]
 
-* [.separated]#**Checkers (Validation)**#
-* xref:checkers/model2owl-checkers.adoc[UML Convention Checking Rules]
-
 * [.separated]#**Transformation Rules**#
 * xref:transformation/uml2owl-transformation.adoc[Introduction]
 ** xref:transformation/transf-rules1.adoc[Classes and Attributes]
 ** xref:transformation/transf-rules2.adoc[Connectors]
 ** xref:transformation/transf-rules3.adoc[Data Types]
 ** xref:transformation/transf-rules4.adoc[Descriptors]
+
+* [.separated]#**Checkers (Validation)**#
+* xref:checkers/model2owl-checkers.adoc[UML Convention Checking Rules]
 
 * [.separated]#**Performing Transformations**#
 * xref:local.adoc[On a local machine]
