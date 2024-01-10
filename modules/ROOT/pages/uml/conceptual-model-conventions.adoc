@@ -57,9 +57,9 @@ include::conv-packages.adoc[]
 [[sec:keywords]]
 == Key words for Requirement Statements
 
-The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119 [xref:references.adoc#ref:rfc2119[rfc2119]].
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119 [xref:references.adoc#ref-rfc2119[rfc-2119]].
 
-The key words "MUST (BUT WE KNOW YOU WON’T)", "SHOULD CONSIDER", "REALLY SHOULD NOT", "OUGHT TO", "WOULD PROBABLY", "MAY WISH TO", "COULD", "POSSIBLE", and "MIGHT" in this document are to be interpreted as described in RFC 6919 [xref:references.adoc#ref:rfc6919[rfc6919]].
+The key words "MUST (BUT WE KNOW YOU WON’T)", "SHOULD CONSIDER", "REALLY SHOULD NOT", "OUGHT TO", "WOULD PROBABLY", "MAY WISH TO", "COULD", "POSSIBLE", and "MIGHT" in this document are to be interpreted as described in RFC 6919 [xref:references.adoc#ref-rfc6919[rfc-6919]].
 
 
 
