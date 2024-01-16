@@ -6,7 +6,7 @@
 
 //[[sec:introduction]]
 
-The following topics are included in this version of the Semantic Web Service Documentation:
+The following topics are included in this version of the model2owl Documentation:
 
 == General Reference
 * xref:intro.adoc[Introduction] +
