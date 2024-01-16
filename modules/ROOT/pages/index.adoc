@@ -9,6 +9,8 @@
 The following topics are included in this version of the Semantic Web Service Documentation:
 
 == General Reference
+* xref:intro.adoc[Introduction] +
+An introduction to the model2owl project
 * xref:business.adoc[Functional Overview] +
 Project context and overview for business users
 * xref:technical.adoc[Technical Overview] +
@@ -42,7 +44,7 @@ The UML convention checking inventory
 * xref:local.adoc[Local machine] +
 Performing Transformations on a Local Machine
 * xref:boiler.adoc[The boilerplate utility] +
-performing transformations online using the boilerplate utility
+Performing transformations online using the boilerplate utility
 
 
 include::partial$feedback.adoc[]

@@ -7,6 +7,9 @@
 
 
 * xref:index.adoc[Home]
+
+* [.separated]#**General Reference**#
+* xref:intro.adoc[Introduction]
 * xref:business.adoc[Functional Overview]
 * xref:technical.adoc[Technical Overview]
 
