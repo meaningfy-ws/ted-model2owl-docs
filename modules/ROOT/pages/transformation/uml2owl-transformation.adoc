@@ -15,7 +15,7 @@ The process and the methodology adopted involve crafting the conceptual model in
 
 This section provides a working definition of the transformation rules for converting the UML conceptual model into the formal ontology and validation data shapes. These rules are organised in accordance with the xref:ePO_Arch_Design.adoc[eProcurement Ontology Architecture and Formalisation Specification].
 
-=== Current Knowledge
+== Current Knowledge
 
 Much has been written about https://www.e-informatyka.pl/index.php/einformatica/volumes/volume-2019/issue-1/article-3/[transformations from UML to OWL and vice versa].
 //The most significant literature on this topic was published between 2006 and 2019 comprising three book chapters, nine journal papers and multiple conference papers.
@@ -30,7 +30,7 @@ Three further papers by Xu el al in https://link.springer.com/chapter/10.1007/97
 
 https://www.e-informatyka.pl/index.php/einformatica/volumes/volume-2019/issue-1/article-3/[Sadowska, 2019], presents a comprehensive review of  related work. It is used as a guideline for ensuring the necessary coverage of the transformation rules specified in this report. It is important to note that not all the UML elements are dealt with here, only the ones employed in the eProcurement conceptual model.
 
-=== How to read this documentation
+== How to read this documentation
 
 The remainder of this topic comprises four sections covering major UML topics. The section xref:transformation/transf-rules1.adoc#sec:tran-rules[Classes and Attributes] treats classes and attributes. The second section deals with the   xref:transformation/transf-rules2.adoc[associations, dependencies and generalisations]. The third section  describes the xref:transformation/transf-rules3.adoc[transformation rules] i.e., how the data types and enumerations should be transformed and finally, the fourth and final section provides xref:transformation/transf-rules4.adoc[transformation rules applicable to all UML elements], concerning comments, labels and notes.
 
@@ -40,7 +40,7 @@ Transformation rules are specified in normative language and are aided by protot
 
 Each transformation rule is accompanied by the formal OWL representation in https://www.w3.org/TR/turtle/[Turtle]  and https://www.w3.org/2001/sw/RDFCore/TR/WD-rdf-syntax-grammar-20030117/[RDF/XML syntaxes] corresponding to the depicted UML fragment from the preceding figure. RDF/XML is a syntax that expresses RDF graphs as an XML document. Turtle is a textual syntax for RDF that is compact and resembles a natural text form with abbreviations for common usage patterns and data types.
 
-=== UML visual notation
+== UML visual notation
 
 This section provides the main UML elements employed in this document. A detailed description can be consulted in the standard specifications https://www.omg.org/spec/UML/2.5.1[uml2.5] and in the https://www.amazon.com/Unified-Modeling-Language-User-Guide/dp/0321267974[UML user guide].
 
@@ -64,7 +64,7 @@ image::f3.png[3]
 
 <<fig:uml-associations>> depicts association, generalisation and dependency connectors as the only ones necessary to model the eProcurement conceptual model.
 
-=== Graffoo visual notation
+== Graffoo visual notation
 
 This section provides the main Graffoo elements employed in this document. A detailed description can be consulted in the OWL standard specifications https://www.w3.org/2012/pdf/REC-owl2-overview-20121211.pdf[owl2] and in the https://www.researchgate.net/publication/301951431_Modelling_OWL_Ontologies_with_Graffoo[graffoo  user guide].
 

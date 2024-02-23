@@ -7,7 +7,7 @@
 
 
 [[sec:relations]]
-=== Conventional recommendations on Relations
+== Conventional recommendations on Relations
 
 
 [[rule:connectors-names-with-verb]]
@@ -86,7 +86,7 @@ Models should define such inverse pairs for relationships although this does not
 
 
 [[sec:connectors]]
-=== Technical conventions on connectors
+== Technical conventions on connectors
 
 
 [[rule:connectors-name]]
@@ -128,7 +128,7 @@ All supported UML connectors shall have direction "Source->Target". In addition,
 
 
 [[sec:relations-reuse]]
-=== Reuse of Relations
+== Reuse of Relations
 
 [[rule:connectors-reuse]]
 |===

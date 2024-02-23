@@ -7,7 +7,7 @@
 
 
 [[sec:classes]]
-=== Conventional recommendations on Classes
+== Conventional recommendations on Classes
 
 [[rule:class-name-gen]]
 |===
@@ -109,7 +109,7 @@ Circular inheritance must be avoided.
 This means that if a class `B` specialises a class `A`, then `A` may not specialise `B` or any of the subclasses of `B`.
 
 [[sec:uml-class]]
-=== Technical conventions on uml:Class elements
+== Technical conventions on uml:Class elements
 
 [[rule:class-name-mandatory]]
 |===

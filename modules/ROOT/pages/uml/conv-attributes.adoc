@@ -52,7 +52,7 @@ Attribute multiplicity should be specified indicating the minimum and maximum ca
 In special cases, a list of custom default multiplicities is defined for the transformation script. This means that some data types or classes that are used as attribute types are paired with a default multiplicity, for example "1..1", "0..1", "2..2".
 
 [[sec:attributes-class]]
-=== uml:Class attributes
+== uml:Class attributes
 
 [[rule:attributes-datatypes]]
 |===

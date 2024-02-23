@@ -1,10 +1,9 @@
-:doctitle:
+:doctitle: Working Locally
 :doccode: m2o-main-prod-029
 :author: NPJ
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: November 2023
 
-= Working Locally
 
 == Introducing the Makefile tool
 
@@ -65,7 +64,7 @@ make owl-core XMI_INPUT_FILE_PATH=/home/mypc/work/model2owl/file1.xml OUTPUT_FOL
 ** parameters:
 *** ONTOLOGY_FOLDER_PATH - path to the folder containing turtle file/files
 
-==== Preparing the local environment
+== Preparing the local environment
 
 *Prerequisites*:
 

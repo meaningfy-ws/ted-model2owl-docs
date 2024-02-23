@@ -21,7 +21,7 @@ This section specifies the transformation rules for UML descriptive elements. Th
 |Source |<<rule:element-source-core>> |<<rule:element-source-ds>> |
 |===
 
-=== Name
+== Name
 
 Most of the UML elements are named. The xref:uml/conceptual-model-conventions.adoc[UML conventions] dedicate an extensive section to the naming conventions and how to generate a URI and a label from the UML element name deterministically. By default, the use of the SKOS lexicalization (`skos:prefLabel`) in the core ontology layer is recommended.
 

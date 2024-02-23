@@ -9,7 +9,7 @@
 In this section, a number of general conventions of either _conventional_ or _technical_ nature are provided. The topic starts with some general conventions, and then a number of generic areas are covered: naming things, providing appropriate descriptions, and generic recommendations on technical aspects of encoding such information. In each topic, both conventional and technical conventions are covered, as relevant.
 
 [[sec:general-model]]
-=== General conventions of the UML Model
+== General conventions of the UML Model
 
 To reduce the complexity of both the UML models, and the conversion of those UML models into derived artefacts i.e., OWL ontologies and SHACL shapes, a minimum set of UML model components and UML elements and connectors, were identified that express most of the ontological statements needed in practice. For this minimum set of UML model components, a xref:transformation/uml2owl-transformation.adoc[well-defined set of transformation rules] was agreed to ensure that the generation of derived artefacts is deterministic (not random) and complete. Other UML components were ignored.
 
@@ -65,7 +65,7 @@ This convention also includes that the UML class attributes have their visibilit
 
 
 [[sec:names]]
-=== Naming Conventions
+== Naming Conventions
 
 Defining naming and structural conventions for concepts in an ontology, and strictly adhering to them, not only makes the ontology easier to understand, it also helps avoid common modelling mistakes.
 
@@ -329,7 +329,7 @@ In addition to the SEMIC recommendation for providing good definitions, the foll
 *See also:* SEMIC Style Guide Rule [https://semiceu.github.io/style-guide/1.0.0/gc-general-conventions.html#sec:gc-r5[GC-R5]], which provides more recommendations to be followed here.
 
 [[sec:controlled-lists]]
-=== Controlled lists
+== Controlled lists
 
 A controlled list is a carefully selected list of words and phrases and commonly employed in modelling practices. The controlled list has a name, and a set of terms. For example, the list of grammatical genders can be named "Gender" and comprise the terms "masculine", "feminine", "neuter" and "utrum".
 
@@ -410,7 +410,7 @@ More specific requirements on the uml:Enumeration elements are provided in the S
 
 
 [[sec:namespaces]]
-=== Namespaces
+== Namespaces
 
 In order to enable the reuse of names defined in other models and reuse of unique references for names that support easy identification, namespace management must be considered. We adopt an XML approach in defining and managing namespaces as it is inherent in both XMI and OWL2 standards. Hence, a _namespace_ is a set of symbols that is used to organise objects of various kinds, so that these objects may be referred to by name and are uniquely identifiable.
 
@@ -448,7 +448,7 @@ is the namespace name and `Organization` is the local name.
 // If the delimiter (:) is used without any prefix, then the empty string prefix is resolved to the default namespace as defined in [xref:references.adoc#ref:xml-namespaces[xml-namespaces]].
 
 [[sec:charset]]
-=== Character encoding
+== Character encoding
 
 In the formal ontology, the URIs must conform to https://www.w3.org/TR/rdf11-mt/[RDF 1.1] and https://www.w3.org/TR/xml/[XML] format specifications. Both languages effectively require that terms begin with an upper or lower case letter from the ASCII character set, or an underscore (_). This tight restriction means that, for example, terms may not begin with a number, hyphen or accented character https://joinup.ec.europa.eu/sites/default/files/document/2012-03/D3.1-Process%20and%20Methodology%20for%20Core%20Vocabularies_v1.01.pdf[(Process and Methodology used for Core Vocabularies)]. Although underscores are permitted, they are discouraged as they may be, in some cases, misread as spaces. A formal definition of these restrictions is given in the XML specification document https://www.researchgate.net/publication/319395252_Extensible_Markup_Language_XML_10_Fifth_Edition?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6Il9kaXJlY3QiLCJwYWdlIjoiX2RpcmVjdCJ9fQ[(Bray et al, 2008)].
 
@@ -488,7 +488,7 @@ Encoded UTF-8 and UTF-16 names may be used https://www.researchgate.net/publicat
 
 
 [[sec:stereotypes-tags]]
-=== Stereotypes and Tags
+== Stereotypes and Tags
 
 [[rule:gen-stereotypes]]
 |===

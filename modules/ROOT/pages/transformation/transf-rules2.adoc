@@ -33,7 +33,7 @@ This section specifies transformation rules for UML association, generalisation 
 |===
 
 [[sec:association-uni]]
-=== Unidirectional association
+== Unidirectional association
 
 A binary Association specifies a semantic relationship between two member ends represented by properties. Please note that in accordance with the https://www.omg.org/spec/UML/2.5.1[uml 2.5] specification, the association end names are not obligatory. However, we adhere to the UML conventions , where the specification of one-member ends, for unidirectional association, and two-member ends, for bidirectional association, is mandatory. Moreover, the provision of a connector (general) name is discouraged.
 

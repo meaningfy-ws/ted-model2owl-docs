@@ -21,7 +21,7 @@ This section describes the specified transformation rules for UML datatypes and 
 |===
 
 [[sec:primitive-type]]
-=== Primitive datatype
+== Primitive datatype
 
 The UML primitive type is a predefined datatype without any substructure. The UML specification, https://www.omg.org/spec/UML/2.5.1[UML 2.5], predefines five primitive types: String, Integer, Boolean, UnlimitedNatural and Real. These extend the list provided in <<tab:type-mapping>>.
 

@@ -4,7 +4,7 @@
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: November 2023
 
-=== Conventional recommendations on datatypes
+== Conventional recommendations on datatypes
 
 [[rule:datatypes-composite]]
 |===
@@ -24,7 +24,7 @@ This convention draws the distinction between primitive (or atomic) types (consi
 
 
 [[sec:uml-datatype]]
-=== Technical conventions on uml:DataType elements
+== Technical conventions on uml:DataType elements
 
 [[rule:datatypes-primitive]]
 |===

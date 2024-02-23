@@ -14,7 +14,7 @@ The utility uses model2owl to transform a UML model into a formal OWL ontology, 
 == Getting Started
 The main steps are as follows:
 
-. Fork this repository
+. Fork https://github.com/meaningfy-ws/model2owl-boilerplate[this repository]
 . Put your UML model/models export (XML file) in the *implementation folder*
 . Configure model2owl using the config folder
 . Change the GitHub action script provided to include your ontologies
@@ -49,8 +49,8 @@ implementation
 
 == Adding model2owl config
 
-* Copy model2owl-config folder into UML model implementation folder created at the previous step
-* Configure model2owl using the files inside model2owl-config folder
+* Copy the model2owl-config folder into the UML model implementation folder created in the previous step
+* Configure the model2owl using the files inside model2owl-config folder
 
 == Adjusting the GitHub actions
 
@@ -66,7 +66,7 @@ In the .GitHub folder in the forked repository, the action script that transform
       - "implementation/demo_ontology/xmi_conceptual_model/demo_ontology_module_CM.xml"
 
 ----
-If a change is detected in any the files that are included in the paths config, it will trigger this GitHub action. The paths should be to the UML model export file.
+If a change is detected in any the files included in the paths config, it will trigger this GitHub action. The paths should be to the UML model export file.
 
 Configure which of the implementation should be included by changing the AVAILABLE_IMPLEMENTATIONS variable inside the action script.
 
