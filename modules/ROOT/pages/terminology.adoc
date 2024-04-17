@@ -1,0 +1,18 @@
+:doctitle: Terminology
+
+Two key concepts from SEMIC Terminology are:
+
+== Semantic data specification 
+
+In the model2owl project we require a semantic data specification to support the https://www.toop.eu/[once-only principle] as defined by the https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-semantic-data-specification[SEMIC definition]. 
+
+This data specification is composed of 
+
+* https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-cv-specification[A core vocabulary (Lightweight ontology)]  
+
+* https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-data-shape-contraint[A Data-shape specification (SHACL)]
+
+== Conceptual model 
+
+We describe our https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-conceptual-model[Conceptual model] using UML using a tool to do so, https://sparxsystems.com/[Enterprise Architect]. 
+

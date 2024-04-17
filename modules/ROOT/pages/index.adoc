@@ -8,14 +8,10 @@
 
 The following topics are included in this version of the model2owl documentation:
 
-== General Reference
-* xref:intro.adoc[Introduction] +
 An introduction to the model2owl project
-* xref:business.adoc[Functional Overview] +
-Project context and overview for business users
-* xref:technical.adoc[Technical Overview] +
-Overview for technical implementers
-
+* xref:intro_overview.adoc[Introduction] +
+Terminology
+* xref:terminology.adoc[Important Terminology] +
 
 == UML Conventions
 

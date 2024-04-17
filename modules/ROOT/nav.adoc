@@ -4,7 +4,7 @@
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: November 2023
 
-* xref:review.adoc[Review Suggestions April 2024]
+// * xref:review.adoc[Review Suggestions April 2024]
 
 * xref:index.adoc[Home]
 
