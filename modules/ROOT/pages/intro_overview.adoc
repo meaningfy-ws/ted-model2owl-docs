@@ -14,7 +14,7 @@ In the context of EU eGovernment digitalisation, the https://eur-lex.europa.eu/L
 
  How we already use this for eProcurement. Explain that we use this approach to produce the core vocabulary of eProcurement and the different modules that extend this core, like eCatalogue, eContract, eFulfilment etc. (there are many more)
 
-=== eProcurement conceptual model requirements
+== eProcurement conceptual model requirements
 
 The eProcurement conceptual model must fulfil four fundamental objectives:
 
@@ -40,11 +40,9 @@ In this section I would talk about how we already use this for eProcurement. Exp
 
 == Semantic data-specifications for e-procurement
 
-
-
 https://github.com/OP-TED/model2owl[model2owl] is a project. Here it is a specific implementation which, in terms of the ePO, honours the specifications published in these documents. 
 
-In short, Model2Owl is used to generate a Semantic data specification from the ePO Conceptual model. 
+In short, model2owl is used to generate a semantic data specification from the ePO conceptual model. An open source https://github.com/OP-TED/model2owl[reference implementation] is available here.
 
 The eProcurement ontology is represented in the human-readable form of a UML conceptual model. Working with the model in this form allows participation in, and discussion between, the following stakeholders, both technical and non-technical:
 
@@ -86,9 +84,6 @@ To generate machine-readable OWL (core and restriction) files and SHACL shapes, 
 It takes the human-readable input in UML form, and in an automated conversion process, applies sets of modelling conventions, transformation rules, and methods of verification to it before generating the output.
 
 The output artifacts are defined by the https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-semantic-data-specification[semic conventions] as a specification, the significance of which is that it ensures that all relevant stakeholders generate data that adheres to the agreed model. The data is structured in the form of a graph that follows https://semiceu.github.io/style-guide/1.0.0/style-guide-whole.html#sec:pc-r1[Linked Data] principles.
-
-
-
 
 //#what about github resources?#
 

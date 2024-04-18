@@ -10,10 +10,11 @@
 
 //* [.separated]#**General Reference**#
 * xref:intro_overview.adoc[Introduction and Overview]
+* xref:terminology.adoc[Terminology]
 //* xref:business.adoc[Functional Overview]
 //* xref:technical.adoc[Technical Overview]
 
-* [.separated]#**UML Conventions**#
+* [.separated]#**UML Model Conventions**#
 * xref:uml/conceptual-model-conventions.adoc[UML Model Conventions]
 
 * [.separated]#**Transformation Rules**#
@@ -27,10 +28,12 @@
 * xref:checkers/model2owl-checkers.adoc[UML Convention Checking Rules]
 
 * [.separated]#**Performing Transformations**#
+* xref:performing.adoc[Performing Transformations: Two Methods]
+////
 * xref:local.adoc[On a local machine]
 * xref:boiler.adoc[Using the boilerplate utility]
 
-////
+
 * [.separated]#**References**#
 * xref:uml/definitions.adoc[Definitions]
 * xref:../../../references/references.adoc[Reference Documents]
