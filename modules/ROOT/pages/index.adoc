@@ -8,10 +8,12 @@
 
 The following topics are included in this version of the model2owl documentation:
 
-An introduction to the model2owl project
 * xref:intro_overview.adoc[Introduction] +
-Terminology
+An introduction to the model2owl project
+
+
 * xref:terminology.adoc[Important Terminology] +
+Terminology
 
 == UML Conventions
 

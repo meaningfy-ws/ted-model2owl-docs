@@ -10,7 +10,7 @@ In the context of EU eGovernment digitalisation, the https://eur-lex.europa.eu/L
 
 //The creation of the  https://docs.ted.europa.eu/epo-home/ePO_Arch_Design.html[eProcurement Ontology] requires collaborative discussions and consensus among various experts in the procurement domain to develop a conceptual model, while the tangible outcomes of the eProcurement Ontology, comprising an OWL-expressed ontology, a series of SHACL shapes, and a glossary, are typically developed by semantic web specialists.
 
-#add process# test...
+#add process#
 
  How we already use this for eProcurement. Explain that we use this approach to produce the core vocabulary of eProcurement and the different modules that extend this core, like eCatalogue, eContract, eFulfilment etc. (there are many more)
 
