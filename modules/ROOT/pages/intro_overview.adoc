@@ -8,7 +8,17 @@ The eProcurement Ontology provides consistent names, relationships, cardinalitie
 
 == model2owl in an eProcurement context
 
+=== The Process Overview: #image to be edited to reflect ref docs functionality not ready yet#
+
+image:../images/m2o2.jpg[]
+
 #model2owl is used to produce the core vocabulary of the eProcurement and the different modules that extend this core, like eCatalogue, eContract, eFulfilment, etc. explain process further...#
+
+=== The Detailed Process
+
+image:../images/m2o3.png[]
+
+
 
 //The creation of the  https://docs.ted.europa.eu/epo-home/ePO_Arch_Design.html[eProcurement Ontology] requires collaborative discussions and consensus among various experts in the procurement domain to develop a conceptual model, while the tangible outcomes of the eProcurement Ontology, comprising an OWL-expressed ontology, a series of SHACL shapes, and a glossary, are typically developed by semantic web specialists.
 
