@@ -8,11 +8,11 @@ The eProcurement Ontology provides consistent names, relationships, cardinalitie
 
 == model2owl in an eProcurement context
 
-=== The Process Overview: #image to be edited to reflect ref docs functionality not ready yet#
+=== The Process Overview 
 
 image:../images/m2o2.jpg[]
 
-#model2owl is used to produce the core vocabulary of the eProcurement and the different modules that extend this core, like eCatalogue, eContract, eFulfilment, etc. explain process further...#
+The model2owl utility available on #GitHub# is used to produce the core vocabulary of the eProcurement and the different modules that extend this core, like eCatalogue, eContract, eFulfilment, etc.
 
 === The Detailed Process
 
