@@ -4,9 +4,9 @@
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: November 2023
 
+One of the outputs of the model2owl project was the conceptual model conventions. These are actively maintained by https://semiceu.github.io/style-guide/1.0.0/index.html[SEMIC] and can be accessed on the https://semiceu.github.io/style-guide/1.0.0/gc-conceptual-model-conventions.html[SEMIC site].
 
-
-This part of the *model2owl* project documentation describes the conventions that the UML conceptual model *should adhere to* so that the tools provided within the *model2owl* project generate the best possible derived artefacts i.e., the most complete and correct OWL ontologies and SHACL shapes.
+//This part of the *model2owl* project documentation describes the conventions that the UML conceptual model *should adhere to* so that the tools provided within the *model2owl* project generate the best possible derived artefacts i.e., the most complete and correct OWL ontologies and SHACL shapes.
 
 
 [[sec:on-conventions]]

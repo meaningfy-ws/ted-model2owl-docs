@@ -8,22 +8,19 @@
 
 The following topics are included in this version of the model2owl documentation:
 
-* xref:intro_overview.adoc[Introduction] +
-An introduction to the model2owl project
+* xref:intro_overview.adoc[UML Introduction] +
 
+* xref:transformation/uml2owl-transformation.adoc[Transformation Introduction] +
+#combine introductions#
 
-* xref:terminology.adoc[Important Terminology] +
+* xref:terminology.adoc[Key Concepts] +
 Terminology
 
-== UML Conventions
+== UML Transformation
+Producing a semantic data specification from UML
 
-* xref:uml/conceptual-model-conventions.adoc[The UML Model Conventions] +
-A list and descriptions of the UML model conventions
+=== Transfer Rules
 
-== Transformation Rules
-
-* xref:transformation/uml2owl-transformation.adoc[Introduction] +
-An introduction to the transformation rules
 * xref:transformation/transf-rules1.adoc[UML Classes and Attributes] +
 Transformation of UML classes and attributes
 * xref:transformation/transf-rules2.adoc[Connectors] +
@@ -33,10 +30,7 @@ Transformation of UML Data Types
 * xref:transformation/transf-rules4.adoc[Descriptors and Tags] +
 Transformation of UML descriptors and tags
 
-== Checkers (Validation)
 
-* xref:checkers/model2owl-checkers.adoc[UML Convention Checking Rules] +
-The UML convention checking inventory
 
 == Performing Transformations
 * xref:local.adoc[Local machine] +
@@ -44,5 +38,14 @@ Performing Transformations on a Local Machine
 * xref:boiler.adoc[The boilerplate utility] +
 Performing transformations online using the boilerplate utility
 
+== UML Conventions
+
+* xref:uml/conceptual-model-conventions.adoc[The UML Model Conventions] +
+The UML model conventions
+
+== Checkers (Validation)
+
+* xref:checkers/model2owl-checkers.adoc[UML Convention Checking Rules] +
+The UML convention checking inventory
 
 include::partial$feedback.adoc[]
