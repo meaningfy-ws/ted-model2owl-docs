@@ -9,15 +9,6 @@
 [[sec:introduction]]
 == Introduction
 
-The Publications Office of the European Union began a project in 2015 to develop an eProcurement ontology, the motivation for which can be read in the xref:ePO_Arch_Design.adoc[eProcurement Ontology Architecture and Formalisation Specifications]. The ultimate objective of the project was to produce a commonly agreed ontology that will conceptualise, formally encode, and make available in an open, structured and machine-readable format, data about public procurement. The data will cover procurement end-to-end, i.e., from notification, through tendering to awarding, ordering, invoicing, and finally, payment. Currently OWL artifacts and a Semantic Data Specification are produced.
-
-The process and the methodology adopted involve creating the conceptual model in https://www.omg.org/spec/UML/2.5.1[Unified Modelling Language (UML)] and then abiding by a set of conventions and recommendations to transforming the model into a formal ontology expressed in https://www.w3.org/OWL/[Web Ontology Language (OWL)].
-
-We transform it to produce:
-
-*A core vocabulary (Lightweight ontology)
-*A Data-shape specification (SHACL)
-
 This section provides a working definition of the transformation rules for converting the UML conceptual model into the formal ontology and validation data shapes. These rules are organised in accordance with the xref:ePO_Arch_Design.adoc[eProcurement Ontology Architecture and Formalisation Specification].
 
 == How to read this documentation
