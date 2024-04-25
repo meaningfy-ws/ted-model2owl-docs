@@ -3,7 +3,7 @@
 
 
 
-The OP provides a #reference implementation# on GitHub in which you will find instructions on how to perform transformations either
+The OP provides a https://github.com/OP-TED/model2owl[reference implementation] on GitHub in which you will find instructions on how to perform transformations either
 
 * Locally
 * Using the Boilerplate utility provided
