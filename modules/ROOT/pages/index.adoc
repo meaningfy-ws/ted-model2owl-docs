@@ -9,7 +9,7 @@
 The following topics are included in this version of the model2owl documentation:
 
 * xref:intro_overview.adoc[Introduction] +
-Introduction to the model2owl project and available tools
+Introduction to the model2owl project
 
 ////
 * xref:transformation/uml2owl-transformation.adoc[Transformation Introduction] +
