@@ -8,10 +8,13 @@
 
 The following topics are included in this version of the model2owl documentation:
 
-* xref:intro_overview.adoc[UML Introduction] +
+* xref:intro_overview.adoc[Introduction] +
+Introduction to the model2owl project and available tools
 
+////
 * xref:transformation/uml2owl-transformation.adoc[Transformation Introduction] +
 #combine introductions#
+////
 
 * xref:terminology.adoc[Key Concepts] +
 Terminology
@@ -33,10 +36,8 @@ Transformation of UML descriptors and tags
 
 
 == Performing Transformations
-* xref:local.adoc[Local machine] +
-Performing Transformations on a Local Machine
-* xref:boiler.adoc[The boilerplate utility] +
-Performing transformations online using the boilerplate utility
+* xref:performing.adoc[Reference Implementation] +
+Performing Transformations locally or using the utility provided
 
 == UML Conventions
 
