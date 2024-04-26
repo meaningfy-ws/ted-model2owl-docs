@@ -34,13 +34,14 @@ In the https://docs.ted.europa.eu/epo-home/ePO_Arch_Design.html[planning and dev
 
 == model2owl in an eProcurement context
 
-https://github.com/OP-TED/model2owl[model2owl] is a project which can be implemented in different cases to generate a semantic data specification. In the case of the ePO, it is a specific implementation used to generate a semantic data specification from the ePO conceptual model. An open source https://github.com/OP-TED/model2owl[reference implementation] is available here.
+https://github.com/OP-TED/model2owl[model2owl] is a project which can be implemented in different cases to generate a semantic data specification. In the case of the ePO, it is a specific implementation used to generate a semantic data specification from the ePO conceptual model. 
 
-*model2owl* adheres to https://semiceu.github.io/style-guide/1.0.0/index.html[semantic conventions], which enables operation within a unified UML model. The model serves as the input source, and model2owl provides processes that automate the production of the data specification artifacts. In the automated processes, sets of modelling conventions, transformation rules, and methods of verification are applied to human-readable UML to generate machine-readable output artifacts.
 
-Having a single source of truth and automating artifact generation significantly reduces administrative overhead in each development cycle.
+*model2owl* adheres to https://semiceu.github.io/style-guide/1.0.0/index.html[semantic conventions], which enables operation within a unified UML model. The model serves as the input, and model2owl provides processes that automate the production of the output, the data specification artifacts. In the automated processes, sets of modelling conventions, transformation rules, and methods of verification are applied to human-readable UML to generate machine-readable output artifacts.
 
-The output artifacts are defined by the https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-semantic-data-specification[semic conventions] as a specification, the significance of which is that it ensures that all stakeholders generate data that adheres to the agreed model. The data is structured in the form of a graph that follows https://semiceu.github.io/style-guide/1.0.0/style-guide-whole.html#sec:pc-r1[Linked Data] principles.
+Having a single source of truth for the input and automating artifact generation significantly reduces administrative overhead in each development cycle.
+
+The output artifacts are defined by the https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-semantic-data-specification[semic conventions] as a data specification. The significance of this is that it ensures that all stakeholders generate data that adheres to the agreed model. The data is structured in the form of a graph that follows https://semiceu.github.io/style-guide/1.0.0/style-guide-whole.html#sec:pc-r1[Linked Data] principles.
 
 ////
 UML is closer to the programming languages, in which enterprise applications are implemented, than other more logic-oriented approaches, and generally the primary application of UML for ontology design is in the development of class diagrams for object-oriented software.
@@ -117,7 +118,7 @@ To understand the technical process in more depth, see the xref:technical.adoc[T
 
 A more detailed description of the functional and technical overviews can be found in the xref:ePO_Arch_Design.adoc[eProcurement Ontology Architecture and Formalisation Specifications].
 
-The model2owl reference implementation for the ePo can be found on https://github.com/OP-TED/model2owl[GitHub].
+The model2owl reference implementation for the ePO can be found on https://github.com/OP-TED/model2owl[GitHub].
 
 ////
 In short, model2owl is used to generate a semantic data specification from the ePO conceptual model. An open source https://github.com/OP-TED/model2owl[reference implementation] is available here.
