@@ -23,7 +23,7 @@ Each transformation rule is accompanied by the formal OWL representation in http
 
 == UML visual notation
 
-This section provides the main UML elements employed in this document. A detailed description can be consulted in the standard specifications https://www.omg.org/spec/UML/2.5.1[uml2.5] and in the https://www.amazon.com/Unified-Modeling-Language-User-Guide/dp/0321267974[UML user guide].
+This section provides the main UML elements employed in this document. A detailed description can be consulted in the standard specifications https://www.omg.org/spec/UML/2.5.1[uml2.5].
 
 
 .UML visual notation for classes and attributes

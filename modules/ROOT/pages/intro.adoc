@@ -10,29 +10,27 @@
 
 == Overview
 
-The creation of the  https://docs.ted.europa.eu/epo-home/ePO_Arch_Design.html[eProcurement Ontology] requires collaborative discussions and consensus among various experts in the procurement domain to develop a conceptual model, while the tangible outcomes of the eProcurement Ontology, comprising an OWL-expressed ontology, a series of SHACL shapes, and a glossary, iare typically developed by semantic web specialists.
+The creation of the  https://docs.ted.europa.eu/epo-home/ePO_Arch_Design.html[eProcurement Ontology] is achieved through collaborative discussions and consensus among various experts in the procurement domain to develop a conceptual model, while the tangible outcomes of the eProcurement Ontology, comprising an OWL-expressed ontology, a series of SHACL shapes, and a glossary, are typically developed by semantic web specialists.
 
 
-////
-In the https://docs.ted.europa.eu/epo-home/ePO_Arch_Design.html[planning and development] of the eProcurement Ontology Project, it was decided to represent the conceptual model in https://www.amazon.com/Unified-Modeling-Language-User-Guide/dp/0321267974[Unified Modelling Language (UML)]. UML is a language that represents concepts visually, thereby facilitating understanding and a common conceptualisation of the model amongst stakeholders.
+
+In the https://docs.ted.europa.eu/epo-home/ePO_Arch_Design.html[planning and development] of the eProcurement Ontology Project, it was decided to represent the conceptual model in Unified Modelling Language (UML). UML is a language that represents concepts visually, thereby facilitating understanding and a common conceptualisation of the model amongst stakeholders.
 
 
-UML is closer to the programming languages in which enterprise applications are implemented than other more logic-oriented approaches, and generally, the primary application of UML for ontology design is in the development of class diagrams for object-oriented software (for more information, see https://www.amazon.com/UML-Distilled-Standard-Modeling-Language/dp/0321193687[here]).
+UML is closer to the programming languages, in which enterprise applications are implemented, than other more logic-oriented approaches, and generally the primary application of UML for ontology design is in the development of class diagrams for object-oriented software.
 ////
 
 To maintain broader public interaction and discussion, and continue the development of these artifacts, the ePO model2owl working group opted for an intermediary representation, unified modeling language (UML). UML allows participation in the development process by technical and non-technical parties as it holds widespread recognition in the eProcurement domain, and is also comprehensible to a wider audience. In addition, tools exist that facilitate the generation of diagrams on top of visual representations, facilitating discussion by all interested groups.
 
-////
+
 UML, however, does not necessarily define formal semantics as consistently or accurately as required to support the implementation of an ontology from class diagrams. Semantics, therefore, may become subject to interpretation by both stakeholders involved in the development process, and by users performing application and integration tasks (for more information, see https://link.springer.com/chapter/10.1007/978-3-540-24744-9_14[here]).
 ////
 
-*model2OWL* adheres to https://semiceu.github.io/style-guide/1.0.0/index.html[semantic conventions], which enables operation within a unified UML model. This model serves as the single source of truth, and through automated processes, essential artifacts such as a glossary, an OWL ontology, and SHACL shapes can be generated. Embracing a single source of truth, and automating artifact generation, significantly reduces administrative overhead in each development cycle.
+*model2owl* adheres to https://semiceu.github.io/style-guide/1.0.0/index.html[semantic conventions], which enables operation within a unified UML model. This model serves as the single source of truth, and through automated processes, essential artifacts such as a glossary, an OWL ontology, and SHACL shapes can be generated. Embracing a single source of truth, and automating artifact generation, significantly reduces administrative overhead in each development cycle.
 
 // #insert some examples: contract conclusion/ different country rules/ adherence to legislation etc#
 
-To generate machine-readable OWL (core and restriction) files and SHACL shapes, the model2owl tool does the following:
-
-It takes the human-readable input in UML form, and in an automated conversion process, applies sets of modelling conventions, transformation rules, and methods of verification to it before generating the output.
+To generate machine-readable OWL (core and restriction) files and SHACL shapes, the model2owl tool takes the human-readable input in UML form and in an automated conversion process applies sets of modelling conventions, transformation rules, and methods of verification to it before generating the output.
 
 The output artifacts are defined by the https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-semantic-data-specification[semic conventions] as a specification, the significance of which is that it ensures that all relevant stakeholders generate data that adheres to the agreed model. The data is structured in the form of a graph that follows https://semiceu.github.io/style-guide/1.0.0/style-guide-whole.html#sec:pc-r1[Linked Data] principles.
 

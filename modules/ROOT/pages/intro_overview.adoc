@@ -1,10 +1,40 @@
 :doctitle: Introduction
 
+////
 == The Once Only Principle (TOOP)
 
 In the context of EU eGovernment digitalisation, the https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2013:175:0001:0008:EN:PDF#:~:text=This%20Directive%20respects%20the%20fundamental,to%20property%20(Article%2017)["once only principle" in EU public administration] on the re-use of public sector information is one of the drivers of eProcurement, aimed at making public spending more transparent, evidence-oriented, optimised, streamlined and integrated with market conditions. Part of this is the development of an https://docs.ted.europa.eu/EPO/latest/index.html[eProcurement Ontology].
 
 The eProcurement Ontology provides consistent names, relationships, cardinalities, etc, to all aspects of eProcurement which ensures that the terminology is consistent. Translations into all the EU languages are also treated in this way. This is essential for the resulting data produced during the eProcurement process and made available for public consumption so that searching the data is efficient, and the results accurate, complete and specific.
+////
+
+== Overview
+
+The creation of the  https://docs.ted.europa.eu/epo-home/ePO_Arch_Design.html[eProcurement Ontology] is achieved through collaborative discussions and consensus among various experts in the procurement domain to develop a conceptual model, while the tangible outcomes of the eProcurement Ontology, comprising an OWL-expressed ontology, a series of SHACL shapes, and a glossary, are typically developed by semantic web specialists.
+
+In the https://docs.ted.europa.eu/epo-home/ePO_Arch_Design.html[planning and development] of the eProcurement Ontology Project, it was decided to represent the conceptual model in Unified Modelling Language (UML). UML is a language that represents concepts visually, thereby facilitating understanding and a common conceptualisation of the model amongst different stakeholders.
+
+https://github.com/OP-TED/model2owl[model2owl] is a project, which, in the case of the ePO, is a specific implementation which, in terms , is used to generate a semantic data specification from the ePO conceptual model. An open source https://github.com/OP-TED/model2owl[reference implementation] is available here.
+
+model2owl is a tool that takes the UML as input converts it automatically into produces 
+
+////
+UML is closer to the programming languages, in which enterprise applications are implemented, than other more logic-oriented approaches, and generally the primary application of UML for ontology design is in the development of class diagrams for object-oriented software.
+
+
+To maintain broader public interaction and discussion, and continue the development of these artifacts, the ePO model2owl working group opted for an intermediary representation, unified modeling language (UML). UML allows participation in the development process by technical and non-technical parties as it holds widespread recognition in the eProcurement domain, and is also comprehensible to a wider audience. In addition, tools exist that facilitate the generation of diagrams on top of visual representations, facilitating discussion by all interested groups.
+
+
+UML, however, does not necessarily define formal semantics as consistently or accurately as required to support the implementation of an ontology from class diagrams. Semantics, therefore, may become subject to interpretation by both stakeholders involved in the development process, and by users performing application and integration tasks (for more information, see https://link.springer.com/chapter/10.1007/978-3-540-24744-9_14[here]).
+////
+
+*model2owl* adheres to https://semiceu.github.io/style-guide/1.0.0/index.html[semantic conventions], which enables operation within a unified UML model. This model serves as the single source of truth, and through automated processes, essential artifacts such as a glossary, an OWL ontology, and SHACL shapes can be generated. Embracing a single source of truth, and automating artifact generation, significantly reduces administrative overhead in each development cycle.
+
+// #insert some examples: contract conclusion/ different country rules/ adherence to legislation etc#
+
+To generate machine-readable OWL (core and restriction) files and SHACL shapes, the model2owl tool takes the human-readable input in UML form and in an automated conversion process applies sets of modelling conventions, transformation rules, and methods of verification to it before generating the output.
+
+The output artifacts are defined by the https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-semantic-data-specification[semic conventions] as a specification, the significance of which is that it ensures that all relevant stakeholders generate data that adheres to the agreed model. The data is structured in the form of a graph that follows https://semiceu.github.io/style-guide/1.0.0/style-guide-whole.html#sec:pc-r1[Linked Data] principles.
 
 == model2owl in an eProcurement context
 
