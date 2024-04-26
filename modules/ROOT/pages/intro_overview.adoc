@@ -32,9 +32,9 @@ In the https://docs.ted.europa.eu/epo-home/ePO_Arch_Design.html[planning and dev
 
 * Citizens
 
-https://github.com/OP-TED/model2owl[model2owl] is a project which can be implemented in different cases to generate a semantic data specification. In the case of the ePO, is a specific implementation which is used to generate a semantic data specification (an OWL-expressed ontology, a series of SHACL shapes, and a glossary) from the ePO conceptual model. An open source https://github.com/OP-TED/model2owl[reference implementation] is available here.
+https://github.com/OP-TED/model2owl[model2owl] is a project which can be implemented in different cases to generate a semantic data specification. In the case of the ePO, it is a specific implementation used to generate a semantic data specification (an OWL-expressed ontology, a series of SHACL shapes, and a glossary) from the ePO conceptual model. An open source https://github.com/OP-TED/model2owl[reference implementation] is available here.
 
-*model2owl* adheres to https://semiceu.github.io/style-guide/1.0.0/index.html[semantic conventions], which enables operation within a unified UML model. The model serves as the input source, and the model2owl provides processes that automate the production of the specification artifacts. In the automated processes, human readable UML input has sets of modelling conventions, transformation rules, and methods of verification applied to it before the output artifacts are generated. 
+*model2owl* adheres to https://semiceu.github.io/style-guide/1.0.0/index.html[semantic conventions], which enables operation within a unified UML model. The model serves as the input source, and model2owl provides processes that automate the production of the specification artifacts. In the automated processes, human readable UML input has sets of modelling conventions, transformation rules, and methods of verification applied to it before the output artifacts are generated. 
 
 Having a single source of truth and automating artifact generation significantly reduces administrative overhead in each development cycle.
 
