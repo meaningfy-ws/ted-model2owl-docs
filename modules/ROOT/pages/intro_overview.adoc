@@ -60,7 +60,7 @@ UML, however, does not necessarily define formal semantics as consistently or ac
 
 === The Process Overview 
 
-The image below illustrates the high-level process.
+The image below illustrates the high-level process:
 
 image::m2o2.jpg[]
 
@@ -68,7 +68,7 @@ The model2owl implementation available on https://github.com/OP-TED/model2owl[Gi
 
 === The Detailed Process
 
-The detailed process below illustrates the steps or actions in the generation starting with changes made to the conceptual model and ending with the data specification.
+The detailed process below illustrates the steps or actions in the generation starting with changes made to the conceptual model and ending with the data specification:
 
 image::m2o3.png[]
 

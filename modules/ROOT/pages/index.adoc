@@ -4,9 +4,9 @@
 :authoremail: nicole-anne.paterson-jones@ext.ec.europa.eu
 :docdate: November 2023
 
-"model2owl" is a tool for transforming human-readable semantic models into machine-readable OWL (core and restriction) files and SHACL shapes. It takes the human-readable input in UML form, applies modelling conventions, transformation rules, and methods of verification to it, and outputs it in machine-readable OWL format.
+"model2owl" is a tool for transforming human-readable semantic models into machine-readable OWL (core and restriction) files and SHACL shapes. It takes the human-readable input in UML form, applies modelling conventions, transformation rules, and methods of verification to it, and outputs it in machine-readable OWL and SHACL shapes.
 
-The following topics are included in this version of the model2owl documentation:
+The following sections are included in this version of the model2owl documentation:
 
 * xref:intro_overview.adoc[Introduction] +
 Introduction to the model2owl project
