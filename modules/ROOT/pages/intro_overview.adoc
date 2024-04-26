@@ -32,7 +32,9 @@ In the https://docs.ted.europa.eu/epo-home/ePO_Arch_Design.html[planning and dev
 
 * Citizens
 
-https://github.com/OP-TED/model2owl[model2owl] is a project which can be implemented in different cases to generate a semantic data specification. In the case of the ePO, it is a specific implementation used to generate a semantic data specification (an OWL-expressed ontology, a series of SHACL shapes, and a glossary) from the ePO conceptual model. An open source https://github.com/OP-TED/model2owl[reference implementation] is available here.
+== model2owl in an eProcurement context
+
+https://github.com/OP-TED/model2owl[model2owl] is a project which can be implemented in different cases to generate a semantic data specification. In the case of the ePO, it is a specific implementation used to generate a semantic data specification from the ePO conceptual model. An open source https://github.com/OP-TED/model2owl[reference implementation] is available here.
 
 *model2owl* adheres to https://semiceu.github.io/style-guide/1.0.0/index.html[semantic conventions], which enables operation within a unified UML model. The model serves as the input source, and model2owl provides processes that automate the production of the specification artifacts. In the automated processes, human readable UML input has sets of modelling conventions, transformation rules, and methods of verification applied to it before the output artifacts are generated. 
 
@@ -54,9 +56,6 @@ UML, however, does not necessarily define formal semantics as consistently or ac
 
 // #insert some examples: contract conclusion/ different country rules/ adherence to legislation etc#
 
-
-
-== model2owl in an eProcurement context
 
 === The Process Overview 
 
@@ -107,12 +106,6 @@ Information on the eProcurement ontology architecture, UML conventions, transfer
 
 == Semantic data-specifications for e-procurement
 
-https://github.com/OP-TED/model2owl[model2owl] is a project. Here it is a specific implementation which, in terms of the ePO, honours the specifications published in these documents. 
-
-In short, model2owl is used to generate a semantic data specification from the ePO conceptual model. An open source https://github.com/OP-TED/model2owl[reference implementation] is available here.
-
-The eProcurement ontology is represented in the human-readable form of a UML conceptual model. 
-
 To facilitate the digitisation of eProcurement, a machine-readable form of the conceptual model must be produced: the model needs to be converted/ translated into machine-readable OWL files and SHACL shapes.
 The model2owl tool has been created to perform this function. It uses a number of xref:technical.adoc[open standards and conventions] in a process that includes strict rules and validation:
 
@@ -124,11 +117,17 @@ To understand the technical process in more depth, see the xref:technical.adoc[T
 
 A more detailed description of the functional and technical overviews can be found in the xref:ePO_Arch_Design.adoc[eProcurement Ontology Architecture and Formalisation Specifications].
 
+The model2owl reference implementation for the ePo can be found on https://github.com/OP-TED/model2owl[GitHub].
+
+////
+In short, model2owl is used to generate a semantic data specification from the ePO conceptual model. An open source https://github.com/OP-TED/model2owl[reference implementation] is available here.
+
+The eProcurement ontology is represented in the human-readable form of a UML conceptual model. 
+
+
 To facilitate broader public interaction and discussion, and continue the development of these artifacts, the ePO model2owl working group opted for an intermediary representation, unified modeling language (UML). UML allows participation in the development process by technical and non-technical parties as it holds widespread recognition in the eProcurement domain, and is also comprehensible to a wider audience. In addition, tools exist that facilitate the generation of diagrams on top of visual representations, facilitating discussion by all interested groups.
 
 *model2OWL* adheres to https://semiceu.github.io/style-guide/1.0.0/gc-conceptual-model-conventions.html[semantic conventions], which enables operation within a unified UML model. This model serves as the single source of truth, and through automated processes, essential artifacts such as a glossary, an OWL ontology, and SHACL shapes can be generated. Embracing a single source of truth, and automating artifact generation, significantly reduces administrative overhead in each development cycle.
-
-
-//#what about github resources?#
+////
 
 include:partial$feedback.adoc[]
