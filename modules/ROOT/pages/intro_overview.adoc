@@ -63,7 +63,7 @@ The image below illustrates the high-level process.
 
 image::m2o2.jpg[]
 
-The model2owl utility available on https://github.com/OP-TED/model2owl[GitHub] is used to produce the core vocabulary of the eProcurement and the different modules that extend this core, like eCatalogue, eContract, eFulfilment, etc.
+The model2owl implementation available on https://github.com/OP-TED/model2owl[GitHub] is used to produce the core vocabulary of the eProcurement and the different modules that extend this core e.g., eCatalogue, eContract, eFulfilment, etc.
 
 === The Detailed Process
 
