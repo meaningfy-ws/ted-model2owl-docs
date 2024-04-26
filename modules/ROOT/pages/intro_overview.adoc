@@ -10,13 +10,13 @@ The eProcurement Ontology provides consistent names, relationships, cardinalitie
 
 == Overview
 
-The creation of the  https://docs.ted.europa.eu/epo-home/ePO_Arch_Design.html[eProcurement Ontology] is achieved through collaborative discussions and consensus among various experts in the procurement domain to develop a conceptual model, while the tangible outcomes of the eProcurement Ontology, comprising an OWL-expressed ontology, a series of SHACL shapes, and a glossary, are typically developed by semantic web specialists.
+The development of the  https://docs.ted.europa.eu/epo-home/ePO_Arch_Design.html[eProcurement Ontology] is achieved through collaborative discussions and consensus among various experts in the procurement domain to develop a conceptual model, while the tangible outcomes of the eProcurement Ontology, comprising an OWL-expressed ontology, a series of SHACL shapes, and a glossary, are typically developed by semantic web specialists.
 
-In the https://docs.ted.europa.eu/epo-home/ePO_Arch_Design.html[planning and development] of the eProcurement Ontology Project, it was decided to represent the conceptual model in Unified Modelling Language (UML). UML is a language that represents concepts visually, thereby facilitating participation,  discussion, and a common conceptualisation of the model amongst different stakeholders:
+In the https://docs.ted.europa.eu/epo-home/ePO_Arch_Design.html[planning and development] of the eProcurement Ontology project, it was agreed that the conceptual model would be represented in Unified Modelling Language (UML). UML is a language that represents concepts visually, thereby facilitating participation,  discussion, and a common conceptualisation of the model amongst different stakeholders:
 
 * Buyers, such as public administrations in the EU Member States or EU institutions;
 
-* Economic operators, i.e., suppliers of goods and services such as businesses, entrepreneurs and financial institutions;
+* Suppliers of goods and services such as businesses, entrepreneurs and financial institutions;
 
 * Academia and researchers;
 
@@ -36,7 +36,7 @@ In the https://docs.ted.europa.eu/epo-home/ePO_Arch_Design.html[planning and dev
 
 https://github.com/OP-TED/model2owl[model2owl] is a project which can be implemented in different cases to generate a semantic data specification. In the case of the ePO, it is a specific implementation used to generate a semantic data specification from the ePO conceptual model. An open source https://github.com/OP-TED/model2owl[reference implementation] is available here.
 
-*model2owl* adheres to https://semiceu.github.io/style-guide/1.0.0/index.html[semantic conventions], which enables operation within a unified UML model. The model serves as the input source, and model2owl provides processes that automate the production of the specification artifacts. In the automated processes, human readable UML input has sets of modelling conventions, transformation rules, and methods of verification applied to it before the output artifacts are generated. 
+*model2owl* adheres to https://semiceu.github.io/style-guide/1.0.0/index.html[semantic conventions], which enables operation within a unified UML model. The model serves as the input source, and model2owl provides processes that automate the production of the data specification artifacts. In the automated processes, sets of modelling conventions, transformation rules, and methods of verification are applied to human-readable UML to generate machine-readable output artifacts.
 
 Having a single source of truth and automating artifact generation significantly reduces administrative overhead in each development cycle.
 
@@ -107,7 +107,7 @@ Information on the eProcurement ontology architecture, UML conventions, transfer
 == Semantic data-specifications for e-procurement
 
 To facilitate the digitisation of eProcurement, a machine-readable form of the conceptual model must be produced: the model needs to be converted/ translated into machine-readable OWL files and SHACL shapes.
-The model2owl tool has been created to perform this function. It uses a number of xref:technical.adoc[open standards and conventions] in a process that includes strict rules and validation:
+The model2owl tool uses a number of xref:technical.adoc[open standards and conventions] in a process that includes strict rules and validation:
 
 * Firstly, the UML must follow certain xref:uml/conceptual-model-conventions.adoc[conventions]
 * Secondly, xref:transformation/uml2owl-transformation.adoc[transfer rules] must be applied.
