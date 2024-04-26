@@ -49,4 +49,3 @@ The UML model conventions
 * xref:checkers/model2owl-checkers.adoc[UML Convention Checking Rules] +
 The UML convention checking inventory
 
-include::partial$feedback.adoc[]

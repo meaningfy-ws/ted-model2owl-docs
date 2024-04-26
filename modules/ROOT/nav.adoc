@@ -28,7 +28,7 @@
 * xref:checkers/model2owl-checkers.adoc[UML Convention Checking Rules]
 
 * [.separated]#**Performing Transformations**#
-* xref:performing.adoc[Performing Transformations: Two Methods]
+* xref:performing.adoc[model2owl transformations on the ePO]
 ////
 * xref:local.adoc[On a local machine]
 * xref:boiler.adoc[Using the boilerplate utility]

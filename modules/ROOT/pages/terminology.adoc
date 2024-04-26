@@ -14,5 +14,5 @@ This data specification is composed of
 
 == The Conceptual model 
 
-We describe our https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-conceptual-model[Conceptual model] in UML using the https://sparxsystems.com/[Enterprise Architect] software tool. 
+The ePO https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-conceptual-model[Conceptual model] is described in UML using the https://sparxsystems.com/[Enterprise Architect] software tool. 
 

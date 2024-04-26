@@ -9,11 +9,11 @@
 [[sec:introduction]]
 == Introduction
 
-This section provides a working definition of the transformation rules for converting the UML conceptual model into the formal ontology and validation data shapes. These rules are organised in accordance with the xref:ePO_Arch_Design.adoc[eProcurement Ontology Architecture and Formalisation Specification].
+The transfer rules section provides a working definition of the transformation rules for converting the UML conceptual model into the formal ontology and validation data shapes. These rules are organised in accordance with the xref:ePO_Arch_Design.adoc[eProcurement Ontology Architecture and Formalisation Specification].
 
 == How to read this documentation
 
-The remainder of this topic comprises four sections covering major UML topics. The section xref:transformation/transf-rules1.adoc#sec:tran-rules[Classes and Attributes] treats classes and attributes. The second section deals with the xref:transformation/transf-rules2.adoc[associations, dependencies and generalisations]. The third section describes the xref:transformation/transf-rules3.adoc[transformation rules] i.e., how the data types and enumerations should be transformed and finally, the fourth and final section provides xref:transformation/transf-rules4.adoc[transformation rules applicable to all UML elements], concerning comments, labels and notes.
+The section comprises four sections covering major UML topics. The section xref:transformation/transf-rules1.adoc#sec:tran-rules[Classes and Attributes] treats classes and attributes. The second section deals with the xref:transformation/transf-rules2.adoc[associations, dependencies and generalisations]. The third section describes the xref:transformation/transf-rules3.adoc[transformation rules] i.e., how the data types and enumerations should be transformed and finally, the fourth and final section provides xref:transformation/transf-rules4.adoc[transformation rules applicable to all UML elements], concerning comments, labels and notes.
 
 Each section provides a table with an overview of the transformation rule set presented within. The table has three columns, one for every layer of the ontology architecture comprising rules: (a) , (b) , and (c) .
 
