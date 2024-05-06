@@ -131,4 +131,4 @@ To facilitate broader public interaction and discussion, and continue the develo
 *model2OWL* adheres to https://semiceu.github.io/style-guide/1.0.0/gc-conceptual-model-conventions.html[semantic conventions], which enables operation within a unified UML model. This model serves as the single source of truth, and through automated processes, essential artifacts such as a glossary, an OWL ontology, and SHACL shapes can be generated. Embracing a single source of truth, and automating artifact generation, significantly reduces administrative overhead in each development cycle.
 ////
 
-include:partial$feedback.adoc[]
+include::partial$feedback.adoc[]
