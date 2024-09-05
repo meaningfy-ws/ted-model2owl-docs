@@ -58,13 +58,18 @@ This specification establishes conventions for the interpretation of the UML-bas
 
 == Performing transformations
 
+The OP provides a https://github.com/OP-TED/model2owl[reference implementation] on GitHub in which you will find instructions on how to perform transformations either
+
+* Locally
+* Using the Boilerplate utility provided
+
+////
 There are two ways to perform the transformations:
 
 * xref:local.adoc[Locally], on a machine, and
 * Using the xref:boiler.adoc[model2owl boilerplate utility]
 
 
-////
 === Using the automated online utility: model2owl-boilerplate
 
 To use model2owl without installing or executing anything locally, the online https://github.com/meaningfy-ws/model2owl-boilerplate[model2owl boilerplate utility] has been created. The instructions are given in the repositories README.md file as well as here:

@@ -282,7 +282,7 @@ There is the option to use common and descriptive prefixes and suffixes for rela
 *See also:* SEMIC Style Guide Rule [https://semiceu.github.io/style-guide/1.0.0/gc-general-conventions.html#sec:gc-r4[GC-R4]]
 
 [[sec:descriptions]]
-=== Notes, descriptions and comments
+== Notes, descriptions and comments
 
 A large emphasis is set on the naming conventions, however, more often than not, a good name is insufficient for an accurate or easy comprehension by human-readers. To address this, and to increase the conceptual richness, practitioners may wish to provide human-readable definitions, notes, examples and comments clarifying the underlying assumptions,and providing usage examples, additional explanations and other types of information.
 
