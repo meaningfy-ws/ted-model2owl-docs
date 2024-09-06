@@ -26,7 +26,7 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="ROOT" data-version="ted-model2owl-docs">
+<div class="nav-container" data-component="ROOT" data-version="public-review">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -56,7 +56,7 @@
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="conv-classes.html">Classes</a>
   </li>
-  <li class="nav-item" data-depth="2">
+  <li class="nav-item is-current-page" data-depth="2">
     <a class="nav-link" href="conv-attributes.html">Class Attributes</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -80,7 +80,7 @@
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="conv-datatypes.html">Data Types</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="2">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="conv-enumerations.html">Enumerations</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -123,14 +123,14 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">model2owl Documentation</span>
-    <span class="version">ted-model2owl-docs</span>
+    <span class="version">public-review</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <div class="title"><a href="../index.html">model2owl Documentation</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../index.html">ted-model2owl-docs</a>
+          <a href="../index.html">public-review</a>
         </li>
       </ul>
     </li>
@@ -147,10 +147,10 @@
   <ul>
     <li><a href="../index.html">model2owl Documentation</a></li>
     <li><a href="conceptual-model-conventions.html">UML Model Conventions</a></li>
-    <li><a href="conv-enumerations.html">Enumerations</a></li>
+    <li><a href="conv-attributes.html">Class Attributes</a></li>
   </ul>
 </nav>
-<div class="edit-this-page"><a href="https://github.com/meaningfy-ws/ted-model2owl-docs/edit/feature/M2O1-23/docs/modules/ROOT/pages/uml/conv-enumerations.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="https://github.com/meaningfy-ws/ted-model2owl-docs/edit/feature/M2O1-23/docs/modules/ROOT/pages/uml/conv-attributes.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -158,27 +158,24 @@
 </aside>
 <article class="doc">
 <div class="sect1">
-<h2 id="_conventions_on_umlenumeration_elements"><a class="anchor" href="#_conventions_on_umlenumeration_elements"></a>Conventions on uml:Enumeration elements</h2>
+<h2 id="_conventions_on_attributes_of_umlclass_elements"><a class="anchor" href="#_conventions_on_attributes_of_umlclass_elements"></a>Conventions on Attributes of uml:Class elements</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="sec:enumeration"><a class="anchor" href="#sec:enumeration"></a>Technical conventions on uml:Enumeration elements</h3>
-<div class="paragraph">
-<p>In UML the controlled lists, discussed in Section [<a href="conv-general.html#sec:controlled-lists" class="xref page">Controlled List</a>] are represented as uml:Enumeration. They are transformed into instances of a SKOS model [<a href="../references.html#ref:skos-spec" class="xref page">skos-spec</a>].</p>
-</div>
-<table id="rule:enumeration-to-skos" class="tableblock frame-all grid-all stretch">
+<h3 id="sec:attributes"><a class="anchor" href="#sec:attributes"></a>Conventional recommendations on Attributes</h3>
+<table id="rule:attributes-names-with-verb" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color:  #a8c6f7;"><p class="tableblock"> <strong>Title:</strong> Interpretation of uml:Enumeration</p></td>
+<td class="tableblock halign-left valign-top" style="background-color:  #a8c6f7;"><p class="tableblock"> <strong>Title:</strong> Attribute names</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Identifier:</strong> rule:enumeration-to-skos</p></td>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Identifier:</strong> rule:attributes-names-with-verb</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Statement:</strong></p>
-<p class="tableblock">An uml:Enumeration element is transformed into <code>skos:ConceptScheme</code>, and an enumeration item into a <code>skos:Concept</code>.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Statement:</strong>
+It is recommended to use a verb in the attribute name, such as "has-" or "is-".</p></td>
 </tr>
 </tbody>
 </table>
@@ -186,16 +183,97 @@
 <p><strong>Description:</strong></p>
 </div>
 <div class="paragraph">
-<p>Each uml:Enumeration element is transformed into skos:ConceptScheme, and each enumeration item, if present as an uml:Attribute value, is transformed into a <code>skos:Concept</code>. An enumeration might be empty, especially when they refer to externally specified controlled lists.</p>
+<p>When creating attribute names, it is conventional to use simple nouns such as "name", "weight", "colour". Attributes are a special type of relations that describe an entity in terms of its qualities. And so, to be consistent with the above convention and in order to increase the clarity, it is recommended to employ the prefix "has-" for each attribute, even if it does not add much to the term&#8217;s meaning. So, it is preferred to use terms such as "hasName", "hasWeight" and "hasColour".</p>
 </div>
 <div class="paragraph">
-<p>In a uml:Enumeration element, the name shall be interpreted as the controlled list name; it must be a normalised string. Each attribute name is used as a local segment in the generation of the concept URI. The attribute type is ignored and by default is considered to be <code>skos:Concept</code>. The attribute alias is transformed into the `skos:Concept`s preferred label. The attribute initial value is transformed into the alternative label of the concept.</p>
+<p>It is recommended to use simple nouns for attribute names prepended with the verb "has-".</p>
 </div>
 <div class="paragraph">
-<p>In case no attribute alias is specified then the attribute name is used as preferred label of the skos:Concept. This happens as skos:prefLabel is a mandatory property in the SKOS model.</p>
+<p>It is recommended to avoid duplicate attribute names across multiple classes. Unless, by design, attributes with the same name are shared across multiple classes.</p>
+</div>
+<table id="rule:attributes-multiplicity" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #a8c6f7;"><p class="tableblock"> <strong>Title:</strong> Attribute multiplicity</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Identifier:</strong> rule:attributes-multiplicity</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Statement:</strong>
+Attributes shall be assigned cardinality specifications contextualised to the class carrying them.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Description:</strong></p>
 </div>
 <div class="paragraph">
-<p>It is possible to employ the enumerations for class properties by drawing a dependency (uml:Dependency) relation from the class to the enumeration and provide a relation target role. However, the enumeration should not connect to other elements.</p>
+<p>The attribute multiplicity should be specified indicating the minimum and maximum cardinality. The default [1] multiplicity shall be interpreted as unspecified, and expressed as [0..*] in the OWL model.</p>
+</div>
+<div class="paragraph">
+<p>In special cases, a list of custom default multiplicities is defined for the transformation script. That means that some data types or classes that are used as attribute types are paired with a default multiplicity, for example "1..1", "0..1", "2..2".</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="sec:attributes-class"><a class="anchor" href="#sec:attributes-class"></a>uml:Class attributes</h3>
+<table id="rule:attributes-datatypes" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #a8c6f7;"><p class="tableblock"> <strong>Title:</strong> Attribute datatypes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Identifier:</strong> rule:attributes-datatypes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Statement:</strong>
+uml:Attribute shall be defined with generally accepted primitive datatypes.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Description:</strong></p>
+</div>
+<div class="paragraph">
+<p>Each uml:Attribute must have a name and an attribute type. uml:Attribute is mostly transformed into owl:DataProperty and in some controlled cases into owl:ObjectProperty. High preference shall be given to using OWL 2 compliant XSD [<a href="../references.html#ref:xsd" class="xref page">xsd</a>] and RDF [<a href="../references.html#ref:rdf" class="xref page">rdf</a>] standard datatypes. [<a href="conv-datatypes.html#rule:datatypes-primitive" class="xref page">See convention on Primitive Data types</a>]</p>
+</div>
+<div class="paragraph">
+<p>In cases when a property needs to be defined as ranging on an unknown controlled list or authority table constitute a special case. They can be expressed as uml:Attribute with the datatype <code>skos:Concept</code>. These attributes are transformed into owl:ObjectProperty in a manner similarly to uml:Association.</p>
+</div>
+<div class="paragraph">
+<p>An attribute may contain an alias, used as an alternative label. It can be specified via uml:Tags. [<a href="conv-general.html#rule:gen-tags" class="xref page">See convention on uml:Tags</a>]</p>
+</div>
+<table id="rule:attributes-reuse" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #a8c6f7;"><p class="tableblock"> <strong>Title:</strong> Attribute name reuse</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Identifier:</strong> rule:attributes-reuse</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Statement:</strong>
+Attribute names can be reused only as attributes in other classes, not as relations.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Description:</strong></p>
+</div>
+<div class="paragraph">
+<p>It is mandatory to avoid using the same name in an attribute and in a relation, unless an additional rule that handles intentional exceptions exists.</p>
+</div>
+<div class="paragraph">
+<p>The definition and datatype (and in most cases also the multiplicity) of the attribute should be the same in all classes where it is reused.</p>
 </div>
 </div>
 </div>
