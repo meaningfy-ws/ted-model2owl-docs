@@ -1,5 +1,5 @@
 name: ROOT
-version: public-review
+version: ted-model2owl-docs
 title: model2owl Documentation
 start_page: ROOT:index.adoc
 asciidoc:
