@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Untitled :: model2owl documentation</title>
+    <title>model2owl Project Documentation :: model2owl documentation</title>
+    <meta name="description" content="The documentation for the model2owl project.">
     <meta name="generator" content="Antora 3.1.3">
     <link rel="stylesheet" href="../_/css/site.css">
     <link rel="icon" href="../favicon.ico" type="image/x-icon">  </head>
@@ -19,14 +20,14 @@
     <div class="navbar-brand">
       <div class="navbar-item search hide-for-print">
         <div id="search-field" class="field">
-          <input id="search-input" type="text" placeholder="Search the docs" >
+          <input id="search-input" type="text" placeholder="Search the docs"  autofocus>
         </div>
       </div>
     </div>
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="ROOT" data-version="public-review">
+<div class="nav-container" data-component="ROOT" data-version="ted-model2owl-docs">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -36,7 +37,7 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="epo-context.html">Context: model2owl and eProcurement ontology </a>
   </li>
 </ul>
@@ -123,14 +124,14 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">model2owl Documentation</span>
-    <span class="version">public-review</span>
+    <span class="version">ted-model2owl-docs</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <div class="title"><a href="index.html">model2owl Documentation</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="index.html">public-review</a>
+          <a href="index.html">ted-model2owl-docs</a>
         </li>
       </ul>
     </li>
@@ -142,98 +143,77 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="index.html" class="home-link"></a>
+  <a href="index.html" class="home-link is-current"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">model2owl Documentation</a></li>
-    <li><a href="epo-context.html">Context: model2owl and eProcurement ontology </a></li>
+    <li><a href="index.html">model2owl Project Documentation</a></li>
   </ul>
 </nav>
-<div class="edit-this-page"><a href="https://github.com/meaningfy-ws/ted-model2owl-docs/edit/feature/M2O1-23/docs/modules/ROOT/pages/epo-context.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="https://github.com/meaningfy-ws/ted-model2owl-docs/edit/feature/M2O1-23/docs/modules/ROOT/pages/index.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<div class="sect1">
-<h2 id="sec:introduction"><a class="anchor" href="#sec:introduction"></a>Relation to ePO</h2>
-<div class="sectionbody">
+<h1 class="page">model2owl Project Documentation</h1>
 <div class="paragraph">
-<p>This section provides the motivation for the <a href="https://github.com/OP-TED/model2owl/"><strong>model2owl</strong></a> software project within the <a href="https://docs.ted.europa.eu/EPO/latest/business.html">eProcurement Ontology (ePO)</a> project. The business context and the project overview are detailed in the <a href="https://docs.ted.europa.eu/epo-home/ePO_Arch_Design.html">eProcurement ontology architecture and formalisation specifications</a>.</p>
+<p>The <a href="https://github.com/OP-TED/model2owl/"><strong>model2owl</strong></a> software project was conceived as part of the <a href="https://docs.ted.europa.eu/EPO/latest/business.html">eProcurement Ontology (ePO)</a> public procurement digitization project of the <a href="https://en.wikipedia.org/wiki/Publications_Office_of_the_European_Union">Publications Office of the European Union (OP)</a>. It comprises a <em>toolset</em>, or set of <a href="https://en.wikipedia.org/wiki/Programming_tool">programming tools</a>, for transforming an UML (v2.5) model from its XMI (v2.5.1) serialisation into a formal OWL ontology, and a SHACL shape. This approach is conformant to the <a href="https://semiceu.github.io/style-guide/1.0.0/index.html">SEMIC Style Guide</a> and with <a href="https://github.com/OP-TED/model2owl/blob/master/docs/ontology-architecture/ontology-architecture.pdf">eProcurement Ontology Architecture specification</a>.</p>
 </div>
 <div class="paragraph">
-<p>We provide here a working specification of the guidelines and conventions for the eProcurement conceptual model, such that it qualifies as suitable input for the transformation scripts meant to generate the formal eProcurement ontology. The <a href="https://github.com/OP-TED/model2owl/"><strong>model2owl</strong></a> toolset, which hosts these transformation scripts, is therefore an integral part of the ePO project.</p>
-</div>
-<div class="sect2">
-<h3 id="_background"><a class="anchor" href="#_background"></a>Background</h3>
-<div class="paragraph">
-<p>In the eProcurement ontology project, the conceptual model was decided [<a href="references.html#ref:d2.01-2017" class="xref page">d2.01-2017</a>] to be represented in <em>Unified Modelling Language (UML)</em> [<a href="references.html#ref:uml-userguide" class="xref page">uml-userguide</a>]. It is a visual representation language that facilitates understanding and convergence between stakeholders towards a common conceptualisation of the model.</p>
+<p>The UML transformation is performed using XSLT stylesheets under the assumption that the UML model conforms to the set of conventions outlined in <a href="uml/conceptual-model-conventions.html" class="xref page">ePO UML conventions</a>. This set of UML conventions is aligned with and extends the UML conventions specified in <a href="https://semiceu.github.io/style-guide/1.0.0/index.html">SEMIC Style Guide</a>. Validation rules for the transformation confirm the conformance to these conventions.</p>
 </div>
 <div class="paragraph">
-<p>Generally, the primary application of UML [<a href="references.html#ref:fowler2004" class="xref page">fowler2004</a>] for ontology design is in the specification of class diagrams, a design formalism initially conceived for object-oriented software. UML does not define a formal <em>semantics</em> that would permit to determine, from the class diagrams, whether a corresponding ontology is consistent, or to determine the correctness of the ontology implementation. Semantics in UML is therefore subject to interpretation by the stakeholders involved in the development process, and later by the users in the application and integration tasks [<a href="references.html#ref:grunninger2003" class="xref page">grunninger2003</a>].</p>
-</div>
-<div class="paragraph">
-<p>Yet, UML is closer than more logic-oriented approaches to the programming languages in which software applications&#8201;&#8212;&#8201;typically <a href="https://en.wikipedia.org/wiki/Enterprise_software">enterprise applications</a>&#8201;&#8212;&#8201;are implemented. For this reason, the current specification establishes conventions for interpretation of the UML-based conceptual model.</p>
-</div>
-<div class="paragraph">
-<p>The UML Conceptual Model of the eProcurement domain serves as the single source of truth, which means that the formal eProcurement ontology is derived from it through a model transformation process. It is possible to generate automatically the formal ontology in RDF format [<a href="references.html#ref:rdf11" class="xref page">rdf11</a>] from the XMI (v.2.5.1) serialisation [<a href="references.html#ref:xmi2.5.1" class="xref page">xmi2.5.1</a>] of a UML (v.2.5) model [<a href="references.html#ref:uml2.5" class="xref page">uml2.5</a>], provided that <a href="uml/conceptual-model-conventions.html" class="xref page">a set of modelling conventions</a> is respected, and that <a href="transformation/uml2owl-transformation.html" class="xref page">a set of clear transformation rules</a> is established.</p>
-</div>
-<div class="paragraph">
-<p>This document provides the UML modelling constraints and a set of conventional and technical recommendations for naming and structuring the UML class diagram elements: packages, classes, data types, enumerations, enumeration items, class attributes, association relation and dependency relation. These will be addressed contextually in the subsections of <a href="uml/conceptual-model-conventions.html" class="xref page">UML conventions specification</a>.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="sec:requirements"><a class="anchor" href="#sec:requirements"></a>eProcurement conceptual model requirements</h3>
-<div class="paragraph">
-<p>The eProcurement conceptual model must fulfil mainly four fundamental objectives.</p>
+<p>The following capabilities are implemented:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Facilitate understanding/comprehension of the represented system</p>
+<p>UML &#8594; Compliance report (ideal for checking the model against the established conventions)</p>
 </li>
 <li>
-<p>Promote efficient conveyance of system details between team members and external stakeholders.</p>
+<p>UML &#8594; Glossary (ideal for a quick overview of terminology defined)</p>
 </li>
 <li>
-<p>Provide a point of reference for system designers to gather system specifications and documentation.</p>
+<p>UML &#8594; OWL 2 (lightweight ontology suitable as a core vocabulary)</p>
 </li>
 <li>
-<p>Serve as input for development of a (more) formal model.</p>
+<p>UML &#8594; OWL 2 (heavyweight ontology with additional axioms suitable for reasoning purposes)</p>
+</li>
+<li>
+<p>UML &#8594; SHACL (data shapes suitable for representing an application profile)</p>
+</li>
+<li>
+<p>UML &#8594; SVRL (Compliance report in SVRL format)</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>In order to support the objectives, the eProcurement conceptual model must fulfil the following requirements:</p>
+<p>This documentation is evolving and aims at covering the following aspects related to use of these tools:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Be available to all stakeholders, to facilitate collaboration and iteration.</p>
+<p>The architectural setup of the toolset and the ontology</p>
 </li>
 <li>
-<p>Be easily changeable, as a continuous reflection of up-to-date information.</p>
+<p>The conceptual model conventions that the UML model should adhere to, in order to enable the tools to generate the best possible results.</p>
 </li>
 <li>
-<p>Contain both visual and written forms of diagramming, to better explain the abstract concepts it may represent.</p>
+<p>The transformation rules applied in the process of conversion.</p>
 </li>
 <li>
-<p>Establish relevant terms and concepts that will be used throughout the project.</p>
-</li>
-<li>
-<p>Define terms and concepts.</p>
-</li>
-<li>
-<p>Provide a basic structure for the conceptual entities of the project.</p>
-</li>
-<li>
-<p>Reduce the ambiguity while maintaining a simple and concise encoding.</p>
+<p>The set of validation rules that check a transformation&#8217;s conformance to the established conventions (and UML interpretations).</p>
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>The tools can be used on any other ontology that is built according to the provided <a href="https://github.com/OP-TED/model2owl/blob/master/docs/ontology-architecture/ontology-architecture.pdf">modelling architecture</a> and <a href="uml/conceptual-model-conventions.html" class="xref page">UML conceptual model conventions</a>.</p>
 </div>
-</div>
+<div class="paragraph">
+<p>The toolset can be used in two ways. The first way offers a simplified setup based on <a href="https://docs.github.com/en/actions">GitHub Actions</a> that requires no infrastructure and is available online. It promotes a GIT-based workflow where input, configuration and transformed artefacts are stored in a repository and a user commit triggers execution of the <em>model2owl</em> transformation. Details of that method can be found <a href="https://github.com/OP-TED/model2owl?tab=readme-ov-file#online">in the project description</a>.
+Alternatively, the software can be installed and executed locally. The user can interact with the software through a <a href="https://www.gnu.org/software/make/">Make</a>-based command line interface. Please check <a href="https://github.com/OP-TED/model2owl?tab=readme-ov-file#locally">the installation, configuration and usage instruction</a> to learn more.</p>
 </div>
 </article>
   </div>

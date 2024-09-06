@@ -26,7 +26,7 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="ROOT" data-version="public-review">
+<div class="nav-container" data-component="ROOT" data-version="ted-model2owl-docs">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -72,7 +72,7 @@
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="conv-conn-generalization.html">Generalization</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item is-current-page" data-depth="3">
     <a class="nav-link" href="conv-conn-realization.html">Realization</a>
   </li>
 </ul>
@@ -123,14 +123,14 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">model2owl Documentation</span>
-    <span class="version">public-review</span>
+    <span class="version">ted-model2owl-docs</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <div class="title"><a href="../index.html">model2owl Documentation</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../index.html">public-review</a>
+          <a href="../index.html">ted-model2owl-docs</a>
         </li>
       </ul>
     </li>
@@ -144,15 +144,117 @@
 <button class="nav-toggle"></button>
   <a href="../index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">model2owl Documentation</a></li>
+    <li><a href="conceptual-model-conventions.html">UML Model Conventions</a></li>
+    <li><a href="conv-connectors.html">Connectors</a></li>
+    <li><a href="conv-conn-realization.html">Realization</a></li>
+  </ul>
 </nav>
-<div class="edit-this-page"><a href="https://github.com/meaningfy-ws/ted-model2owl-docs/edit/feature/M2O1-23/docs/modules/ROOT/pages/uml/technical-conventions.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="https://github.com/meaningfy-ws/ted-model2owl-docs/edit/feature/M2O1-23/docs/modules/ROOT/pages/uml/conv-conn-realization.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-
+<div class="sect1">
+<h2 id="sec:realization"><a class="anchor" href="#sec:realization"></a>Conventions on uml:Realization Connectors</h2>
+<div class="sectionbody">
+<table id="rule:realization-btw-object-and-class-or-enum" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #a8c6f7;"><p class="tableblock"> <strong>Title:</strong> uml:Realization connects objects with classes or enumerations</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Identifier:</strong> rule:realization-btw-object-and-class-or-enum</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Statement:</strong>
+uml:Realization connectors connect a uml:Object element to a uml:Class or uml:Enumeration element.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Description:</strong></p>
+</div>
+<div class="paragraph">
+<p>The uml:Realization connector signifies an instantiation relation, and is transformed into <code>rdf:type</code> relation standing between the source object and the target class. In case the target is a uml:Enumeration element (and the enum is converted into a <code>skos:ConceptScheme</code> instance, and the object into a <code>skos:Concept</code>), then the relation should be translated into a <code>skos:inScheme</code> relation.</p>
+</div>
+<table id="rule:realization-name" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #a8c6f7;"><p class="tableblock"> <strong>Title:</strong> uml:Realization connector with no name</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Identifier:</strong> rule:realization-name</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Statement:</strong>
+uml:Realization connectors shall have no name or a target role specified.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Description:</strong></p>
+</div>
+<div class="paragraph">
+<p>The uml:Realization connectors must have no name (see the <a href="conv-connectors.html#rule:connectors-name" class="xref page">General convention on connector names</a>) nor source/target roles specified in the UML model.</p>
+</div>
+<table id="rule:realization-multiplicity" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #a8c6f7;"><p class="tableblock"> <strong>Title:</strong> uml:Realization connector with no multiplicity</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Identifier:</strong> rule:realization-multiplicity</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Statement:</strong>
+uml:Realization connectors shall have no target or source multiplicity specified.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Description:</strong></p>
+</div>
+<div class="paragraph">
+<p>The multiplicity must not be specified neither at the target nor at the source end of the uml:Realization connector.</p>
+</div>
+<table id="rule:realization-proxy-objects" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #a8c6f7;"><p class="tableblock"> <strong>Title:</strong> Proxy objects</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Identifier:</strong> rule:realization-proxy-objects</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Statement:</strong>
+For objects defined in external models proxy uml:Object elements should be defined.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Description:</strong></p>
+</div>
+<div class="paragraph">
+<p>In case an object that is to be used in this model is defined in an external model a proxy uml:Object element should be created so that we can connect it to classes in our model. For example, if we want to refer to the <code>time:unitMonth</code> instance of the class <code>time:TemporalUnit</code>, then a proxy for <code>time:unitMonth</code> individual (and in this case also of the class <code>time:TemporalUnit</code>) must be created (ideally in a dedicated <code>time</code> package).</p>
+</div>
+</div>
+</div>
 </article>
   </div>
 </main>

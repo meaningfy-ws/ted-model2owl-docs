@@ -26,7 +26,7 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="ROOT" data-version="public-review">
+<div class="nav-container" data-component="ROOT" data-version="ted-model2owl-docs">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -69,7 +69,7 @@
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="conv-conn-dependency.html">Dependency</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="3">
+  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="conv-conn-generalization.html">Generalization</a>
   </li>
   <li class="nav-item" data-depth="3">
@@ -83,7 +83,7 @@
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="conv-enumerations.html">Enumerations</a>
   </li>
-  <li class="nav-item" data-depth="2">
+  <li class="nav-item is-current-page" data-depth="2">
     <a class="nav-link" href="conv-objects.html">Objects</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -123,14 +123,14 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">model2owl Documentation</span>
-    <span class="version">public-review</span>
+    <span class="version">ted-model2owl-docs</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <div class="title"><a href="../index.html">model2owl Documentation</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../index.html">public-review</a>
+          <a href="../index.html">ted-model2owl-docs</a>
         </li>
       </ul>
     </li>
@@ -147,11 +147,10 @@
   <ul>
     <li><a href="../index.html">model2owl Documentation</a></li>
     <li><a href="conceptual-model-conventions.html">UML Model Conventions</a></li>
-    <li><a href="conv-connectors.html">Connectors</a></li>
-    <li><a href="conv-conn-generalization.html">Generalization</a></li>
+    <li><a href="conv-objects.html">Objects</a></li>
   </ul>
 </nav>
-<div class="edit-this-page"><a href="https://github.com/meaningfy-ws/ted-model2owl-docs/edit/feature/M2O1-23/docs/modules/ROOT/pages/uml/conv-conn-generalization.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="https://github.com/meaningfy-ws/ted-model2owl-docs/edit/feature/M2O1-23/docs/modules/ROOT/pages/uml/conv-objects.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -159,22 +158,25 @@
 </aside>
 <article class="doc">
 <div class="sect1">
-<h2 id="sec:genaralization"><a class="anchor" href="#sec:genaralization"></a>Conventions on uml:Generalization Connectors</h2>
+<h2 id="sec:uml-object"><a class="anchor" href="#sec:uml-object"></a>Conventions on uml:Object elements</h2>
 <div class="sectionbody">
-<table id="rule:generalization-btw-classes-or-connectors" class="tableblock frame-all grid-all stretch">
+<div class="paragraph">
+<p>The generic conventions that are defined for all UML elements in the <a href="conv-general.html" class="xref page">General conventions</a> section apply also for the uml:Object element. This section provides a few additional conventions in addition to those.</p>
+</div>
+<table id="rule:objects-attributes" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color:  #a8c6f7;"><p class="tableblock"> <strong>Title:</strong> uml:Generalization connects two classes or two connectors</p></td>
+<td class="tableblock halign-left valign-top" style="background-color:  #a8c6f7;"><p class="tableblock"> <strong>Title:</strong> Objects with no Attributes</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Identifier:</strong> rule:generalization-btw-classes-or-connectors</p></td>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Identifier:</strong> rule:objects-attributes</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Statement:</strong>
-uml:Generalization connectors connect a uml:Class element to its superclass uml:Class element, or a uml:Connector to its super-property uml:Connector.</p></td>
+uml:Object elements shall have no attributes specified.</p></td>
 </tr>
 </tbody>
 </table>
@@ -182,32 +184,25 @@ uml:Generalization connectors connect a uml:Class element to its superclass uml:
 <p><strong>Description:</strong></p>
 </div>
 <div class="paragraph">
-<p>The uml:Generalization connector signifies either:</p>
+<p>Objects in the UML model should be "empty", i.e. have no additional values/attributes specified.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>a class-subClass relation and is transformed into <code>rdfs:subClassOf</code> relation standing between source and target classes, or</p>
-</li>
-<li>
-<p>a property-subProperty relation and is transformed into <code>rdfs:subPropertyOf</code> relation standing between source and target properties</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>They often would serve as a "proxy" for an individual, or SKOS concept, defined outside the current model.</p>
 </div>
-<table id="rule:generalization-name" class="tableblock frame-all grid-all stretch">
+<table id="rule:objects-relations" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color:  #a8c6f7;"><p class="tableblock"> <strong>Title:</strong> uml:Generalization connector with no name</p></td>
+<td class="tableblock halign-left valign-top" style="background-color:  #a8c6f7;"><p class="tableblock"> <strong>Title:</strong> Relations of Objects</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Identifier:</strong> rule:generalization-name</p></td>
+<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Identifier:</strong> rule:objects-relations</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Statement:</strong>
-uml:Generalization connectors shall have no name or a target role specified.</p></td>
+uml:Object element shall have no outgoing connectors, except uml:Realization connector(s) to some Class or Enumeration.</p></td>
 </tr>
 </tbody>
 </table>
@@ -215,99 +210,10 @@ uml:Generalization connectors shall have no name or a target role specified.</p>
 <p><strong>Description:</strong></p>
 </div>
 <div class="paragraph">
-<p>The uml:Generalization connectors must have no name (see the <a href="conv-connectors.html#rule:connectors-name" class="xref page">General convention on connector names</a>) nor source/target roles specified in the UML model.</p>
-</div>
-<table id="rule:generalization-multiplicity" class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 100%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color:  #a8c6f7;"><p class="tableblock"> <strong>Title:</strong> uml:Generalization connector with no multiplicity</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Identifier:</strong> rule:generalization-multiplicity</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Statement:</strong>
-uml:Generalization connectors shall have no target or source multiplicity specified.</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p><strong>Description:</strong></p>
+<p>Each Object should instantiate a Class or an Enumeration. Therefore, there shall be at least one uml:Realization relationship between the Object and a Class or Enumeration.</p>
 </div>
 <div class="paragraph">
-<p>The multiplicity must not be specified neither at the target nor at the source end of the uml:Generalization connector.</p>
-</div>
-<table id="rule:generalization-proxy-classes" class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 100%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color:  #a8c6f7;"><p class="tableblock"> <strong>Title:</strong> Proxy classes</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Identifier:</strong> rule:generalization-proxy-classes</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Statement:</strong>
-For classes defined in external models proxy uml:Class elements should be defined.</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p><strong>Description:</strong></p>
-</div>
-<div class="paragraph">
-<p>In case a model class should inherit a class from an external model then proxies must be created for those classes. For example, if <code>Buyer</code> specialises an <code>org:Organization</code>, then a proxy for <code>org:Organization</code> must be created in the <code>org</code> package.</p>
-</div>
-<table id="rule:generalization-disjoint-subclasses" class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 100%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color:  #a8c6f7;"><p class="tableblock"> <strong>Title:</strong> Disjoint subclasses</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Identifier:</strong> rule:generalization-disjoint-subclasses</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Statement:</strong>
-Subclasses of the same class, represented by multiple uml:Generalization connectors pointing to the same superclass, are assumed disjoint by default. Exceptions may exist and can be encoded.</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p><strong>Description:</strong></p>
-</div>
-<div class="paragraph">
-<p>In this specification, the subclasses are assumed disjoint by default, unless otherwise specified in the transformations script, or explicitly marked on the generalisation relation with <code>&lt;&lt;non-disjoint&gt;&gt;</code> stereotype. For the converse case the <code>&lt;&lt;disjoint&gt;&gt;</code> stereotype shall be used.</p>
-</div>
-<table id="rule:generalization-equivalent-classes" class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 100%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color:  #a8c6f7;"><p class="tableblock"> <strong>Title:</strong> Equivalent classes</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Identifier:</strong> rule:generalization-equivalent-classes</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color:  #f5f8fc;"><p class="tableblock"><strong>Statement:</strong>
-Equivalent classes can be represented by using stereotypes on the uml:Generalization connectors.</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p><strong>Description:</strong></p>
-</div>
-<div class="paragraph">
-<p>In case two classes are equivalent, then the \(&lt;&lt;equivalent&gt;&gt;\) or \(&lt;&lt;complete&gt;&gt;\) stereotype should be used as a marker.</p>
+<p>Except these realisation connectors, an Object should not connect to any other elements. An Object stands for a specific instance of a class and/or an element of a controlled list, and can only be referred to.</p>
 </div>
 </div>
 </div>
