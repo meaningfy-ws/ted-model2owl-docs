@@ -12,7 +12,7 @@ content:
   sources:
 #    - url: .
     - url: https://github.com/meaningfy-ws/ted-model2owl-docs
-      branches: [ main, feature/M2O1-23 ]
+      branches: [ feature/M2O1-23 ]
       start_path: docs
 ui:
   bundle:
