@@ -12,6 +12,7 @@
 *** xref:uml/conv-conn-dependency.adoc[Dependency]
 *** xref:uml/conv-conn-generalization.adoc[Generalization]
 *** xref:uml/conv-conn-realization.adoc[Realization]
+** xref:uml/unsupported-uml-constructs.adoc[Unsupported UML Constructs]
 ** xref:uml/conv-datatypes.adoc[Data Types]
 ** xref:uml/conv-enumerations.adoc[Enumerations]
 ** xref:uml/conv-objects.adoc[Objects]

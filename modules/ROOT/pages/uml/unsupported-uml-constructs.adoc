@@ -1,0 +1,68 @@
+[[sec:unsupported-uml-constructs]]
+== Unsupported UML Constructs
+
+model2owl transforms a deliberately constrained *subset* of UML class-diagram
+constructs into OWL ontologies and SHACL shapes. UML offers several modelling
+constructs whose semantics either have no direct counterpart in the target
+formalisms or are intentionally out of scope. This section lists those
+constructs, explains what each one is, and states what model2owl does with it
+(or does instead).
+
+Modellers should avoid relying on these constructs to carry semantics that they
+expect to appear in the generated artefacts. Where a richer relationship is
+required, it should be expressed with a supported construct (see the
+xref:uml/conv-connectors.adoc#sec:connectors[Connector conventions]) or captured
+out-of-band.
+
+[[sec:unsupported-nary-associations]]
+=== N-ary (ternary and higher-arity) associations
+
+An *n-ary association* is a single association that relates three or more
+classifiers at once (a ternary association relates three, and so on), typically
+drawn as a diamond connecting all participating ends. Only *binary*
+associations — those relating exactly two classes — are transformed. N-ary
+associations (arity greater than two) are *ignored* in the generated RDF
+artefacts: no object properties, classes, or shapes are produced for them.
+
+To represent an n-ary relationship, *reify* it: introduce an intermediate class
+that stands for the relationship and connect it to each participant with a
+binary association. See the supported connector set in
+xref:uml/conv-general.adoc#rule:gen-model-connectors[Supported UML connectors].
+
+[[sec:unsupported-qualified-associations]]
+=== Qualified associations
+
+A *qualified association* attaches a *qualifier* (one or more attributes) to an
+association end, partitioning the set of associated instances by the qualifier
+value — conceptually similar to a keyed lookup. model2owl does *not* represent
+the qualifier: the association is not transformed as qualified, and the
+qualifier carries no meaning in the generated artefacts. Model the relationship
+as a plain binary association, and express any key-like semantics through an
+explicit attribute or a dedicated class.
+
+[[sec:unsupported-aggregation-composition]]
+=== Aggregation and composition associations
+
+UML distinguishes plain associations from *shared aggregation* (hollow diamond)
+and *composite aggregation / composition* (filled diamond), which add
+part-whole semantics — and, for composition, lifecycle dependency of the part
+on the whole. model2owl treats both shared and composite aggregation as a
+*plain association*: the part-whole semantics are *not* generated (no
+distinguished part-of/has-part axioms, no lifecycle constraints). If part-whole
+meaning must be conveyed, encode it explicitly through suitably named and typed
+object properties rather than relying on the aggregation adornment.
+
+[[sec:unsupported-covering-constraints]]
+=== Covering and completeness constraints on generalization sets
+
+A *generalization set* groups several generalizations sharing one superclass and
+may carry constraints. The `{complete}` (covering) constraint asserts that every
+instance of the superclass belongs to at least one of the listed subclasses,
+while the `{disjoint}` constraint asserts that no instance belongs to more than
+one. model2owl does *not* transform these generalization-set constraints:
+`{complete}`/covering constraints are *not* turned into OWL covering axioms
+(`owl:unionOf` / covering `owl:equivalentClass` axioms over the subclasses), and
+`{disjoint}` constraints are *not* turned into `owl:disjointWith` /
+`owl:AllDisjointClasses` axioms. Note that covering (completeness) and
+disjointness are independent constraints: each may hold without the other. If
+either axiom is required in the ontology, it must be added by other means.
