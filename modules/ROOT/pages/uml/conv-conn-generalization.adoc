@@ -88,6 +88,11 @@ Equivalent classes can be represented by using stereotypes on the uml:Generaliza
 
 In case two classes are equivalent, then the latexmath:[$<<equivalent>>$] or latexmath:[$<<complete>>$] stereotype should be used as a marker.
 
+[NOTE]
+====
+*Covering and completeness constraints are not transformed.* A `{complete}` (covering) constraint on a generalization set — asserting that every instance of the superclass belongs to at least one of its subclasses — is *not* turned into an OWL covering axiom. The same applies to the `{disjoint}` constraint. These are listed among the constructs that model2owl does not transform; see xref:uml/unsupported-uml-constructs.adoc#sec:unsupported-uml-constructs[Unsupported UML Constructs].
+====
+
 
 [[rule:generalization-btw-connectors-and-allowed-targets]]
 |===
