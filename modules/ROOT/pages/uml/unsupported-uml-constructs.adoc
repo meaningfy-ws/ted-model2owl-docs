@@ -70,9 +70,11 @@ A generalization set groups several generalizations sharing one superclass and
 may carry constraints. The `{complete}` (covering) constraint asserts that every
 instance of the superclass belongs to at least one of the listed subclasses,
 while the `{disjoint}` constraint asserts that no instance belongs to more than
-one. Model2owl does not transform these generalization-set constraints. Although
-these constraints are not modelled, model2owl's output is consistent with the UML
-2.5.1 default of `{incomplete, overlapping}`: for a plain class generalization it
-generates only an `rdfs:subClassOf` axiom, with no disjointness (`owl:disjointWith` /
-`owl:AllDisjointClasses`) or covering (`owl:unionOf` / subclass-union
-`owl:equivalentClass`) axioms.
+one. Model2owl does not transform these generalization-set constraints.
+
+[NOTE]
+====
+Although these constraints are not modelled, model2owl's output is consistent with
+the UML 2.5.1 default of `{incomplete, overlapping}`: for a plain class
+generalization it generates only an `rdfs:subClassOf` axiom.
+====
