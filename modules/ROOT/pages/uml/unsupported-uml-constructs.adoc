@@ -1,18 +1,18 @@
 [[sec:unsupported-uml-constructs]]
 == Unsupported UML Constructs
 
-model2owl transforms a subset of UML class-diagram constructs into OWL
+Model2owl transforms a subset of UML class-diagram constructs into OWL
 ontologies and SHACL shapes. UML offers several modelling constructs whose
 semantics either have no direct counterpart in the target formalisms or are not
 supported. This section lists those constructs, explains what each one is,
-states what model2owl does with it, and, where possible, proposes an alternative
+describes how model2owl handles each one, and, where possible, proposes an alternative
 modelling approach.
 
 Modellers should avoid relying on these constructs to carry semantics that they
 expect to appear in the generated artefacts. Where a richer relationship is
 required, it should be expressed with a supported construct (see the
-xref:uml/conv-connectors.adoc#sec:connectors[Connector conventions]) or captured
-out-of-band.
+xref:uml/conv-connectors.adoc#sec:connectors[Connector conventions]) or recorded
+separately, outside the model.
 
 [[sec:unsupported-nary-associations]]
 === N-ary (ternary and higher-arity) associations
@@ -36,7 +36,7 @@ xref:uml/conv-general.adoc#rule:gen-model-connectors[Supported UML connectors].
 
 A qualified association attaches a qualifier (one or more attributes) to an
 association end, partitioning the set of associated instances by the qualifier
-value. model2owl does not represent the qualifier: the association is not
+value. Model2owl does not represent the qualifier: the association is not
 transformed as qualified, and the qualifier carries no meaning in the generated
 artefacts. Model the relationship as a plain binary association, and express any
 key-like semantics through an explicit attribute or a dedicated class.
@@ -46,7 +46,7 @@ key-like semantics through an explicit attribute or a dedicated class.
 
 An association class is a UML element that is at once an association and a class:
 it connects classes like an association and also carries its own attributes like
-a class. model2owl does not support association classes: the combined
+a class. Model2owl does not support association classes: the combined
 association-and-class semantics are not generated. To attach attributes or
 further relationships to a relationship, reify it as an ordinary class connected
 to each participant with a binary association.
@@ -57,7 +57,7 @@ to each participant with a binary association.
 UML distinguishes plain associations from shared aggregation (hollow diamond) and
 composite aggregation, also called composition (filled diamond), which add
 part-whole semantics, and, for composition, lifecycle dependency of the part on
-the whole. model2owl treats both shared and composite aggregation as a plain
+the whole. Model2owl treats both shared and composite aggregation as a plain
 association: the part-whole semantics are not generated (no distinguished
 part-of/has-part axioms, no lifecycle constraints). If part-whole meaning must be
 conveyed, encode it explicitly through suitably named and typed object properties
@@ -70,10 +70,9 @@ A generalization set groups several generalizations sharing one superclass and
 may carry constraints. The `{complete}` (covering) constraint asserts that every
 instance of the superclass belongs to at least one of the listed subclasses,
 while the `{disjoint}` constraint asserts that no instance belongs to more than
-one. model2owl does not transform these generalization-set constraints:
-`{complete}`/covering constraints are not turned into OWL covering axioms
-(`owl:unionOf` / covering `owl:equivalentClass` axioms over the subclasses), and
-`{disjoint}` constraints are not turned into `owl:disjointWith` /
-`owl:AllDisjointClasses` axioms. Covering (completeness) and disjointness are
-independent constraints: each may hold without the other. If either axiom is
-required in the ontology, it must be added by other means.
+one. Model2owl does not transform these generalization-set constraints. Although
+these constraints are not modelled, model2owl's output is consistent with the UML
+2.5.1 default of `{incomplete, overlapping}`: for a plain class generalization it
+generates only an `rdfs:subClassOf` axiom, with no disjointness (`owl:disjointWith` /
+`owl:AllDisjointClasses`) or covering (`owl:unionOf` / subclass-union
+`owl:equivalentClass`) axioms.
