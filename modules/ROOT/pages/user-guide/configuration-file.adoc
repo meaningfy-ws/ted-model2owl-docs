@@ -273,13 +273,22 @@ missing an explicit status can be processed consistently.
 - **The `statusProperty` tells model2owl which property is used in UML tags to express the status
 of an element.** Model2owl interprets these tags to determine element status.
 
-=== **Annotating SHACL shapes with ontology URI**
-Each instance of `sh:NodeShape` and `sh:PropertyShape` is annotated with the URI
-of the ontology in which it is defined. This typically refers to the ontology
-contained within the same SHACL shapes artefact. The `rdfs:isDefinedBy` property
-is used to identify the source ontology of each shape. It can be disabled by
-setting the `annotateShaclConceptsWithOntology` configuration parameter to
-`false()`.
+[[sec:isdefinedby-annotation]]
+=== **Annotating concepts with the ontology URI**
+
+Each generated concept is annotated with the URI of the ontology in which it is
+defined, using the `rdfs:isDefinedBy` property (transformation rules
+xref:transformation/transf-rules4.adoc#rule:element-source-core[T.08] for the OWL
+artefacts and xref:transformation/transf-rules4.adoc#rule:element-source-ds[T.09]
+for the SHACL shapes). Two independent flags control this behaviour; set either to
+`false()` to suppress the corresponding annotation.
+
+[options="header"]
+|===
+| Parameter Name | Data Type | Description | Default Value
+| `annotateDefinedConceptsWithOntology` | Boolean | If `true`, every concept defined in the OWL **core/restrictions** artefacts is annotated with `rdfs:isDefinedBy` pointing at the ontology IRI. | `true`
+| `annotateShaclConceptsWithOntology` | Boolean | If `true`, every `sh:NodeShape`/`sh:PropertyShape` in the **SHACL shapes** artefact is annotated with `rdfs:isDefinedBy` pointing at the shapes ontology. | `true`
+|===
 
 === **Comments generation**
 
@@ -345,6 +354,17 @@ allow users to **control and customize which information is displayed and how it
 
 This section defines metadata parameters used in the generation of **OWL Core, OWL Restrictions, SHACL Shapes, convention report, and ReSpec documentation** artefacts. Metadata plays a crucial role in **identifying, describing, and managing ontology components**,
 ensuring that each generated artefact contains the necessary information. The described metadata properties should be defined in the **metadata.json JSON file** that belongs to the set of configuration files. An exemplary metadata JSON file is included in the model2owl repository and can be accessed link:https://github.com/OP-TED/model2owl/blob/develop/test/ePO-default-config/metadata.json[here].
+
+[NOTE]
+====
+All metadata properties listed below are *optional*. If a property is omitted, or left blank, model2owl does not fail: for the OWL Core, OWL Restrictions, SHACL and convention-report artefacts the corresponding annotation or field is simply left out, and in the ReSpec documentation it renders empty.
+
+A few properties are nonetheless *recommended*, because omitting them degrades the result:
+
+* `versionInfo` — drives `owl:versionInfo` and the `owl:versionIRI`;
+* `preferredNamespaceUri` and `preferredNamespacePrefix` — used to build correct term URIs and compact (prefixed) names;
+* `ontologyTitleCore`, `ontologyTitleRestrictions`, `ontologyTitleShapes` — the artefact titles.
+====
 
 [options="header"]
 |===
