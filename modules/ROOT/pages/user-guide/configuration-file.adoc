@@ -175,6 +175,16 @@ The **`includedPrefixesList`** parameter ensures that certain prefixes (e.g., `e
 are always treated as **internal**. This means that **concepts with these prefixes will always be included**,
 even if they would sometimes be classified as reused.
 
+[NOTE]
+====
+A concept is matched by the prefix in its name (the part before `:`). If your model's
+terms are **unprefixed** (e.g. `Vehicle` rather than `myprefix:Vehicle`), their prefix is
+the empty string, so you must include `''` in the list — set `includedPrefixesList` to
+`('')`. Otherwise none of your concepts match, they are all treated as reused/supportive,
+and the ReSpec documentation shows no *main* entities. The ReSpec generation emits a
+warning when a model has classes but none qualifies as a main entity.
+====
+
 [options="header"]
 |===
 | Parameter Name | Data Type | Description | Default Value
