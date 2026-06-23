@@ -115,7 +115,10 @@ For a pair of connectors with a generalization relation linking them, each of th
 
 This is a constraint on the *end orientation* of the two associations — which class is placed at the *source* end and which at the *target* end — and is independent of the associations' navigability/direction. When generating the corresponding `rdfs:subPropertyOf` axioms, model2owl pairs the two associations end-by-end (source role with source role, target role with target role). If the two associations are oriented inconsistently — that is, the corresponding classes are placed at opposite ends — their same-side ends become attached to unrelated classes, the sub-property pairing is inverted, and the super-property's `rdfs:domain`/`rdfs:range` propagate onto the wrong classes, so a reasoner derives unintended subclass relations.
 
+[CAUTION]
+====
 To avoid this, ensure the sources and targets of the two associations are oriented consistently: corresponding source/target ends must carry either the same class or two classes linked by a class generalisation (the source end of one association lines up with the source end of the other, and likewise for the target ends). Because a non-navigable (or bidirectional) association shows no arrow on the diagram, its end orientation is not visually apparent — inspect the connector's source and target ends in the modelling tool to confirm it. This convention is enforced by the checker `generalisation-connector-and-missing-class-generalisation-9`.
+====
 
 
 [[rule:generalization-btw-connectors-and-class-generalization-for-distinct-connector-targets]]
