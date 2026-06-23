@@ -435,7 +435,7 @@ The term definition key contains the attribute and the relevant class names. It 
 [#rule:attribute-rc-range,source,XML,caption='',title='{example-caption} {counter:rule-cnt:1.1}. Attribute type -- in reasoning layer',reftext='{example-caption} {rule-cnt}']
 ====
 Specify data (or object) property range for attribute(s).
-The range of object properties created for attributes that are reused in multiple classes should be the union of all the classes specified as values for those attributes.
+The range of object properties created for attributes that are reused in multiple classes should be the union of all the classes specified as values for those attributes. Analogously, when a *data* property is reused across multiple classes with several different datatypes, its range is the union of those datatypes, expressed as an `rdfs:Datatype` with `owl:unionOf` (an OWL 2 _DataUnionOf_).
 ====
 
 [cols="a,a", options="noheader"]
@@ -505,6 +505,41 @@ For reused attributes, like the ones depicted in <<fig:attribute-visual-reuse>>,
                 <rdf:Description rdf:about="http://base.onto.uri/OtherClass2"/>
             </owl:unionOf>
         </owl:Class>
+    </rdfs:range>
+</rdf:Description>
+----
+|===
+
+When the reused attribute is a *data* property whose reuse contexts declare different datatypes, the range is a union of those datatypes, wrapped in `rdfs:Datatype`.
+
+[cols="a,a", options="noheader"]
+|===
+|
+.Data property range (datatype union) for reused attributes in Turtle syntax
+[source,Turtle]
+----
+:attribute1
+  rdfs:range [
+    rdf:type rdfs:Datatype ;
+    owl:unionOf (
+      xsd:short
+      xsd:long
+    )
+  ]
+.
+----
+|
+.Data property range (datatype union) for reused attributes in RDF/XML syntax
+[source,XML]
+----
+<rdf:Description rdf:about = "http://base.onto.uri/attribute1">
+    <rdfs:range>
+        <rdfs:Datatype>
+            <owl:unionOf rdf:parseType="Collection">
+                <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#short"/>
+                <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#long"/>
+            </owl:unionOf>
+        </rdfs:Datatype>
     </rdfs:range>
 </rdf:Description>
 ----
