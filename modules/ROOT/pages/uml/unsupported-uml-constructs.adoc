@@ -36,10 +36,11 @@ xref:uml/conv-general.adoc#rule:gen-model-connectors[Supported UML connectors].
 
 A qualified association attaches a qualifier (one or more attributes) to an
 association end, partitioning the set of associated instances by the qualifier
-value. Model2owl does not represent the qualifier: the association is not
-transformed as qualified, and the qualifier carries no meaning in the generated
-artefacts. Model the relationship as a plain binary association, and express any
-key-like semantics through an explicit attribute or a dedicated class.
+value. Model2owl does not represent the qualifier, but it *does* transform the
+underlying binary association: the ordinary (unqualified) object property is
+generated as usual, and only the qualifier is dropped — it carries no meaning in
+the generated artefacts. Model the relationship as a plain binary association, and
+express any key-like semantics through an explicit attribute or a dedicated class.
 
 [[sec:unsupported-association-classes]]
 === Association classes
@@ -57,11 +58,12 @@ to each participant with a binary association.
 UML distinguishes plain associations from shared aggregation (hollow diamond) and
 composite aggregation, also called composition (filled diamond), which add
 part-whole semantics, and, for composition, lifecycle dependency of the part on
-the whole. Model2owl treats both shared and composite aggregation as a plain
-association: the part-whole semantics are not generated (no distinguished
-part-of/has-part axioms, no lifecycle constraints). If part-whole meaning must be
-conveyed, encode it explicitly through suitably named and typed object properties
-rather than relying on the aggregation notation.
+the whole. Model2owl does not transform aggregation or composition connectors at
+all: an aggregation or composition connector produces *nothing* in the generated
+artefacts — neither a plain association nor any part-whole or lifecycle axiom. If a
+relationship must appear in the output, model it as a plain binary association
+(and, if part-whole meaning matters, convey it through suitably named and typed
+object properties) rather than relying on the aggregation notation.
 
 [[sec:unsupported-covering-constraints]]
 === Covering and completeness constraints on generalization sets
@@ -78,3 +80,13 @@ Although these constraints are not modelled, model2owl's output is consistent wi
 the UML 2.5.1 default of `{incomplete, overlapping}`: for a plain class
 generalization it generates only an `rdfs:subClassOf` axiom.
 ====
+
+[[sec:unsupported-id-property-modifier]]
+=== The `{id}` property modifier
+
+The `{id}` modifier marks an attribute as part of the identity of its owning
+class, indicating that its value distinguishes instances. Model2owl does not
+transform the `{id}` modifier: the attribute itself is still generated as an
+ordinary data (or object) property, but no identity, uniqueness, or key axiom
+(such as `owl:hasKey`) is produced from it, so the `{id}` marking carries no
+meaning in the generated artefacts.
