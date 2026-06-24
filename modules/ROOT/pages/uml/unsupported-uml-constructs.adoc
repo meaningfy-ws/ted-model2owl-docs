@@ -36,7 +36,7 @@ xref:uml/conv-general.adoc#rule:gen-model-connectors[Supported UML connectors].
 
 A qualified association attaches a qualifier (one or more attributes) to an
 association end, partitioning the set of associated instances by the qualifier
-value. Model2owl does not represent the qualifier, but it *does* transform the
+value. Model2owl does not represent the qualifier, but it does transform the
 underlying binary association: the ordinary (unqualified) object property is
 generated as usual, and only the qualifier is dropped — it carries no meaning in
 the generated artefacts. Model the relationship as a plain binary association, and
@@ -62,7 +62,7 @@ UML distinguishes plain associations from shared aggregation (hollow diamond) an
 composite aggregation, also called composition (filled diamond), which add
 part-whole semantics, and, for composition, lifecycle dependency of the part on
 the whole. Model2owl does not transform aggregation or composition connectors at
-all: an aggregation or composition connector produces *nothing* in the generated
+all: an aggregation or composition connector produces nothing in the generated
 artefacts — neither a plain association nor any part-whole or lifecycle axiom. If a
 relationship must appear in the output, model it as a plain binary association
 (and, if part-whole meaning matters, convey it through suitably named and typed
