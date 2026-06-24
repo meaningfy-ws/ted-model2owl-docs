@@ -48,9 +48,12 @@ express any key-like semantics through an explicit attribute or a dedicated clas
 An association class is a UML element that is at once an association and a class:
 it connects classes like an association and also carries its own attributes like
 a class. Model2owl does not support association classes: the combined
-association-and-class semantics are not generated. To attach attributes or
-further relationships to a relationship, reify it as an ordinary class connected
-to each participant with a binary association.
+association-and-class semantics are not generated. Specifically, the association
+class itself, its attributes (which would otherwise become data or object
+properties), and any association from another class to it are all omitted from
+every artefact. To attach attributes or further relationships to a relationship,
+reify it as an ordinary class connected to each participant with a binary
+association.
 
 [[sec:unsupported-aggregation-composition]]
 === Aggregation and composition associations
