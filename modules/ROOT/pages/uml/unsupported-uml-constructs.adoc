@@ -8,6 +8,12 @@ supported. This section lists those constructs, explains what each one is,
 describes how model2owl handles each one, and, where possible, proposes an alternative
 modelling approach.
 
+Where an unsupported construct nonetheless contains a supported part — for
+example the plain binary association underlying a qualified association or an
+association class — model2owl follows a best-effort approach: it transforms that
+supported part and ignores only the unsupported aspect, which is reported in the
+convention report.
+
 Modellers should avoid relying on these constructs to carry semantics that they
 expect to appear in the generated artefacts. Where a richer relationship is
 required, it should be expressed with a supported construct (see the
@@ -47,12 +53,14 @@ express any key-like semantics through an explicit attribute or a dedicated clas
 
 An association class is a UML element that is at once an association and a class:
 it connects classes like an association and also carries its own attributes like
-a class. Model2owl does not support association classes: the combined
-association-and-class semantics are not generated. Specifically, the association
-class itself, its attributes (which would otherwise become data or object
-properties), and any association from another class to it are all omitted from
-every artefact. To attach attributes or further relationships to a relationship,
-reify it as an ordinary class connected to each participant with a binary
+a class. Model2owl does not support the association-class construct as such, but
+following the best-effort approach it still transforms the supported part: the
+underlying binary association between the two participant classes is generated as
+an ordinary association. Only the class facet is dropped — the association class
+element itself, its attributes (which would otherwise become data or object
+properties), and any association from another class to it are omitted from every
+artefact. To also capture the dropped attributes or further relationships, reify
+the relationship as an ordinary class connected to each participant with a binary
 association.
 
 [[sec:unsupported-aggregation-composition]]
