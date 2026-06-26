@@ -66,6 +66,7 @@ allowed characters for normalised strings, default delimiter in URIs, etc.
 | `base-ontology-uri` | String | The base URI for the ontology. |`http://data...eu/a4g/ontology`
 | `base-shape-uri` | String | The base URI for SHACL shapes. | `http://data...eu/a4g/data-shape`
 | `base-restriction-uri` | String | The base URI for OWL restrictions. | `http://data...eu/a4g/ontology`
+| `fullArtefactURI` | String | The ontology IRI carried by the consolidated OWL-full artefact (see `generateOWLFull`). Defaults to the canonical `base-ontology-uri`, so the consolidated form is published as the ontology itself. | `$base-ontology-uri`
 | `defaultDelimiter` | String | The default delimiter to use when a namespace lacks one. | `#`
 | `nodeShapeURIsuffix` | String | A suffix for URIs of sh:NodeShape instances in the SHACL artefact. | `'Shape'`
 | `acceptableTypesForObjectProperties` | List | Defines types that can produce object properties. | `('epo:Identifier', 'rdfs:Literal')`
@@ -194,6 +195,7 @@ warning when a model has classes but none qualifies as a main entity.
 | `generateReusedConceptsOWLrestrictions` | Boolean | Enables or disables the inclusion of reused concepts in OWL restrictions. | `true`
 | `generateReusedConceptsJSONLDcontext` | Boolean | Enables or disables the inclusion of reused concepts in JSON-LD context. | `true`
 | `generateReusedConceptsGlossary` | Boolean | Enables or disables the inclusion of reused concepts in the glossary. Applies to glossaries generated in both HTML and AsciiDoc formats. | `true`
+| `generateOWLFull` | Boolean | Enables the optional consolidated OWL-full form (`make owl-full`): the OWL core and OWL restrictions artefacts are merged into a single self-contained ontology and the standalone outputs are dropped. See xref:user-guide/how-to-use.adoc#sec:owl-full[the OWL-full consolidated form] in the user guide. | `false`
 |===
 === Status filtering parameters
 
@@ -416,12 +418,15 @@ A few properties are nonetheless *recommended*, because omitting them degrades t
 | `ontologyDescriptionCore` | String | Provides a detailed description of the eProcurement Ontology Core. (dct:description)| _Some text_
 | `ontologyDescriptionRestrictions` | String | Provides a detailed description of the eProcurement Ontology Restrictions. (dct:description) | _Some text_
 | `ontologyDescriptionShapes` | String | Provides a detailed description of the eProcurement Ontology Shapes. (dct:description) | _Some text_
+| `ontologyDescriptionFull` | String | Description of the consolidated OWL-full artefact. (dct:description) Optional; when omitted or blank it falls back to `ontologyDescriptionCore`. | _Some text_
 | `ontologyLabelCore` | String | Defines the label for the OWL Core ontology. (rdfs:label)| _Some text_
 | `ontologyLabelRestrictions` | String | Defines the label for the OWL Restrictions ontology. (rdfs:label)| _Some text_
 | `ontologyLabelShapes` | String | Defines the label for the SHACL Shapes ontology. (rdfs:label)| _Some text_
+| `ontologyLabelFull` | String | Label for the consolidated OWL-full artefact. (rdfs:label) Optional; when omitted or blank it falls back to `ontologyLabelCore`. | _Some text_
 | `ontologyTitleCore` | String | Defines the title for the OWL Core ontology. (dct:title) | `ePO Core core`
 | `ontologyTitleRestrictions` | String | Defines the title for the OWL Restrictions ontology. (dct:title)| `ePO Core restrictions`
 | `ontologyTitleShapes` | String | Defines the title for the SHACL Shapes ontology. (dct:title)  | `ePO Core shapes`
+| `ontologyTitleFull` | String | Title for the consolidated OWL-full artefact. (dct:title) Optional; when omitted or blank it falls back to `ontologyTitleCore`. | `ePO Core full`
 | `owners` | List[Object] | List of owners of the project | See description of the object properties below
 | `owners.name` | String | Owner name | `Tom Smith`
 | `owners.website` | String | Owner website (optional) | `https://www.ex.com`
