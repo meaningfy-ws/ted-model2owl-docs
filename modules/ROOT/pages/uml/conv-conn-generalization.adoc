@@ -90,7 +90,9 @@ In case two classes are equivalent, then the latexmath:[$<<equivalent>>$] or lat
 
 [NOTE]
 ====
-*Covering and completeness constraints are not transformed.* A `{complete}` (covering) constraint on a generalization set — asserting that every instance of the superclass belongs to at least one of its subclasses — is *not* turned into an OWL covering axiom. The same applies to the `{disjoint}` constraint. These are listed among the constructs that model2owl does not transform; see xref:uml/unsupported-uml-constructs.adoc#sec:unsupported-uml-constructs[Unsupported UML Constructs].
+*Covering constraint is not transformed.* A `{complete}` (covering) constraint on a generalization set — asserting that every instance of the superclass belongs to at least one of its subclasses — is *not* turned into an OWL covering axiom. This is listed among the constructs that model2owl does not transform; see xref:uml/unsupported-uml-constructs.adoc#sec:unsupported-covering-constraints[Unsupported UML Constructs].
+
+The `{disjoint}` constraint, however, *is* transformed: a generalization set marked `{disjoint}` causes model2owl to generate OWL disjointness axioms for its member subclasses (see xref:transformation/transf-rules2.adoc#rule:disjoint-classes-rc[Transformation rule: Disjoint classes from generalization sets]).
 ====
 
 
