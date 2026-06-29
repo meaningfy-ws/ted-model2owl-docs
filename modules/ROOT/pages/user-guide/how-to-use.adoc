@@ -82,6 +82,13 @@ These commands execute transformations and generate outputs:
     - `NAMESPACES_USER_XML_FILE_PATH` – Path to the *.xml file containing namespaces.
     - `IMPORTS_XML_FILE_PATH` – Path to the *.xml file containing ontology URIs to be imported.
 
+* `owl-full` – Generates an _alternative, consolidated form_ of the ontology: the OWL core and OWL restrictions artefacts merged into a single self-contained ontology (the two OWL artefacts consolidated for convenience, not a new artefact). It is optional and **disabled by default**; enable it with the `generateOWLFull` configuration parameter. When enabled it generates core and restrictions (if absent), merges them — keeping a single coherent ontology header and dropping the internal core/restrictions cross-import — and removes the standalone core/restrictions outputs so only the consolidated artefact remains (in `.owl`, `.rdf` and `.ttl`).
+  ** **Parameters:**
+    - `XMI_INPUT_FILE_PATH` – Path to the XMI file.
+    - `OUTPUT_FOLDER_PATH` – Path to the output folder.
+    - `NAMESPACES_USER_XML_FILE_PATH` – Path to the *.xml file containing namespaces.
+    - `IMPORTS_XML_FILE_PATH` – Path to the *.xml file containing ontology URIs to be imported.
+
 * `shacl` – Generates SHACL data shapes suitable for validation.
   ** **Parameters:**
     - `XMI_INPUT_FILE_PATH` – Path to the XMI file.
@@ -348,39 +355,43 @@ model2owl.
    * Generated File:
      **`<input-file>_restrictions.rdf`** – OWL Restrictions ontology.
 
-3. `make shacl` – Generates SHACL shapes for data validation.
+3. `make owl-full` – Generates the optional consolidated form of the ontology (OWL core and OWL restrictions merged). Disabled by default; enable it with the `generateOWLFull` configuration parameter. See <<sec:owl-full, the OWL-full consolidated form>>.
+   * Generated Files (only when enabled; they replace the standalone core/restrictions files):
+     **`<input-file>_full.owl`**, **`<input-file>_full.rdf`**, **`<input-file>_full.ttl`** – the consolidated ontology in OWL (OWL API flavour), RDF/XML and Turtle.
+
+4. `make shacl` – Generates SHACL shapes for data validation.
    * Generated File:
      **`<input-file>_shapes.rdf`** – SHACL shapes in RDF format.
 
-4. `make generate-jsonld-context` – Generates JSON-LD context for JSON-LD applications.
+5. `make generate-jsonld-context` – Generates JSON-LD context for JSON-LD applications.
    * Generated File:
      **`<input-file>_context.jsonld`** – Signatures of ontology terms usable in a JSON-LD data file. The file consists of a JSON object with a single top-level entry having the `@context` key and an object with link:https://www.w3.org/TR/json-ld/#dfn-term-definition[term definitions] as its value.
 
-5. `make generate-glossary` – Generates an HTML glossary of terms extracted from the UML model.
+6. `make generate-glossary` – Generates an HTML glossary of terms extracted from the UML model.
    * Generated File:
      **`<input-file>_glossary.html`** – Glossary in HTML format.
 
-6. `make generate-asciidoc-glossary` – Generates an AsciiDoc glossary of terms extracted from the UML model.
+7. `make generate-asciidoc-glossary` – Generates an AsciiDoc glossary of terms extracted from the UML model.
    * Generated File:
      **`<input-file>_glossary.adoc`** – Glossary in AsciiDoc format.
 
-7. `make generate-convention-report` – Generates a compliance report from the UML model in HTML format, validating it against the conventions.
+8. `make generate-convention-report` – Generates a compliance report from the UML model in HTML format, validating it against the conventions.
    * Generated File:
      **`<input-file>_convention_report.html`** – HTML compliance report.
 
-8. `make generate-convention-SVRL-report` – Generates a compliance report in SVRL format.
+9. `make generate-convention-SVRL-report` – Generates a compliance report in SVRL format.
    * Generated File:
      **`<input-file>_convention_svrl_report.xml`** – SVRL compliance report.
 
-9. `make generate-respec` – Generates a ReSpec documentation package.
+10. `make generate-respec` – Generates a ReSpec documentation package.
    * Generated folder:
      **`<respec-dir>`** – A folder containing the HTML ReSpec document and all required resources (artefact files, images, examples, and other static assets). The package structure is described in <<sec:respec-package-structure, ReSpec package structure>>.
 
-10. `make merge-owl-shacl` – Merge OWL ontology and SHACL shapes files. Used as a preprocessing step before calling `run-rdf-diff`.
+11. `make merge-owl-shacl` – Merge OWL ontology and SHACL shapes files. Used as a preprocessing step before calling `run-rdf-diff`.
    * Generated File:
      **`<output-dir>/<file-name>.ttl`** – An RDF file combining content of provided OWL core and SHACL shapes artefacts, resulting in an OWL-SHACL RDF file (embedded SHACL shapes).
 
-11. `make run-rdf-diff` – Generates a diff report in a format specified by the user (JSON / AsciiDoc / HTML).
+12. `make run-rdf-diff` – Generates a diff report in a format specified by the user (JSON / AsciiDoc / HTML).
    * Generated File:   
      **`<output-dir>/diff.<report-extension>`** – A diff report listing changes between two versions of an RDF file. 
 
@@ -393,6 +404,28 @@ Example of transformation command:
 ```
 make owl-core XMI_INPUT_FILE_PATH=/home/mypc/work/model2owl/file1.xml OUTPUT_FOLDER_PATH=./my-folder
 ```
+
+[[sec:owl-full]]
+=== The OWL-full consolidated form
+
+By default model2owl publishes the ontology as two complementary OWL artefacts: the
+lightweight *OWL core* (definitions) and the heavyweight *OWL restrictions* (axioms for
+reasoning, which imports core). Some consumers prefer a single, self-contained file. The
+optional *OWL-full* form provides exactly that: it is not a new artefact but an
+**alternative form of the same ontology**, with the two OWL artefacts consolidated for
+convenience.
+
+It is **disabled by default** and enabled with the `generateOWLFull` configuration
+parameter (see <<sec:configuration,Configuration>>). When enabled, `make owl-full`:
+
+* generates OWL core and OWL restrictions (if not already present), then merges them with
+  https://robot.obolibrary.org/[ROBOT] into one ontology;
+* keeps a single coherent ontology header (carrying the IRI configured in
+  `fullArtefactURI`, by default the canonical base ontology URI) and drops the internal
+  `owl:imports` from restrictions to core (the two layers are now consolidated), while
+  keeping any external imports;
+* removes the standalone core and restrictions outputs, so only the consolidated
+  `<input-file>_full.owl` / `.rdf` / `.ttl` remain.
 
 == Using model2owl online
 Model2owl-boilerplate (and its forked versions) can be used to run model2owl in an automated
