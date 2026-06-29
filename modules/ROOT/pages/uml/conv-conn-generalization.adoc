@@ -105,7 +105,7 @@ The `{disjoint}` constraint, however, *is* transformed: a generalization set mar
 *Identifier:* rule:generalization-btw-connectors-and-allowed-targets
 
 |*Statement:*
- Ends of the same side (either source or target) of two connectors connected with a generalization relation
+Ends of the same side (either source or target) of two connectors connected with a generalization relation
 must be attached to the same class or two different ones connected with a generalization relation.
 |===
 
