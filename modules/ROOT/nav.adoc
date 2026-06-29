@@ -16,6 +16,7 @@
 ** xref:uml/conv-enumerations.adoc[Enumerations]
 ** xref:uml/conv-objects.adoc[Objects]
 ** xref:uml/conv-packages.adoc[Packages]
+** xref:uml/unsupported-uml-constructs.adoc[Unsupported UML Constructs]
 * xref:checkers/model2owl-checkers.adoc[UML convention checking rules]
 * xref:transformation/uml2owl-transformation.adoc[Transformation Rules]
 ** xref:transformation/transf-rules1.adoc[Rules for UML Classes and Attributes]

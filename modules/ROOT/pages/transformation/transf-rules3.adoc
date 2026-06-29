@@ -46,6 +46,7 @@ Ideally, in the implementation, this rule would be combined with the relevant ru
 |Float |xsd:float
 |Integer |xsd:integer
 |Char |xsd:string
+|Character |xsd:string
 |String |xsd:string
 |Short |xsd:short
 |Long |xsd:long

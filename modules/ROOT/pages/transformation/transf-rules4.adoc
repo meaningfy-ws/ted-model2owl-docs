@@ -390,6 +390,14 @@ Annotate all locally defined OWL concepts with the name of the (core) ontology t
 ----
 |===
 
+[NOTE]
+====
+This annotation is optional: it is controlled by the `annotateDefinedConceptsWithOntology`
+configuration parameter (default `true`). Set it to `false()` to suppress
+`rdfs:isDefinedBy` in the OWL artefacts. See
+xref:user-guide/configuration-file.adoc#sec:isdefinedby-annotation[Annotating concepts with the ontology URI].
+====
+
 
 [#rule:element-source-ds,source,XML,caption='',title='{example-caption} {counter:rule-cnt:T.01}. Source specification -- in data shape layer',reftext='{example-caption} {rule-cnt}']
 ====
@@ -436,3 +444,11 @@ shape:ClassName-PropertyName
 </rdf:Description>
 ----
 |===
+
+[NOTE]
+====
+This annotation is optional: it is controlled by the `annotateShaclConceptsWithOntology`
+configuration parameter (default `true`). Set it to `false()` to suppress
+`rdfs:isDefinedBy` in the SHACL shapes. See
+xref:user-guide/configuration-file.adoc#sec:isdefinedby-annotation[Annotating concepts with the ontology URI].
+====

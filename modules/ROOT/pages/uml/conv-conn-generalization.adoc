@@ -88,6 +88,11 @@ Equivalent classes can be represented by using stereotypes on the uml:Generaliza
 
 In case two classes are equivalent, then the latexmath:[$<<equivalent>>$] or latexmath:[$<<complete>>$] stereotype should be used as a marker.
 
+[NOTE]
+====
+*Covering and completeness constraints are not transformed.* A `{complete}` (covering) constraint on a generalization set — asserting that every instance of the superclass belongs to at least one of its subclasses — is *not* turned into an OWL covering axiom. The same applies to the `{disjoint}` constraint. These are listed among the constructs that model2owl does not transform; see xref:uml/unsupported-uml-constructs.adoc#sec:unsupported-uml-constructs[Unsupported UML Constructs].
+====
+
 
 [[rule:generalization-btw-connectors-and-allowed-targets]]
 |===
@@ -98,15 +103,22 @@ In case two classes are equivalent, then the latexmath:[$<<equivalent>>$] or lat
 *Identifier:* rule:generalization-btw-connectors-and-allowed-targets
 
 |*Statement:*
- Ends of the same side (either source or target) of two connectors connected with a generalization relation 
-can be attached to the same class or two different ones connected with a generalization relation.
+ Ends of the same side (either source or target) of two connectors connected with a generalization relation
+must be attached to the same class or two different ones connected with a generalization relation.
 |===
 
 *Description:*
-For a pair of connectors with a generalization relation linking them, each of the sides of their ends can be attached to the following:
+For a pair of connectors with a generalization relation linking them, each of the sides of their ends must be attached to one of the following:
 
 * same class or
 * two classes connected with a generalization relation
+
+This is a constraint on the *end orientation* of the two associations — which class is placed at the *source* end and which at the *target* end — and is independent of the associations' navigability/direction. When generating the corresponding `rdfs:subPropertyOf` axioms, model2owl pairs the two associations end-by-end (source role with source role, target role with target role). If the two associations are oriented inconsistently — that is, the corresponding classes are placed at opposite ends — their same-side ends become attached to unrelated classes, the sub-property pairing is inverted, and the super-property's `rdfs:domain`/`rdfs:range` propagate onto the wrong classes, so a reasoner derives unintended subclass relations.
+
+[CAUTION]
+====
+To avoid this, ensure the sources and targets of the two associations are oriented consistently: corresponding source/target ends must carry either the same class or two classes linked by a class generalisation (the source end of one association lines up with the source end of the other, and likewise for the target ends). Because a non-navigable (or bidirectional) association shows no arrow on the diagram, its end orientation is not visually apparent — inspect the connector's source and target ends in the modelling tool to confirm it. This convention is enforced by the checker `generalisation-connector-and-missing-class-generalisation-9`.
+====
 
 
 [[rule:generalization-btw-connectors-and-class-generalization-for-distinct-connector-targets]]

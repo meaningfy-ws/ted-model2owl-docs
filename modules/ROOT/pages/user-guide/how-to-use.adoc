@@ -105,7 +105,7 @@ These commands execute transformations and generate outputs:
   ** **Parameters:**
     - `RESPEC_OUTPUT_DIR` – Output directory for the documentation package.
     - `RESPEC_DATA_JSON_PATH` – (Optional) Path to the ReSpec data JSON file. If not provided, the file will be generated automatically.
-    - `RESPEC_METADATA_JSON_PATH` – Path to the metadata JSON file.
+    - `METADATA_JSON_PATH` – Path to the metadata JSON file (shared by all artefacts; when unset, ReSpec falls back to the default metadata).
     - `RESPEC_INPUT_ASSETS_DIR` – Directory containing static assets (examples, images, etc.).
     - `XMI_INPUT_FILE_PATH` – (Optional) Path to the UML XMI model file needed for generating the ReSpec data JSON file (if not given).
     - `OUTPUT_FOLDER_PATH` – (Optional) Directory where a ReSpec data JSON file should be stored (if not given).
