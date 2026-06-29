@@ -77,19 +77,26 @@ relationship must appear in the output, model it as a plain binary association
 object properties) rather than relying on the aggregation notation.
 
 [[sec:unsupported-covering-constraints]]
-=== Covering and completeness constraints on generalization sets
+=== Covering constraint on generalization sets
 
 A generalization set groups several generalizations sharing one superclass and
 may carry constraints. The `{complete}` (covering) constraint asserts that every
-instance of the superclass belongs to at least one of the listed subclasses,
-while the `{disjoint}` constraint asserts that no instance belongs to more than
-one. Model2owl does not transform these generalization-set constraints.
+instance of the superclass belongs to at least one of the listed subclasses.
+Model2owl does not transform this constraint.
 
 [NOTE]
 ====
-Although these constraints are not modelled, model2owl's output is consistent with
-the UML 2.5.1 default of `{incomplete, overlapping}`: for a plain class
+Although the `{complete}` constraint is not transformed, model2owl's output is
+consistent with the UML 2.5.1 default of `{incomplete}`: for a plain class
 generalization it generates only an `rdfs:subClassOf` axiom.
+====
+
+[NOTE]
+====
+The `{disjoint}` constraint, which asserts that no instance of the superclass
+belongs to more than one of the listed subclasses, *is* supported: model2owl
+generates OWL disjointness axioms for the member subclasses of any generalization
+set marked `{disjoint}` (`isDisjoint = true`). See xref:transformation/transf-rules2.adoc#rule:disjoint-classes-rc[Transformation rule: Disjoint classes from generalization sets].
 ====
 
 [[sec:unsupported-id-property-modifier]]
