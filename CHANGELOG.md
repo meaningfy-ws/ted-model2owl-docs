@@ -9,6 +9,48 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### Changed
 
 
+## [3.3.0-beta] - 2026-06-30
+### Added
+- New documentation page listing unsupported UML constructs, describing the
+  behaviour each unsupported construct produces and why it is not transformed.
+- Documentation of the optional OWL-full consolidated artefact and the
+  `generateOWLFull` and `fullArtefactURI` configuration parameters (M2O3-234).
+- Documentation of `{disjoint}` generalization-set support in the OWL-restrictions
+  artefact (M2O3-235).
+- CAUTION admonition documenting the bidirectional-connector directionality
+  pitfall in the generalisation-connector conventions.
+- Documentation of the `Character` UML primitive datatype mapping to `xsd:string`.
+- Documentation of datatype-union range generation for data properties with mixed
+  reused datatypes.
+- Documentation of the unified `METADATA_JSON_PATH` Make parameter.
+- Guidance for using `includedPrefixesList=('')` with unprefixed ontology models.
+- Documentation of the `annotateDefinedConceptsWithOntology` (OWL) and
+  `annotateShaclConceptsWithOntology` (SHACL) parameters that control whether
+  `rdfs:isDefinedBy` annotations are generated; suppression NOTEs added to the
+  corresponding transformation rules T.08/T.09.
+
+### Changed
+- Association class and qualified association handling described as best-effort,
+  with an explicit statement of what is omitted from generated artefacts.
+- Generalization-set default-semantics note rendered as a NOTE admonition.
+- Covering and completeness generalization-set constraints documented as
+  unsupported.
+- Connector-generalisation convention updated to reflect the directionality
+  pitfall guidance.
+- Checker documentation for general-connector-type-1 and general-element-type-2
+  updated to match the softened code wording.
+- Generalisation-connector checker documentation aligned with the actual checker
+  IDs (-9/-10).
+- Checker messages for unsupported constructs updated to match the new
+  convention-report wording.
+- `{disjoint}` modifier removed from the unsupported-constructs list.
+
+### Removed
+- Documentation of the removed checker `connectors-with-same-name-multiplicity-1`.
+- Documentation of the removed checker `class-attributes-reuse-data-types-3`
+  (differing datatypes on a reused attribute are now supported).
+
+
 ## [3.2.0-rc.2] - 2026-02-03
 ### Added
 Introduce a description of generating RDF diff reports for multiple modules in the user guide (TEDM2O-12).
